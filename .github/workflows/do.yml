@@ -1,4 +1,4 @@
-name: push to digitalOcean
+name: push to beta
 on: push
 jobs:
   repo-sync:
@@ -19,4 +19,4 @@ jobs:
         git config --global user.email "damilolaakinterinwa@gmail.com"
         git config --global user.name "darmilola"
         git checkout master
-        git push -u digitalocean master
+        git push -u beta master
