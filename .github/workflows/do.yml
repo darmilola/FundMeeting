@@ -18,4 +18,4 @@ jobs:
         git remote add beta ssh://root@104.236.88.231/var/development/beta.git
         git config --global user.email damilolaakinterinwa@gmail.com
         git config --global user.name  darmilola
-        git push -u beta master
+        git push -u TimesBuddy master
