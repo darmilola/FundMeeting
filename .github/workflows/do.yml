@@ -15,7 +15,7 @@ jobs:
          name: id_rsa # optional
          known_hosts: ${{ secrets.KNOWN_HOSTS }}
     - run: |
-        git remote add. ssh://root@104.236.88.231/var/development/beta.git
+        git remote add . ssh://root@104.236.88.231/var/development/beta.git
         git config --global user.email damilolaakinterinwa@gmail.com
         git config --global user.name  darmilola
         git push -u beta master
