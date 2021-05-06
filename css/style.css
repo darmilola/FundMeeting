@@ -1508,7 +1508,10 @@ header.sticky {
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
+    margin-left:20px;
+    margin-right: -10px;
     padding: 20px;
+    width: 100%;
     position: relative;
 }
 
@@ -5139,6 +5142,7 @@ canvas {
 .sidebar.right {
     float: left;
     width: 100%;
+    margin-left: 35px;
 }
 .row.merged20{
     margin-right: -10px;
