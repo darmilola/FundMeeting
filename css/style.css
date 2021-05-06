@@ -65,11 +65,19 @@ body {
 	letter-spacing: 0.2px;
 }
 p {
-    font-size: 14px;
+    font-size: 15px;
+    font-family: quebec;
     letter-spacing: 0.1px;
     line-height: 26px;
-    color: #959ab5;
+    color: #1c2f3b;
+
 }
+
+@font-face {
+    font-family: quebec;
+    src:url("../fonts/bentomed.otf");
+}
+
 a,
 a:hover,
 a:focus,
@@ -657,7 +665,7 @@ header.sticky {
 /*--- topbar ---*/
 
 .topbar {
-    background: #34465d;
+    background: #132a39;
     display: block;
     height: 66px;
     padding: 0 16px;
@@ -1704,7 +1712,7 @@ form button {
 }
 
 .user-post {
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dashed #132a39;
     display: inline-block;
     margin-bottom: 20px;
     padding-bottom: 20px;
