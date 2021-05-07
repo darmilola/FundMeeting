@@ -665,7 +665,7 @@ header.sticky {
 /*--- topbar ---*/
 
 .topbar {
-    background: #132a39;
+    background: #2b092b;
     display: block;
     height: 66px;
     padding: 0 16px;
@@ -1508,8 +1508,21 @@ header.sticky {
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
-    margin-left:20px;
-    margin-right: -10px;
+    margin-left:40px;
+    margin-right: 0px;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+.trending_now{
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ede9e9;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left:50px;
+    margin-right: 70px;
     padding: 20px;
     width: 100%;
     position: relative;

@@ -1,0 +1,80 @@
+.channel_img_url {
+    border-radius: 100%;
+    height: 32px;
+    width: 32px;
+    margin-left: 10px;
+}
+.trending_channel_metas_root {
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.trending_channel_root {
+    background-color: white;
+    fill: grey;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.trending_channel {
+    padding: 12px 0 0;
+    margin-left: 10px;
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: #132a39;
+}
+.channel_metas {
+    width: 100%;
+    margin-left: 5px;
+    margin-left: 15px;
+    display: block;
+}
+.channel_link {
+    font-size: 13px;
+    line-height: 16px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.channel_members {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+.channel_image_metas {
+    margin-top: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+a:link,
+a:visited {
+    color: #132a39;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+.channel_join_button {
+    font-size: 13px;
+    min-height: 30px;
+    min-width: 25px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border-color: white;
+    width: 90px;
+    background-color: #1264a3;
+    border: none;
+    color: white;
+    fill: white;
+}
