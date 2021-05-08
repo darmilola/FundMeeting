@@ -1827,6 +1827,8 @@ form button {
     padding: 0;
     position: absolute;
     top: 50%;
+    padding: 20px;
+    border-radius: 5px;
     transform: translate(-50%, -50%);
     width: auto;
     z-index: 88;
@@ -1855,11 +1857,13 @@ form button {
 	transform: scale(1);
 }
 
+.post-meta:hover .like-dislike{
+    background-color: #000000;
+    opacity: 0.7;
+}
+
 .like-dislike > li a {
-    background: #989dbd none repeat scroll 0 0;
     border-radius: 100%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    color: #fff;
     display: inline-block;
     font-size: 20px;
     height: 34px;
@@ -1868,8 +1872,9 @@ form button {
     transition: all 0.2s linear 0s;
     width: 34px;
 }
+
 .like-dislike > li a:hover {
-    background: #fff none repeat scroll 0 0;
+
     transform: scale(1.1);
 }
 
@@ -1989,7 +1994,7 @@ a.learnmore:hover{
     float: left;
     line-height: 27px;
     margin-bottom: 0;
-    margin-top: 13px;
+    margin-top: 5px;
     padding-left: 0;
     width: 66%;
 }
@@ -2001,7 +2006,6 @@ a.learnmore:hover{
 .we-video-info > ul li {
     display: inline-block;
     font-size: 13px;
-    margin-right: 32px;
 	vertical-align: middle;
 }
 

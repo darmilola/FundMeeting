@@ -1,0 +1,31 @@
+#upvote_li{
+    margin-bottom: 30px;
+    margin-right: 2px;
+
+}
+#downvote_li{
+    margin-bottom: 30px;
+    margin-left: 2px;
+
+}
+#reactions_count{
+    margin-bottom: 30px;
+
+}
+#comments_count_li{
+    margin-bottom: 30px;
+
+
+}
+#comments_li{
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+#share_li{
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+#share_count_li{
+    margin-bottom: 30px;
+
+}

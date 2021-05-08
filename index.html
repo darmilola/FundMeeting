@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/trending_channel.css"/>
 	<link rel="stylesheet" href="css/make_discoveries.css"/>
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="css/gallery.css">
+	<link rel="stylesheet" href="css/post_action_area.css">
 </head>
 <body>
 <div class="wavy-wraper">
@@ -553,70 +556,63 @@
 														Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero. <a href="social-post-detail.html" title="">Read More</a>
 													</p>
 													<figure>
-                                                        <div class="slick-single">
-                                                            <div>
-                                                                <img src="images/resources/slick1.jpg" class="img-fluid" alt="">
-                                                            </div>
-                                                            <div>
-                                                                <img src="images/resources/slick2.jpg" class="img-fluid" alt="">
-                                                            </div>
-                                                            <div>
-                                                                <img src="images/resources/slick3.jpg" class="img-fluid" alt="">
-                                                            </div>
-                                                            <div>
-                                                                <img src="images/resources/slick4.jpg" class="img-fluid" alt="">
-                                                            </div>
+														<div id="image-slider" class="splide">
+															<div class="splide__track">
+																<ul class="splide__list">
+                                                            <li class="splide__slide" role="button" tabindex="0">
+                                                                <img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_960_720.jpg" class="img-fluid" alt="">
+                                                            </li>
+																<li class="splide__slide" role="button" tabindex="0">
+																	<img src="https://cdn.pixabay.com/photo/2020/09/25/06/07/portrait-5600556_960_720.jpg" class="img-fluid" alt="">
+																</li>
+																<li class="splide__slide" role="button" tabindex="0">
+																	<img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_960_720.jpg" class="img-fluid" alt="">
+																</li>
+																<li class="splide__slide" role="button" tabindex="0">
+																	<img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_960_720.jpg" class="img-fluid" alt="">
+																</li>
+															</ul>
                                                         </div>
-                                                        <ul class="like-dislike">
-															<li><a class="bg-purple" href="#" title="Save to Pin Post"><i class="fa fa-thumb-tack"></i></a></li>
-															<li><a class="bg-blue" href="#" title="Like Post"><i class="ti-thumb-up"></i></a></li>
-															<li><a class="bg-red" href="#" title="dislike Post"><i class="ti-thumb-down"></i></a></li>
-														</ul>
-													</figure>	
+														</div>
+													</figure>
+													<ul class="like-dislike">
+														<li><a  id="vote_icon_link_upvote" href="#" title="dislike Post">  <img id="upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
+
+
+														<li><a id="vote_icon_link_downvote" href="#" title="Downvote">  <img  id="downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
+													</ul>
+
 													<div class="we-video-info">
 														<ul>
-															<li>
-																<span class="views" title="views">
-																	<i class="fa fa-eye"></i>
-																	<ins>1.2k</ins>
-																</span>
+															<li id="upvote_li">
+																<img  src="./images/svg/neutraupvote.svg" height="16px" width="16px"/>
 															</li>
-															<li>
-																<div class="likes heart" title="Like/Dislike">❤ <span>2K</span></div>
+															<li id="reactions_count">
+																<div title="Like/Dislike Count">265k</div>
 															</li>
-															<li>
-																<span class="comment" title="Comments">
-																	<i class="fa fa-commenting"></i>
-																	<ins>52</ins>
-																</span>
+															<li id="downvote_li">
+																<div title="Like/Dislike"><img  src="./images/svg/neutraldownvote.svg" height="16px" width="16px"/></div>
 															</li>
 
-															<li>
-																<span>
-																	<a class="share-pst" href="#" title="Share">
-																		<i class="fa fa-share-alt"></i>
-																	</a>
-																	<ins>20</ins>
-																</span>	
+															<li id="comments_li">
+																<div title="Comments"><img  src="./images/svg/comments.svg" height="20px" width="20px"/></div>
+															</li>
+
+															<li id="comments_count_li">
+																<div title="Comments Count">100k</div>
+															</li>
+
+															<li id="share_li">
+																<div title="Comments"><img  src="./images/svg/share.svg" height="20px" width="20px"/></div>
+															</li>
+
+															<li id="share_count_li">
+																<div title="Share Count">4k</div>
 															</li>
 														</ul>
 														<div class="users-thumb-list">
-															<a data-toggle="tooltip" title="Anderw" href="#">
-																<img alt="" src="images/resources/userlist-1.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="frank" href="#">
-																<img alt="" src="images/resources/userlist-2.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Sara" href="#">
-																<img alt="" src="images/resources/userlist-3.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Amy" href="#">
-																<img alt="" src="images/resources/userlist-4.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Ema" href="#">
-																<img alt="" src="images/resources/userlist-5.jpg">  
-															</a>
-															<span><strong>You</strong>, <b>Sarah</b> and <a href="#" title="">24+ more</a> liked</span>
+
+
 														</div>
 													</div>
 												</div>
@@ -2544,21 +2540,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script><!-- For timeline slide show -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script><!-- for location picker map -->
 	<script src="js/locationpicker.jquery.js"></script><!-- for loaction picker map -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"/>
 	<script src="js/map-init.js"></script><!-- map initilasition -->
-<!--	<script src="js/page-tourintro.js"></script>
-	<script src="js/page-tour-init.js"></script> -->
 	<script src="js/script.js"></script>
-	<script>
-		var animation = bodymovin.loadAnimation({
-			// animationData: { /* ... */ },
-			container: document.getElementById('live_icon'), // required
-			path: './images/svg/live.json', // required
-			renderer: 'svg', // required
-			loop: true, // optional
-			autoplay: true, // optional
-		});
-	</script>
+	<script src="js/gellery.js"></script>
+	<script src="js/actions.js"></script>
 </div>
 </body>
 </html>
