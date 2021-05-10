@@ -1683,10 +1683,6 @@ form button {
 .friend-info > figure {
     display: inline-block;
     margin-bottom: 0;
-    margin-top: 0;
-    position: relative;
-    vertical-align: middle;
-    width: 40px;
 }
 
 .friend-info > figure > i {
@@ -1733,6 +1729,7 @@ form button {
     margin-bottom: 20px;
     padding-bottom: 20px;
     width: 100%;
+    text-transform: none!important;
 }
 .central-meta .user-post:last-child {
     border: 0 none;
@@ -2385,7 +2382,7 @@ for some reason nth-child(1) is always busy and elements starting from 2 */
 /*--- comment area ---*/
 
 .coment-area {
-    margin-top: 20px;
+    margin-top: -15px;
     width: 100%;
 	display: none;
 	float: left;
@@ -2423,6 +2420,7 @@ for some reason nth-child(1) is always busy and elements starting from 2 */
     padding-left: 8px;
     position: relative;
     vertical-align: top;
+    margin-left: -10px;
     width: 92%;
 }
 
@@ -4961,6 +4959,7 @@ canvas {
 .more {
     float: right;
 	position: relative;
+    margin-right: -15px;
 }
 .more-optns {
     display: inline-block;
