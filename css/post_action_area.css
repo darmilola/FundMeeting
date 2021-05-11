@@ -1,33 +1,251 @@
 #upvote_li{
-    margin-bottom: 30px;
+
     margin-right: 2px;
 
 }
 #downvote_li{
-    margin-bottom: 30px;
+
     margin-left: 2px;
 
 }
 #reactions_count{
-    margin-bottom: 30px;
+
 
 }
 #comments_count_li{
-    margin-bottom: 30px;
-
 
 }
+
+.post_reaction_area_img{
+    height: 12px;
+    width: 12px;
+}
+.post_comment_area_img{
+    height: 14px;
+    width: 14px;
+}
+
+.post_share_area_img{
+    height: 14px;
+    width: 14px;
+}
+.post_save_area_img{
+    height: 12px;
+    width: 12px;
+}
+
 #comments_li{
-    margin-bottom: 30px;
+
     margin-left: 15px;
 }
 #share_li{
-    margin-bottom: 30px;
+
     margin-left: 15px;
 }
 #share_count_li{
-    margin-bottom: 30px;
+
 }
+#save_li{
+
+    margin-left: 15px;
+}
+#save_count_li{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#youtube_upvote_li{
+
+    margin-right: 2px;
+
+}
+#youtube_downvote_li{
+
+    margin-left: 2px;
+
+}
+#youtube_reactions_count{
+
+
+}
+#youtube_comments_count_li{
+
+}
+
+.youtube_post_reaction_area_img{
+    height: 12px;
+    width: 12px;
+}
+#youtube_post_comment_area_img{
+    height: 14px;
+    width: 14px;
+}
+
+#youtube_post_share_area_img{
+    height: 14px;
+    width: 14px;
+}
+#youtube_post_save_area_img{
+    height: 12px;
+    width: 12px;
+}
+
+#youtube_comments_li{
+
+    margin-left: 15px;
+}
+#youtube_share_li{
+
+    margin-left: 15px;
+}
+#youtube_share_count_li{
+
+}
+#youtube_save_li{
+
+    margin-left: 15px;
+}
+#youtube_save_count_li{
+
+}
+
+
+
+
+
+
+
+
+
+#sponsored_upvote_li{
+
+    margin-right: 2px;
+
+}
+#sponsored_downvote_li{
+
+    margin-left: 2px;
+
+}
+#sponsored_reactions_count{
+
+
+}
+#sponsored_comments_count_li{
+
+}
+
+.sponsored_post_reaction_area_img{
+    height: 12px;
+    width: 12px;
+}
+#sponsored_post_comment_area_img{
+    height: 14px;
+    width: 14px;
+}
+
+#sponsored_post_share_area_img{
+    height: 14px;
+    width: 14px;
+}
+#sponsored_post_save_area_img{
+    height: 12px;
+    width: 12px;
+}
+
+#sponsored_comments_li{
+
+    margin-left: 15px;
+}
+#sponsored_share_li{
+
+    margin-left: 15px;
+}
+#sponsored_share_count_li{
+
+}
+#sponsored_save_li{
+
+    margin-left: 15px;
+}
+#sponsored_save_count_li{
+
+}
+
+
+
+
+#linkpost_upvote_li{
+
+    margin-right: 2px;
+
+}
+#linkpost_downvote_li{
+
+    margin-left: 2px;
+
+}
+#linkpost_reactions_count{
+
+
+}
+#linkpost_comments_count_li{
+
+}
+
+.linkpost_post_reaction_area_img{
+    height: 12px;
+    width: 12px;
+}
+#linkpost_post_comment_area_img{
+    height: 14px;
+    width: 14px;
+}
+
+#linkpost_post_share_area_img{
+    height: 14px;
+    width: 14px;
+}
+#linkpost_post_save_area_img{
+    height: 12px;
+    width: 12px;
+}
+
+#linkpost_comments_li{
+
+    margin-left: 15px;
+}
+#linkpost_share_li{
+
+    margin-left: 15px;
+}
+#linkpost_share_count_li{
+
+}
+#linkpost_save_li{
+
+    margin-left: 15px;
+}
+#linkpost_save_count_li{
+
+}
+
+
+
+
+
+
+
+
 
 .post_header_meta{
     margin-left:-7px;
@@ -43,23 +261,171 @@
     font-weight: bold;
 }
 @font-face {
-    font-family: "bentoMed";
+    font-family: "bento";
     src: url('../fonts/bentomed.otf');
 }
-#post_title{
-     font-family: quebec;
-     font-size: 16px;
-     color: #1c2f3b;
-     letter-spacing: 0.4px;
-     margin-top: -10px;
-     line-height: 25px!important;
+@font-face {
+    font-family: "bentoreg";
+    src: url('../fonts/bentonreg.otf');
 }
-.see-more{
+.post_title{
+     font-family: "bento";
+     font-size: 15px;
+     margin-top: -10px;
+     line-height: 20px!important;
+     display:inline-block;
+     color: #222222;
+     word-spacing: 1px;
+    -webkit-transform:scale(1,1.1); /* Safari and Chrome */
+    -moz-transform:scale(1,1.1); /* Firefox */
+    -ms-transform:scale(1,1.1); /* IE 9 */
+    -o-transform:scale(1,1.1); /* Opera */
+    transform:scale(1,1.1); /* W3C */
+}
+.post_text{
+    font-family: "bentoreg";
+    font-size: 15px;
+    display:inline-block;
+    color: #505050;
+    margin-top: -5px;
+    word-spacing: 1px;
+}
+#read-more{
 
-    font-family: "bentoMed";
+    font-family: "bento";
     font-weight: 300;
     font-size: 12px;
     color: #1264a3!important;
     margin-top: -10px;
     line-height: 23px!important;
 }
+
+#youtube_see-more{
+    font-family: "bento";
+    font-weight: 300;
+    font-size: 12px;
+    color: #1264a3!important;
+    margin-top: -10px;
+    line-height: 23px!important;
+}
+#home-comment > p{
+    font-family: "bento"!important;
+}
+
+
+.channel_img_url {
+    border-radius: 100%;
+    height: 32px;
+    width: 32px;
+    margin-left: 10px;
+}
+.trending_channel_metas_root {
+    display: flex;
+    height: 50px;
+}
+.trending_channel_root {
+    background-color: white;
+    fill: grey;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    overflow: visible;
+    word-wrap: break-word;
+    padding: 20px;
+}
+
+.trending_channel {
+    padding: 12px 0 0;
+    margin-left: 10px;
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: #132a39;
+}
+.channel_metas {
+    width: 100%;
+    margin-left: 5px;
+    margin-left: 15px;
+    display: block;
+    padding-top: 15px;
+}
+.channel_link {
+    font-size: 13px;
+    line-height: 16px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.channel_members {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+.channel_image_metas {
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+a:link,
+a:visited {
+    color: #132a39;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+.channel_growth {
+    width: 120px;
+    border: none;
+    color: white;
+    fill: white;
+    margin-top: 7px;
+    display: flex;
+}
+.channel_members {
+    color: grey;
+}
+.svg_arrowup {
+    height: 16px;
+    width: 16px;
+    margin-left: 3px;
+    margin-top: 10px;
+}
+.top_channel_name {
+    color: #0079d3;
+    font-size: 16px;
+}
+.create_your_channel {
+    width: 100%;
+    height: 45px;
+    background-color: #0079d3;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+}
+.create_channel_content {
+    width: 100%;
+    height: 100%;
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -40px;
+}
+.create_channel {
+    color: white;
+    size: 16px;
+}
+.add_arrow {
+    margin-right: 5px;
+    height: 16px;
+    width: 16px;
+}
+

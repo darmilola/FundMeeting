@@ -1987,6 +1987,8 @@ a.learnmore:hover{
     z-index: 0;
 }
 
+
+
 .we-video-info > ul {
     float: left;
     line-height: 27px;
@@ -1995,6 +1997,7 @@ a.learnmore:hover{
     padding-left: 0;
     width: 66%;
 }
+
 
 .social-media {
     vertical-align: sub;

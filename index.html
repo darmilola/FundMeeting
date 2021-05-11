@@ -22,6 +22,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="css/gallery.css">
 	<link rel="stylesheet" href="css/post_action_area.css">
+    <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/videoplayer.css"/>
 </head>
 <body>
 <div class="wavy-wraper">
@@ -465,6 +467,7 @@
 					</div>
 				</li>
 			</ul>
+
 			<div class="user-img">
 				<h5>Jack Carter</h5>
 				<img src="images/resources/admin.jpg" alt="">
@@ -528,6 +531,9 @@
 							<div class="col-lg-7">
 
                                 <div class="loadMore">
+
+
+									<!-------- User post Starts here --->
 									<div class="central-meta item">
 										<div class="user-post">
 											<div class="friend-info">
@@ -552,12 +558,17 @@
 														<a id="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
 														<a id="posted_by_link" href="time-line.html" title="">Posted by u/jack 35mins ago</a>
 													</div>
-
-													</div>
+                                                </div>
 												<div class="post-meta">
-													<p id="post_title">
-														JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. <a class="see-more" href="social-post-detail.html" title="">Read More...</a>
-													</p>
+
+                                                    <!--- post title starts here ---->
+													<p class="post_title">
+														JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software</p>
+                                                    <p class="post_text">JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. </p>
+
+
+
+													<!----- Image Slider is  here ------>
 													<figure>
 														<div id="image-slider" class="splide">
 															<div class="splide__track">
@@ -565,6 +576,28 @@
                                                             <li class="splide__slide" role="button" tabindex="0">
                                                                 <img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_960_720.jpg" class="img-fluid" alt="">
                                                             </li>
+                                                                    <li class="splide__slide">
+                                                                        <video controls disablePictureInPicture controlsList="nodownload"
+                                                                                id="vjs_video_1"
+                                                                                class="video-js vjs-default-skin"
+                                                                                data-setup='{  "aspectRatio":"500:400", "playbackRates": [1, 1.5, 2] }'
+                                                                                preload="none"
+                                                                                poster="https://content.bitsontherun.com/thumbs/3XnJSIm4-480.jpg"
+                                                                                data-setup='{ "aspectRatio":"500:400", "playbackRates": [1, 1.5, 2] }'>
+                                                                            <source
+                                                                                    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+                                                                                    type="video/mp4"/>
+                                                                            <source
+                                                                                    src="https://content.bitsontherun.com/videos/bkaovAYt-27m5HpIu.webm"
+                                                                                    type="video/webm"/>
+                                                                            <track
+                                                                                    label="pt"
+                                                                                    kind="subtitles"
+                                                                                    src="sintel.srt"
+                                                                                    default  />
+                                                                        </video>
+                                                                    </li>
+
 																<li class="splide__slide" role="button" tabindex="0">
 																	<img src="https://cdn.pixabay.com/photo/2020/09/25/06/07/portrait-5600556_960_720.jpg" class="img-fluid" alt="">
 																</li>
@@ -578,6 +611,14 @@
                                                         </div>
 														</div>
 													</figure>
+
+													<!---- image and video slider ends here ----->
+
+
+                                                    <!-- post reactions and user interaction starts here  ---->
+
+
+													<!----- bubble like dislike goes here  --->
 													<ul class="like-dislike">
 														<li><a  id="vote_icon_link_upvote" href="#" title="dislike Post">  <img id="upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
 
@@ -585,130 +626,96 @@
 														<li><a id="vote_icon_link_downvote" href="#" title="Downvote">  <img  id="downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
 													</ul>
 
+
+													<!----- post activity metas continues in these area --->
 													<div class="we-video-info">
 														<ul>
 															<li id="upvote_li">
-																<img  src="./images/svg/neutraupvote.svg" height="16px" width="16px"/>
+																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
 															</li>
 															<li id="reactions_count">
 																<div title="Like/Dislike Count">265k</div>
 															</li>
 															<li id="downvote_li">
-																<div title="Like/Dislike"><img  src="./images/svg/neutraldownvote.svg" height="16px" width="16px"/></div>
+																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
 															</li>
 
 															<li id="comments_li">
-																<div title="Comments"><img  src="./images/svg/comments.svg" height="20px" width="20px"/></div>
+																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
 															</li>
 
 															<li id="comments_count_li">
-																<div title="Comments Count">100k</div>
+																<div title="Comments Count">100k Comments</div>
 															</li>
 
 															<li id="share_li">
-																<div title="Comments"><img  src="./images/svg/share.svg" height="20px" width="20px"/></div>
+																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
 															</li>
 
 															<li id="share_count_li">
-																<div title="Share Count">4k</div>
+																<div title="Share Count">4k Share</div>
+															</li>
+
+															<li id="save_li">
+																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
+															</li>
+
+															<li id="save_count_li">
+																<div title="Share Count">Save</div>
 															</li>
 														</ul>
-														<div class="users-thumb-list">
-
-
-														</div>
 													</div>
-												</div>
-												<div class="coment-area" style="display: block;">
-													<ul class="we-comet">
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/nearly3.jpg" alt="" style="width: 25px; height: 25px;">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Jason borne</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
-																<div class="inline-itms">
-																	<span>5 secs ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
 
-														</li>
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/nearly3.jpg" alt="" style="width: 25px; height: 25px;">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Jason borne</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
-																<div class="inline-itms">
-																	<span>5 secs ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
+                                               <!---- user post interaction ends here  --->
 
-														</li>
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/nearly3.jpg" alt="" style="width: 25px; height: 25px;">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Jason borne</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
-																<div class="inline-itms">
-																	<span>5 secs ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
 
-														</li>
-														<li>
-															<a href="#" title="" class="showmore underline">more comments+</a>
-														</li>
-
-													</ul>
 												</div>
 											</div>
 										</div>
 									</div>
 
 
+ <!------ user post ends here  ----->
 
 
 
 
 
 
-
-									<!-- album post -->
+									<!-- youtube scraped post goes here -->
 									<div class="central-meta item">
 										<div class="user-post">
-											<div class="friend-info">
-												<figure>
-													<img src="images/resources/nearly1.jpg" alt="">
-												</figure>
-												<div class="friend-name">
-													<div class="more">
-														<div class="more-post-optns"><i class="ti-more-alt"></i>
-															<ul>
-																<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
-																<li><i class="fa fa-trash-o"></i>Delete Post</li>
-																<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
-																<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
-																<li><i class="fa fa-clock-o"></i>Schedule Post</li>
-																<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
-																<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
-															</ul>
-														</div>
-													</div>
-													<ins><a href="time-line.html" title="">Jack Carter</a> share <a href="#" title="">link</a></ins>
-													<span><i class="fa fa-globe"></i> published: january,5 2010 19:PM </span>
-												</div>
+                                            <div class="friend-info">
+                                                <figure>
+                                                    <img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
+                                                </figure>
+                                                <div class="friend-name">
+                                                    <div class="more">
+                                                        <div class="more-post-optns"><i class="ti-more-alt"></i>
+                                                            <ul>
+                                                                <li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
+                                                                <li><i class="fa fa-trash-o"></i>Delete Post</li>
+                                                                <li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
+                                                                <li><i class="fa fa-address-card-o"></i>Boost This Post</li>
+                                                                <li><i class="fa fa-clock-o"></i>Schedule Post</li>
+                                                                <li><i class="fa fa-wpexplorer"></i>Select as featured</li>
+                                                                <li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post_header_meta">
+                                                        <a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
+                                                        <a class="posted_by_link" href="time-line.html" title="">Posted by u/jack 35mins ago</a>
+                                                    </div>
+                                                </div>
 												<div class="post-meta">
+
+                                                   <!--- post title starts here --->
+                                                    <p class="post_title">
+                                                        JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. <a class="youtube_see-more" href="social-post-detail.html" title="">read more</a>
+                                                    </p>
+
+                                                    <!-- youtube figures starts here  ---->
 													<figure>
 														<a href="https://www.youtube.com/watch?v=fF382gwEnG8" title="" data-strip-group="mygroup" class="strip vdeo-link" data-strip-options="width: 700,height: 450,youtube: { autoplay: 1 }">
 														<img src="images/resources/user-post.jpg" alt="">
@@ -722,172 +729,102 @@
 															</i>
 															<h2>Canada tourist spots you must visit in 2020</h2>
 														</a>
-														<ul class="like-dislike">
-															<li><a class="bg-purple" href="#" title="Save to Pin Post"><i class="fa fa-thumb-tack"></i></a></li>
-															<li><a class="bg-blue" href="#" title="Like Post"><i class="ti-thumb-up"></i></a></li>
-															<li><a class="bg-red" href="#" title="dislike Post"><i class="ti-thumb-down"></i></a></li>
-														</ul>
-
 													</figure>												
-													<div class="description">
-														<p>
-															Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc. <a href="social-post-detail.html" title="">Read More</a>
-														</p>
-													</div>
+													<!--- youtube figures ends here  --->
+
+
+                                                    <!-- post reactions and user interaction starts here  ---->
+
+
+                                                <!----- bubble like dislike goes here  --->
+                                                <ul class="like-dislike">
+                                                    <li><a  id ="youtube_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="youtube_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="youtube_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
+
+
+                                                    <li><a id="youtube_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="youtube_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="youtube_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
+                                                </ul>
+
+
+
+													<!----- post activity metas continues in these area --->
 													<div class="we-video-info">
 														<ul>
-															<li>
-																<span class="views" title="views">
-																	<i class="fa fa-eye"></i>
-																	<ins>1.2k</ins>
-																</span>
+															<li id="youtube_upvote_li">
+																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
 															</li>
-															<li>
-																<div class="likes heart" title="Like/Dislike">❤ <span>2K</span></div>
+															<li id="youtube_reactions_count">
+																<div title="Like/Dislike Count">265k</div>
 															</li>
-															<li>
-																<span class="comment" title="Comments">
-																	<i class="fa fa-commenting"></i>
-																	<ins>52</ins>
-																</span>
+															<li id="youtube_downvote_li">
+																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
 															</li>
 
-															<li>
-																<span>
-																	<a class="share-pst" href="#" title="Share">
-																		<i class="fa fa-share-alt"></i>
-																	</a>
-																	<ins>20</ins>
-																</span>	
+															<li id="youtube_comments_li">
+																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
+															</li>
+
+															<li id="youtube_comments_count_li">
+																<div title="Comments Count">100k Comments</div>
+															</li>
+
+															<li id="youtube_share_li">
+																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
+															</li>
+
+															<li id="youtube_share_count_li">
+																<div title="Share Count">4k Share</div>
+															</li>
+
+															<li id="youtube_save_li">
+																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
+															</li>
+
+															<li id="youtube_save_count_li">
+																<div title="Share Count">Save</div>
 															</li>
 														</ul>
-														<div class="users-thumb-list">
-															<a data-toggle="tooltip" title="Anderw" href="#">
-																<img alt="" src="images/resources/userlist-1.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="frank" href="#">
-																<img alt="" src="images/resources/userlist-2.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Sara" href="#">
-																<img alt="" src="images/resources/userlist-3.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Amy" href="#">
-																<img alt="" src="images/resources/userlist-4.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Ema" href="#">
-																<img alt="" src="images/resources/userlist-5.jpg">  
-															</a>
-															<span><strong>You</strong>, <b>Sarah</b> and <a href="#" title="">24+ more</a> liked</span>
-														</div>
 													</div>
-												</div>
-												<div class="coment-area" style="">
-													<ul class="we-comet">
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/nearly3.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Jason borne</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
 
-														</li>
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/comet-4.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Sophia</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster.
-																	<i class="em em-smiley"></i>
-																</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
-														</li>
-														<li>
-															<a href="#" title="" class="showmore underline">more comments+</a>
-														</li>
-														<li class="post-comment">
-															<div class="comet-avatar">
-																<img src="images/resources/nearly1.jpg" alt="">
-															</div>
-															<div class="post-comt-box">
-																<form method="post">
-																	<textarea placeholder="Post your comment"></textarea>
-																	<div class="add-smiles">
-																		<div class="uploadimage">
-																			<i class="fa fa-image"></i>
-																			<label class="fileContainer">
-																				<input type="file">
-																			</label>
-																		</div>
-																		<span class="em em-expressionless" title="add icon"></span>
-																		<div class="smiles-bunch">
-																			<i class="em em---1"></i>
-																			<i class="em em-smiley"></i>
-																			<i class="em em-anguished"></i>
-																			<i class="em em-laughing"></i>
-																			<i class="em em-angry"></i>
-																			<i class="em em-astonished"></i>
-																			<i class="em em-blush"></i>
-																			<i class="em em-disappointed"></i>
-																			<i class="em em-worried"></i>
-																			<i class="em em-kissing_heart"></i>
-																			<i class="em em-rage"></i>
-																			<i class="em em-stuck_out_tongue"></i>
-																		</div>
-																	</div>
-																	<button type="submit"></button>
-																</form>	
-															</div>
-														</li>
-													</ul>
-												</div>
+													<!---- user post interaction ends here  --->
+
+                                                </div>
 											</div>
 										</div>
-									</div><!-- video post -->
+									</div>
+
+
+
+
+
+                                    <!-- Sponsored Post -->
 									<div class="central-meta item">
 										<div class="user-post">
 											<div class="friend-info">
-												<figure>
-													<img src="images/resources/nearly1.jpg" alt="">
-												</figure>
-												<div class="friend-name">
-													<div class="more">
-														<div class="more-post-optns"><i class="ti-more-alt"></i>
-															<ul>
-																<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
-																<li><i class="fa fa-trash-o"></i>Delete Post</li>
-																<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
-																<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
-																<li><i class="fa fa-clock-o"></i>Schedule Post</li>
-																<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
-																<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
-															</ul>
+													<figure>
+														<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
+													</figure>
+													<div class="friend-name">
+														<div class="more">
+															<div class="more-post-optns"><i class="ti-more-alt"></i>
+																<ul>
+																	<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
+																	<li><i class="fa fa-trash-o"></i>Delete Post</li>
+																	<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
+																	<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
+																	<li><i class="fa fa-clock-o"></i>Schedule Post</li>
+																	<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
+																	<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
+																</ul>
+															</div>
+														</div>
+														<div class="post_header_meta">
+															<a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
+															<a class="posted_by_link" href="time-line.html" title=""><span>sponsored <i class="fa fa-globe"></i></span></a>
 														</div>
 													</div>
-													<ins><a href="time-line.html" title="">Digital Market</a></ins>
-													<span>sponsored <i class="fa fa-globe"></i></span>
-													
-												</div>
 												<div class="post-meta">
 													<figure>
 														<img src="images/sponsors.gif" alt="">
-														<ul class="like-dislike">
-															<li><a class="bg-purple" href="#" title="Save to Pin Post"><i class="fa fa-thumb-tack"></i></a></li>
-															<li><a class="bg-blue" href="#" title="Like Post"><i class="ti-thumb-up"></i></a></li>
-															<li><a class="bg-red" href="#" title="dislike Post"><i class="ti-thumb-down"></i></a></li>
-														</ul>
 													</figure>	
 													<div class="description">
 														<a href="#" class="learnmore" data-ripple="">Learn More</a>
@@ -895,134 +832,80 @@
 															Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc. <a href="social-post-detail.html" title="">Read More</a>
 														</p>
 													</div>
+
+
+
+													<!-- post reactions and user interaction starts here  ---->
+
+
+													<!----- bubble like dislike goes here  --->
+													<ul class="like-dislike">
+														<li><a  id ="sponsored_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="sponsored_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="sponsored_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
+
+
+														<li><a id="sponsored_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="sponsored_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="sponsored_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
+													</ul>
+
+
+
+													<!----- post activity metas continues in these area --->
 													<div class="we-video-info">
 														<ul>
-															<li>
-																<span class="views" title="views">
-																	<i class="fa fa-eye"></i>
-																	<ins>1.2k</ins>
-																</span>
+															<li id="sponsored_upvote_li">
+																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
 															</li>
-															<li>
-																<div class="likes heart" title="Like/Dislike">❤ <span>2K</span></div>
+															<li id="sponsored_reactions_count">
+																<div title="Like/Dislike Count">265k</div>
 															</li>
-															<li>
-																<span class="comment" title="Comments">
-																	<i class="fa fa-commenting"></i>
-																	<ins>52</ins>
-																</span>
+															<li id="sponsored_downvote_li">
+																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
 															</li>
 
-															<li>
-																<span>
-																	<a class="share-pst" href="#" title="Share">
-																		<i class="fa fa-share-alt"></i>
-																	</a>
-																	<ins>20</ins>
-																</span>	
+															<li id="sponsored_comments_li">
+																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
+															</li>
+
+															<li id="sponsored_comments_count_li">
+																<div title="Comments Count">100k Comments</div>
+															</li>
+
+															<li id="sponsored_share_li">
+																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
+															</li>
+
+															<li id="sponsored_share_count_li">
+																<div title="Share Count">4k Share</div>
+															</li>
+
+															<li id="sponsored_save_li">
+																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
+															</li>
+
+															<li id="sponsored_save_count_li">
+																<div title="Share Count">Save</div>
 															</li>
 														</ul>
-														<div class="users-thumb-list">
-															<a data-toggle="tooltip" title="Anderw" href="#">
-																<img alt="" src="images/resources/userlist-1.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="frank" href="#">
-																<img alt="" src="images/resources/userlist-2.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Sara" href="#">
-																<img alt="" src="images/resources/userlist-3.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Amy" href="#">
-																<img alt="" src="images/resources/userlist-4.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Ema" href="#">
-																<img alt="" src="images/resources/userlist-5.jpg">  
-															</a>
-															<span><strong>You</strong>, <b>Sarah</b> and <a href="#" title="">24+ more</a> liked</span>
-														</div>
 													</div>
-												</div>
-												<div class="coment-area" style="">
-													<ul class="we-comet">
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/nearly3.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Jason borne</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
 
-														</li>
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/comet-4.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Sophia</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster.
-																	<i class="em em-smiley"></i>
-																</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
-														</li>
-														<li>
-															<a href="#" title="" class="showmore underline">more comments+</a>
-														</li>
-														<li class="post-comment">
-															<div class="comet-avatar">
-																<img src="images/resources/nearly1.jpg" alt="">
-															</div>
-															<div class="post-comt-box">
-																<form method="post">
-																	<textarea placeholder="Post your comment"></textarea>
-																	<div class="add-smiles">
-																		<div class="uploadimage">
-																			<i class="fa fa-image"></i>
-																			<label class="fileContainer">
-																				<input type="file">
-																			</label>
-																		</div>
-																		<span class="em em-expressionless" title="add icon"></span>
-																		<div class="smiles-bunch">
-																			<i class="em em---1"></i>
-																			<i class="em em-smiley"></i>
-																			<i class="em em-anguished"></i>
-																			<i class="em em-laughing"></i>
-																			<i class="em em-angry"></i>
-																			<i class="em em-astonished"></i>
-																			<i class="em em-blush"></i>
-																			<i class="em em-disappointed"></i>
-																			<i class="em em-worried"></i>
-																			<i class="em em-kissing_heart"></i>
-																			<i class="em em-rage"></i>
-																			<i class="em em-stuck_out_tongue"></i>
-																		</div>
-																	</div>
+													<!---- user post interaction ends here  --->
 
-																	<button type="submit"></button>
-																</form>	
-															</div>
-														</li>
-													</ul>
 												</div>
 											</div>
 										</div>
-									</div><!-- digital sponsors -->
+									</div>
+
+     <!-- digital sponsors ends here -->
+
+
+
+
+
+									<!---- scraped links goes here ---->
 									<div class="central-meta item">
 										<div class="user-post">
 											<div class="friend-info">
 												<figure>
-													<img alt="" src="images/resources/friend-avatar10.jpg">
+													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
 												</figure>
 												<div class="friend-name">
 													<div class="more">
@@ -1038,8 +921,10 @@
 															</ul>
 														</div>
 													</div>
-													<ins><a title="" href="time-line.html">Janice Griffith</a></ins>
-													<span>published: june,2 2010 19:PM</span>
+													<div class="post_header_meta">
+														<a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
+														<a class="posted_by_link" href="time-line.html" title=""><span>posted by u/jackOblack</span></a>
+													</div>
 												</div>
 												<div class="description">
 													<p>
@@ -1054,141 +939,80 @@
 														<span>Love Maid - HighChill</span>
 														<p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... </p>
 														<a title="" href="#">www.sample.com</a>
-													</div>		
-													
+													</div>
+
+
+
+													<!-- post reactions and user interaction starts here  ---->
+
+
+													<!----- bubble like dislike goes here  --->
 													<ul class="like-dislike">
-															<li><a class="bg-purple" href="#" title="Save to Pin Post"><i class="fa fa-thumb-tack"></i></a></li>
-															<li><a class="bg-blue" href="#" title="Like Post"><i class="ti-thumb-up"></i></a></li>
-															<li><a class="bg-red" href="#" title="dislike Post"><i class="ti-thumb-down"></i></a></li>
-														</ul>
+														<li><a  id ="linkpost_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="linkpost_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="linkpost_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
+
+
+														<li><a id="linkpost_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="linkpost_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="linkpost_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
+													</ul>
+
+
+
+													<!----- post activity metas continues in these area --->
 													<div class="we-video-info">
 														<ul>
-															<li>
-																<span class="views" title="views">
-																	<i class="fa fa-eye"></i>
-																	<ins>1.2k</ins>
-																</span>
+															<li id="linkpost_upvote_li">
+																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
 															</li>
-															<li>
-																<div class="likes heart" title="Like/Dislike">❤ <span>2K</span></div>
+															<li id="linkpost_reactions_count">
+																<div title="Like/Dislike Count">265k</div>
 															</li>
-															<li>
-																<span class="comment" title="Comments">
-																	<i class="fa fa-commenting"></i>
-																	<ins>52</ins>
-																</span>
+															<li id="linkpost_downvote_li">
+																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
 															</li>
 
-															<li>
-																<span>
-																	<a class="share-pst" href="#" title="Share">
-																		<i class="fa fa-share-alt"></i>
-																	</a>
-																	<ins>20</ins>
-																</span>	
+															<li id="linkpost_comments_li">
+																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
+															</li>
+
+															<li id="linkpost_comments_count_li">
+																<div title="Comments Count">100k Comments</div>
+															</li>
+
+															<li id="linkpost_share_li">
+																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
+															</li>
+
+															<li id="linkpost_share_count_li">
+																<div title="Share Count">4k Share</div>
+															</li>
+
+															<li id="linkpost_save_li">
+																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
+															</li>
+
+															<li id="linkpost_save_count_li">
+																<div title="Share Count">Save</div>
 															</li>
 														</ul>
-														<div class="users-thumb-list">
-															<a data-toggle="tooltip" title="Anderw" href="#">
-																<img alt="" src="images/resources/userlist-1.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="frank" href="#">
-																<img alt="" src="images/resources/userlist-2.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Sara" href="#">
-																<img alt="" src="images/resources/userlist-3.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Amy" href="#">
-																<img alt="" src="images/resources/userlist-4.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Ema" href="#">
-																<img alt="" src="images/resources/userlist-5.jpg">  
-															</a>
-															<span><strong>You</strong>, <b>Sarah</b> and <a href="#" title="">24+ more</a> liked</span>
-														</div>
 													</div>
-												</div>
-												<div class="coment-area" style="">
-													<ul class="we-comet">
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/nearly3.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Jason borne</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
 
-														</li>
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/comet-4.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Sophia</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster.
-																	<i class="em em-smiley"></i>
-																</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
-														</li>
-														<li>
-															<a href="#" title="" class="showmore underline">more comments+</a>
-														</li>
-														<li class="post-comment">
-															<div class="comet-avatar">
-																<img src="images/resources/nearly1.jpg" alt="">
-															</div>
-															<div class="post-comt-box">
-																<form method="post">
-																	<textarea placeholder="Post your comment"></textarea>
-																	<div class="add-smiles">
-																		<div class="uploadimage">
-																			<i class="fa fa-image"></i>
-																			<label class="fileContainer">
-																				<input type="file">
-																			</label>
-																		</div>
-																		<span class="em em-expressionless" title="add icon"></span>
-																		<div class="smiles-bunch">
-																			<i class="em em---1"></i>
-																			<i class="em em-smiley"></i>
-																			<i class="em em-anguished"></i>
-																			<i class="em em-laughing"></i>
-																			<i class="em em-angry"></i>
-																			<i class="em em-astonished"></i>
-																			<i class="em em-blush"></i>
-																			<i class="em em-disappointed"></i>
-																			<i class="em em-worried"></i>
-																			<i class="em em-kissing_heart"></i>
-																			<i class="em em-rage"></i>
-																			<i class="em em-stuck_out_tongue"></i>
-																		</div>
-																	</div>
+													<!---- user post interaction ends here  --->
 
-																	<button type="submit"></button>
-																</form>	
-															</div>
-														</li>
-													</ul>
 												</div>
 											</div>
 										</div>
-									</div><!-- love post -->
+									</div>
+<!---- scraped linkspost ends here  ----->
+
+
+
+
+
+									<!-- Empty post no image no video no link -->
 									<div class="central-meta item">
 										<div class="user-post">
 											<div class="friend-info">
 												<figure>
-													<img src="images/resources/friend-avatar10.jpg" alt="">
+													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
 												</figure>
 												<div class="friend-name">
 													<div class="more">
@@ -1204,149 +1028,88 @@
 															</ul>
 														</div>
 													</div>
-													<ins><a href="time-line.html" title="">Mathilda Brinker</a></ins>
-													<span>published: june,2 2020 19:PM</span>
+													<div class="post_header_meta">
+														<a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
+														<a class="posted_by_link" href="time-line.html" title=""><span>posted by u/jackOblack</span></a>
+													</div>
 												</div>
 												<div class="post-meta">
 													<div class="description">
 														<p>
-															World's most beautiful car in Curabitur <a href="#" title="">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website <a href="social-post-detail.html" title="">Read More</a>
+															World's most beautiful car in Curabitur <a href="#" title="">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website <a href="social-post-detail.html" title="">read more</a>
 														</p>
 													</div>
-													
+
+													<!-- post reactions and user interaction starts here  ---->
+
+
+													<!----- bubble like dislike goes here  --->
 													<ul class="like-dislike">
-														<li><a href="#" title="Save to Pin Post"><i class="fa fa-thumb-tack"></i></a></li>
-														<li><a href="#" title="Like Post"><i class="ti-thumb-up"></i></a></li>
-														<li><a href="#" title="dislike Post"><i class="ti-thumb-down"></i></a></li>
+														<li><a  id ="linkpost_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="linkpost_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="linkpost_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
+
+
+														<li><a id="linkpost_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="linkpost_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="linkpost_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
 													</ul>
+
+
+
+													<!----- post activity metas continues in these area --->
 													<div class="we-video-info">
 														<ul>
-															<li>
-																<span class="views" title="views">
-																	<i class="fa fa-eye"></i>
-																	<ins>1.2k</ins>
-																</span>
+															<li id="linkpost_upvote_li">
+																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
 															</li>
-															<li>
-																<div class="likes heart" title="Like/Dislike">❤ <span>2K</span></div>
+															<li id="linkpost_reactions_count">
+																<div title="Like/Dislike Count">265k</div>
 															</li>
-															<li>
-																<span class="comment" title="Comments">
-																	<i class="fa fa-commenting"></i>
-																	<ins>52</ins>
-																</span>
+															<li id="linkpost_downvote_li">
+																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
 															</li>
 
-															<li>
-																<span>
-																	<a class="share-pst" href="#" title="Share">
-																		<i class="fa fa-share-alt"></i>
-																	</a>
-																	<ins>20</ins>
-																</span>	
+															<li id="linkpost_comments_li">
+																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
+															</li>
+
+															<li id="linkpost_comments_count_li">
+																<div title="Comments Count">100k Comments</div>
+															</li>
+
+															<li id="linkpost_share_li">
+																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
+															</li>
+
+															<li id="linkpost_share_count_li">
+																<div title="Share Count">4k Share</div>
+															</li>
+
+															<li id="linkpost_save_li">
+																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
+															</li>
+
+															<li id="linkpost_save_count_li">
+																<div title="Share Count">Save</div>
 															</li>
 														</ul>
-														<div class="users-thumb-list">
-															<a data-toggle="tooltip" title="Anderw" href="#">
-																<img alt="" src="images/resources/userlist-1.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="frank" href="#">
-																<img alt="" src="images/resources/userlist-2.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Sara" href="#">
-																<img alt="" src="images/resources/userlist-3.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Amy" href="#">
-																<img alt="" src="images/resources/userlist-4.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Ema" href="#">
-																<img alt="" src="images/resources/userlist-5.jpg">  
-															</a>
-															<span><strong>You</strong>, <b>Sarah</b> and <a href="#" title="">24+ more</a> liked</span>
-														</div>
 													</div>
-												</div>
-												<div class="coment-area" style="">
-													<ul class="we-comet">
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/nearly3.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Jason borne</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
 
-														</li>
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/comet-4.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Sophia</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster.
-																	<i class="em em-smiley"></i>
-																</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
-														</li>
-														<li>
-															<a href="#" title="" class="showmore underline">more comments+</a>
-														</li>
-														<li class="post-comment">
-															<div class="comet-avatar">
-																<img src="images/resources/nearly1.jpg" alt="">
-															</div>
-															<div class="post-comt-box">
-																<form method="post">
-																	<textarea placeholder="Post your comment"></textarea>
-																	<div class="add-smiles">
-																		<div class="uploadimage">
-																			<i class="fa fa-image"></i>
-																			<label class="fileContainer">
-																				<input type="file">
-																			</label>
-																		</div>
-																		<span class="em em-expressionless" title="add icon"></span>
-																		<div class="smiles-bunch">
-																			<i class="em em---1"></i>
-																			<i class="em em-smiley"></i>
-																			<i class="em em-anguished"></i>
-																			<i class="em em-laughing"></i>
-																			<i class="em em-angry"></i>
-																			<i class="em em-astonished"></i>
-																			<i class="em em-blush"></i>
-																			<i class="em em-disappointed"></i>
-																			<i class="em em-worried"></i>
-																			<i class="em em-kissing_heart"></i>
-																			<i class="em em-rage"></i>
-																			<i class="em em-stuck_out_tongue"></i>
-																		</div>
-																	</div>
-
-																	<button type="submit"></button>
-																</form>	
-															</div>
-														</li>
-													</ul>
+													<!---- user post interaction ends here  --->
 												</div>
 											</div>
 										</div>
-									</div><!-- without image -->
-									<div class="central-meta item">
+									</div>
+										<!-- Empty post no image no video no link -->
+
+
+
+
+
+
+<!--- location post ---->
+										<div class="central-meta item">
 										<div class="user-post">
 											<div class="friend-info">
 												<figure>
-													<img src="images/resources/nearly6.jpg" alt="">
+													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
 												</figure>
 												<div class="friend-name">
 													<div class="more">
@@ -1362,322 +1125,84 @@
 															</ul>
 														</div>
 													</div>
-													<ins><a href="time-line.html" title="">Sophia</a> shared location</ins>
-													<span><i class="fa fa-globe"></i> published: january,5 2010 19:PM</span>
+													<div class="post_header_meta">
+														<a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
+														<a class="posted_by_link" href="time-line.html" title=""><span>posted by u/jackOblack</span></a>
+													</div>
 												</div>
+
 												<div class="post-meta">
 													<div class="post-map">
 														<div class="nearby-map">
 															<div id="map-canvas"></div>
 														</div>
+														<!----- bubble like dislike goes here  --->
 														<ul class="like-dislike">
-															<li><a class="bg-purple" href="#" title="Save to Pin Post"><i class="fa fa-thumb-tack"></i></a></li>
-															<li><a class="bg-blue" href="#" title="Like Post"><i class="ti-thumb-up"></i></a></li>
-															<li><a class="bg-red" href="#" title="dislike Post"><i class="ti-thumb-down"></i></a></li>
+															<li><a  id ="linkpost_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="linkpost_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="linkpost_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
+
+
+															<li><a id="linkpost_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="linkpost_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="linkpost_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
 														</ul>
-													</div><!-- near by map -->
+
+													</div>
+													<!-- near by map -->
 
 													<div class="description">
 														<p>
 															Curabitur Lonely Cat Enjoying in Summer <a href="#" title="">#mypage</a> ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, <a href="social-post-detail.html" title="">Read More</a>
 														</p>
 													</div>
+												</div>
+
+
+													<!----- post activity metas continues in these area --->
 													<div class="we-video-info">
 														<ul>
-															<li>
-																<span class="views" title="views">
-																	<i class="fa fa-eye"></i>
-																	<ins>1.2k</ins>
-																</span>
+															<li id="linkpost_upvote_li">
+																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
 															</li>
-															<li>
-																<div class="likes heart" title="Like/Dislike">❤ <span>2K</span></div>
+															<li id="linkpost_reactions_count">
+																<div title="Like/Dislike Count">265k</div>
 															</li>
-															<li>
-																<span class="comment" title="Comments">
-																	<i class="fa fa-commenting"></i>
-																	<ins>52</ins>
-																</span>
+															<li id="linkpost_downvote_li">
+																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
 															</li>
 
-															<li>
-																<span>
-																	<a class="share-pst" href="#" title="Share">
-																		<i class="fa fa-share-alt"></i>
-																	</a>
-																	<ins>20</ins>
-																</span>	
+															<li id="linkpost_comments_li">
+																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
+															</li>
+
+															<li id="linkpost_comments_count_li">
+																<div title="Comments Count">100k Comments</div>
+															</li>
+
+															<li id="linkpost_share_li">
+																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
+															</li>
+
+															<li id="linkpost_share_count_li">
+																<div title="Share Count">4k Share</div>
+															</li>
+
+															<li id="linkpost_save_li">
+																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
+															</li>
+
+															<li id="linkpost_save_count_li">
+																<div title="Share Count">Save</div>
 															</li>
 														</ul>
-														<div class="users-thumb-list">
-															<a data-toggle="tooltip" title="Anderw" href="#">
-																<img alt="" src="images/resources/userlist-1.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="frank" href="#">
-																<img alt="" src="images/resources/userlist-2.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Sara" href="#">
-																<img alt="" src="images/resources/userlist-3.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Amy" href="#">
-																<img alt="" src="images/resources/userlist-4.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Ema" href="#">
-																<img alt="" src="images/resources/userlist-5.jpg">  
-															</a>
-															<span><strong>You</strong>, <b>Sarah</b> and <a href="#" title="">24+ more</a> liked</span>
-														</div>
 													</div>
-												</div>
-												<div class="coment-area" style="">
-													<ul class="we-comet">
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/nearly3.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Jason borne</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
 
-														</li>
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/comet-4.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Sophia</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster.
-																	<i class="em em-smiley"></i>
-																</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
-														</li>
-														<li>
-															<a href="#" title="" class="showmore underline">more comments+</a>
-														</li>
-														<li class="post-comment">
-															<div class="comet-avatar">
-																<img src="images/resources/nearly1.jpg" alt="">
-															</div>
-															<div class="post-comt-box">
-																<form method="post">
-																	<textarea placeholder="Post your comment"></textarea>
-																	<div class="add-smiles">
-																		<div class="uploadimage">
-																			<i class="fa fa-image"></i>
-																			<label class="fileContainer">
-																				<input type="file">
-																			</label>
-																		</div>
-																		<span class="em em-expressionless" title="add icon"></span>
-																		<div class="smiles-bunch">
-																			<i class="em em---1"></i>
-																			<i class="em em-smiley"></i>
-																			<i class="em em-anguished"></i>
-																			<i class="em em-laughing"></i>
-																			<i class="em em-angry"></i>
-																			<i class="em em-astonished"></i>
-																			<i class="em em-blush"></i>
-																			<i class="em em-disappointed"></i>
-																			<i class="em em-worried"></i>
-																			<i class="em em-kissing_heart"></i>
-																			<i class="em em-rage"></i>
-																			<i class="em em-stuck_out_tongue"></i>
-																		</div>
-																	</div>
 
-																	<button type="submit"></button>
-																</form>	
-															</div>
-														</li>
-													</ul>
+
 												</div>
 											</div>
 										</div>
-									</div><!-- map location post -->
-									<div class="central-meta item">
-										<div class="user-post">
-											<div class="friend-info">
-												<figure>
-													<img src="images/resources/nearly1.jpg" alt="">
-												</figure>
-												<div class="friend-name">
-													<div class="more">
-														<div class="more-post-optns"><i class="ti-more-alt"></i>
-															<ul>
-																<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
-																<li><i class="fa fa-trash-o"></i>Delete Post</li>
-																<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
-																<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
-																<li><i class="fa fa-clock-o"></i>Schedule Post</li>
-																<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
-																<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
-															</ul>
-														</div>
-													</div>
-													<ins><a href="time-line.html" title="">Jack Carter</a> share <a href="#" title="">link</a></ins>
-													<span><i class="fa fa-globe"></i> published: january,5 2010 19:PM </span>
-												</div>
-												<div class="post-meta">
-													<figure>
-														<a href="https://www.youtube.com/watch?v=fF382gwEnG8" title="" data-strip-group="mygroup" class="strip vdeo-link" data-strip-options="width: 700,height: 450,youtube: { autoplay: 1 }">
-														<img src="images/resources/user-post.jpg" alt="">
-															<i>
-																<svg version="1.1" class="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="55px" width="55px"
-																 viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-															  <path class="stroke-solid" fill="none" stroke=""  d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
-																C97.3,23.7,75.7,2.3,49.9,2.5"/>
-															  <path class="icon" fill="" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
-																</svg>
-															</i>
-															<h2>Canada tourist spots you must visit in 2020</h2>
-														</a>
-														<ul class="like-dislike">
-															<li><a class="bg-purple" href="#" title="Save to Pin Post"><i class="fa fa-thumb-tack"></i></a></li>
-															<li><a class="bg-blue" href="#" title="Like Post"><i class="ti-thumb-up"></i></a></li>
-															<li><a class="bg-red" href="#" title="dislike Post"><i class="ti-thumb-down"></i></a></li>
-														</ul>
+									</div>
+							     </div>
+								<!-- map location post -->
 
-													</figure>												
-													<div class="description">
-														<p>
-															Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc. <a href="social-post-detail.html" title="">Read More</a>
-														</p>
-													</div>
-													<div class="we-video-info">
-														<ul>
-															<li>
-																<span class="views" title="views">
-																	<i class="fa fa-eye"></i>
-																	<ins>1.2k</ins>
-																</span>
-															</li>
-															<li>
-																<div class="likes heart" title="Like/Dislike">❤ <span>2K</span></div>
-															</li>
-															<li>
-																<span class="comment" title="Comments">
-																	<i class="fa fa-commenting"></i>
-																	<ins>52</ins>
-																</span>
-															</li>
-
-															<li>
-																<span>
-																	<a class="share-pst" href="#" title="Share">
-																		<i class="fa fa-share-alt"></i>
-																	</a>
-																	<ins>20</ins>
-																</span>	
-															</li>
-														</ul>
-														<div class="users-thumb-list">
-															<a data-toggle="tooltip" title="Anderw" href="#">
-																<img alt="" src="images/resources/userlist-1.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="frank" href="#">
-																<img alt="" src="images/resources/userlist-2.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Sara" href="#">
-																<img alt="" src="images/resources/userlist-3.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Amy" href="#">
-																<img alt="" src="images/resources/userlist-4.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="Ema" href="#">
-																<img alt="" src="images/resources/userlist-5.jpg">  
-															</a>
-															<span><strong>You</strong>, <b>Sarah</b> and <a href="#" title="">24+ more</a> liked</span>
-														</div>
-													</div>
-												</div>
-												<div class="coment-area" style="">
-													<ul class="we-comet">
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/nearly3.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Jason borne</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
-
-														</li>
-														<li>
-															<div class="comet-avatar">
-																<img src="images/resources/comet-4.jpg" alt="">
-															</div>
-															<div class="we-comment">
-																<h5><a href="time-line.html" title="">Sophia</a></h5>
-																<p>we are working for the dance and sing songs. this video is very awesome for the youngster.
-																	<i class="em em-smiley"></i>
-																</p>
-																<div class="inline-itms">
-																	<span>1 year ago</span>
-																	<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-																	<a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
-																</div>
-															</div>
-														</li>
-														<li>
-															<a href="#" title="" class="showmore underline">more comments+</a>
-														</li>
-														<li class="post-comment">
-															<div class="comet-avatar">
-																<img src="images/resources/nearly1.jpg" alt="">
-															</div>
-															<div class="post-comt-box">
-																<form method="post">
-																	<textarea placeholder="Post your comment"></textarea>
-																	<div class="add-smiles">
-																		<div class="uploadimage">
-																			<i class="fa fa-image"></i>
-																			<label class="fileContainer">
-																				<input type="file">
-																			</label>
-																		</div>
-																		<span class="em em-expressionless" title="add icon"></span>
-																		<div class="smiles-bunch">
-																			<i class="em em---1"></i>
-																			<i class="em em-smiley"></i>
-																			<i class="em em-anguished"></i>
-																			<i class="em em-laughing"></i>
-																			<i class="em em-angry"></i>
-																			<i class="em em-astonished"></i>
-																			<i class="em em-blush"></i>
-																			<i class="em em-disappointed"></i>
-																			<i class="em em-worried"></i>
-																			<i class="em em-kissing_heart"></i>
-																			<i class="em em-rage"></i>
-																			<i class="em em-stuck_out_tongue"></i>
-																		</div>
-																	</div>
-																	<button type="submit"></button>
-																</form>	
-															</div>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div><!-- video post -->
-							    </div>
-							</div><!-- centerl meta -->
 							<div class="col-lg-4">
 								<aside class="sidebar static right">
 
@@ -1720,8 +1245,13 @@
 
 
                                      <!-- trending starts here -->
-									<div class="widget rending_channel_root">
-										<h2 class="trending_channel">Trending Channel</h2>
+									<div class="widget trending_channel_root">
+
+										<div class="create_your_channel">
+											<div class="create_channel_content"><img class="add_arrow"  src="/images/svg/add.svg"/><span class="create_channel">Create Channel</span></div>
+										</div>
+
+										<h2 class="trending_channel">Top Channels</h2>
 
 										<div class="trending_channel_metas_root">
 											<div class="channel_image_metas">
@@ -1731,124 +1261,20 @@
 												/>
 											</div>
 											<div class="channel_metas">
-												<a
-														class="channel_link"
-														title="r/WhatsWrongWithYourDog"
-														href="/r/WhatsWrongWithYourDog/"
-												>
-													Elementary Physics and things</a
-												>
-												<div class="channel_members">
-													1,157,673 Susbcribed
-												</div>
+												<a class="top_channel_name">
+													This is a top channel name
+												</a>
 											</div>
-											<div class="join_channel">
-												<button role="button" tabindex="0" class="channel_join_button">
-													Subscribe
+											<div class="channel_growth">
+												<span class="channel_members">125k</span>
+												<img class="svg_arrowup" src="/images/svg/arrowup.svg"/>
 												</button>
 											</div>
 										</div>
-										<div class="trending_channel_metas_root">
-											<div class="channel_image_metas">
-												<img
-														class="channel_img_url"
-														src="https://styles.redditmedia.com/t5_39ht3/styles/communityIcon_l1iqfklg47361.jpg?format=pjpg&amp;s=fb6b78523ca73fccd94b072a444131fc5435e1ef"
-												/>
-											</div>
-											<div class="channel_metas">
-												<a
-														class="channel_link"
-														title="r/WhatsWrongWithYourDog"
-														href="/r/WhatsWrongWithYourDog/"
-												>
-													Elementary Physics and things</a
-												>
-												<div class="channel_members">
-													1,157,673 Susbcribed
-												</div>
-											</div>
-											<div class="join_channel">
-												<button role="button" tabindex="0" class="channel_join_button">
-													Subscribe
-												</button>
-											</div>
-										</div>
-										<div class="trending_channel_metas_root">
-											<div class="channel_image_metas">
-												<img
-														class="channel_img_url"
-														src="https://styles.redditmedia.com/t5_39ht3/styles/communityIcon_l1iqfklg47361.jpg?format=pjpg&amp;s=fb6b78523ca73fccd94b072a444131fc5435e1ef"
-												/>
-											</div>
-											<div class="channel_metas">
-												<a
-														class="channel_link"
-														title="r/WhatsWrongWithYourDog"
-														href="/r/WhatsWrongWithYourDog/"
-												>
-													Elementary Physics and things</a
-												>
-												<div class="channel_members">
-													1,157,673 Susbcribed
-												</div>
-											</div>
-											<div class="join_channel">
-												<button role="button" tabindex="0" class="channel_join_button">
-													Subscribe
-												</button>
-											</div>
-										</div>
-										<div class="trending_channel_metas_root">
-											<div class="channel_image_metas">
-												<img
-														class="channel_img_url"
-														src="https://styles.redditmedia.com/t5_39ht3/styles/communityIcon_l1iqfklg47361.jpg?format=pjpg&amp;s=fb6b78523ca73fccd94b072a444131fc5435e1ef"
-												/>
-											</div>
-											<div class="channel_metas">
-												<a
-														class="channel_link"
-														title="r/WhatsWrongWithYourDog"
-														href="/r/WhatsWrongWithYourDog/"
-												>
-													Elementary Physics and things</a
-												>
-												<div class="channel_members">
-													1,157,673 Susbcribed
-												</div>
-											</div>
-											<div class="join_channel">
-												<button role="button" tabindex="0" class="channel_join_button">
-													Subscribe
-												</button>
-											</div>
-										</div>
-										<div class="trending_channel_metas_root">
-											<div class="channel_image_metas">
-												<img
-														class="channel_img_url"
-														src="https://styles.redditmedia.com/t5_39ht3/styles/communityIcon_l1iqfklg47361.jpg?format=pjpg&amp;s=fb6b78523ca73fccd94b072a444131fc5435e1ef"
-												/>
-											</div>
-											<div class="channel_metas">
-												<a
-														class="channel_link"
-														title="r/WhatsWrongWithYourDog"
-														href="/r/WhatsWrongWithYourDog/"
-												>
-													Elementary Physics and things</a
-												>
-												<div class="channel_members">
-													1,157,673 Susbcribed
-												</div>
-											</div>
-											<div class="join_channel">
-												<button role="button" tabindex="0" class="channel_join_button">
-													Subscribe
-												</button>
-											</div>
-										</div>
-									</div> <!-- trending ends here -->
+
+									</div>
+
+									<!-- trending ends here -->
 
 
                                      <!-- communities starts here-->
@@ -2536,6 +1962,32 @@
 	<script src="js/script.js"></script>
 	<script src="js/gellery.js"></script>
 	<script src="js/actions.js"></script>
+
+
+    <style>
+        .video-js .vjs-control-bar {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+
+        }
+    </style>
+    <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $("button.vjs-subs-caps-button").click(function(){
+                if($('.vjs-text-track-display').css('visibility') === "hidden"){
+
+                    $('.vjs-text-track-display').css('visibility', 'visible');
+
+                }
+                else{
+                    $('.vjs-text-track-display').css('visibility', 'hidden');
+                }
+            });
+        });
+    </script>
 </div>
 </body>
 </html>
