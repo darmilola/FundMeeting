@@ -1,0 +1,532 @@
+#upvote_li{
+
+    margin-right: 2px;
+
+}
+#downvote_li{
+
+    margin-left: 2px;
+
+}
+#reactions_count{
+
+
+}
+#comments_count_li{
+
+}
+
+.post_reaction_area_img{
+    height: 12px;
+    width: 12px;
+}
+.post_comment_area_img{
+    height: 14px;
+    width: 14px;
+}
+
+.post_share_area_img{
+    height: 14px;
+    width: 14px;
+}
+.post_save_area_img{
+    height: 12px;
+    width: 12px;
+}
+
+#comments_li{
+
+    margin-left: 15px;
+}
+#share_li{
+
+    margin-left: 15px;
+}
+#share_count_li{
+
+}
+#save_li{
+
+    margin-left: 15px;
+}
+#save_count_li{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#youtube_upvote_li{
+
+    margin-right: 2px;
+
+}
+#youtube_downvote_li{
+
+    margin-left: 2px;
+
+}
+#youtube_reactions_count{
+
+
+}
+#youtube_comments_count_li{
+
+}
+
+.youtube_post_reaction_area_img{
+    height: 12px;
+    width: 12px;
+}
+#youtube_post_comment_area_img{
+    height: 14px;
+    width: 14px;
+}
+
+#youtube_post_share_area_img{
+    height: 14px;
+    width: 14px;
+}
+#youtube_post_save_area_img{
+    height: 12px;
+    width: 12px;
+}
+
+#youtube_comments_li{
+
+    margin-left: 15px;
+}
+#youtube_share_li{
+
+    margin-left: 15px;
+}
+#youtube_share_count_li{
+
+}
+#youtube_save_li{
+
+    margin-left: 15px;
+}
+#youtube_save_count_li{
+
+}
+
+
+
+
+
+
+
+
+
+#sponsored_upvote_li{
+
+    margin-right: 2px;
+
+}
+#sponsored_downvote_li{
+
+    margin-left: 2px;
+
+}
+#sponsored_reactions_count{
+
+
+}
+#sponsored_comments_count_li{
+
+}
+
+.sponsored_post_reaction_area_img{
+    height: 12px;
+    width: 12px;
+}
+#sponsored_post_comment_area_img{
+    height: 14px;
+    width: 14px;
+}
+
+#sponsored_post_share_area_img{
+    height: 14px;
+    width: 14px;
+}
+#sponsored_post_save_area_img{
+    height: 12px;
+    width: 12px;
+}
+
+#sponsored_comments_li{
+
+    margin-left: 15px;
+}
+#sponsored_share_li{
+
+    margin-left: 15px;
+}
+#sponsored_share_count_li{
+
+}
+#sponsored_save_li{
+
+    margin-left: 15px;
+}
+#sponsored_save_count_li{
+
+}
+
+
+
+
+#linkpost_upvote_li{
+
+    margin-right: 2px;
+
+}
+#linkpost_downvote_li{
+
+    margin-left: 2px;
+
+}
+#linkpost_reactions_count{
+
+
+}
+#linkpost_comments_count_li{
+
+}
+
+.linkpost_post_reaction_area_img{
+    height: 12px;
+    width: 12px;
+}
+#linkpost_post_comment_area_img{
+    height: 14px;
+    width: 14px;
+}
+
+#linkpost_post_share_area_img{
+    height: 14px;
+    width: 14px;
+}
+#linkpost_post_save_area_img{
+    height: 12px;
+    width: 12px;
+}
+
+#linkpost_comments_li{
+
+    margin-left: 15px;
+}
+#linkpost_share_li{
+
+    margin-left: 15px;
+}
+#linkpost_share_count_li{
+
+}
+#linkpost_save_li{
+
+    margin-left: 15px;
+}
+#linkpost_save_count_li{
+
+}
+
+
+
+
+
+
+
+
+
+.post_header_meta{
+    margin-left:-7px;
+    font-size: 11px;
+    display: grid;
+}
+#posted_by_link{
+    color: #747373;
+    font-weight: normal;
+}
+#posted_to_link{
+    color: #363636;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "bento";
+    src: url('../fonts/bentomed.otf');
+}
+@font-face {
+    font-family: "bentoreg";
+    src: url('../fonts/bentonreg.otf');
+}
+.post_title{
+     font-family: "bento";
+     font-size: 15px;
+     margin-top: -10px;
+     line-height: 20px!important;
+     display:inline-block;
+     color: #222222;
+     word-spacing: 1px;
+    -webkit-transform:scale(1,1.1); /* Safari and Chrome */
+    -moz-transform:scale(1,1.1); /* Firefox */
+    -ms-transform:scale(1,1.1); /* IE 9 */
+    -o-transform:scale(1,1.1); /* Opera */
+    transform:scale(1,1.1); /* W3C */
+}
+.post_text{
+    font-family: "bentoreg";
+    font-size: 15px;
+    display:inline-block;
+    color: #505050;
+    margin-top: -5px;
+    word-spacing: 1px;
+}
+#read-more{
+
+    font-family: "bento";
+    font-weight: 300;
+    font-size: 12px;
+    color: #1264a3!important;
+    margin-top: -10px;
+    line-height: 23px!important;
+}
+
+#youtube_see-more{
+    font-family: "bento";
+    font-weight: 300;
+    font-size: 12px;
+    color: #1264a3!important;
+    margin-top: -10px;
+    line-height: 23px!important;
+}
+#home-comment > p{
+    font-family: "bento"!important;
+}
+
+
+.channel_img_url {
+    border-radius: 100%;
+    height: 24px;
+    width: 24px;
+    margin-left: 10px;
+}
+.trending_channel_metas_root {
+    display: flex;
+    height: 40px;
+}
+.trending_channel_root {
+    background-color: white;
+    fill: grey;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    overflow: visible;
+    word-wrap: break-word;
+    padding: 12px;
+}
+
+.trending_channel {
+    padding: 12px 0 0;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #132a39;
+    font-family: "bento";
+}
+.channel_metas {
+    width: 100%;
+    margin-left: 5px;
+    margin-left: 15px;
+    display: block;
+    padding-top: 15px;
+}
+.channel_link {
+    font-size: 13px;
+    line-height: 16px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.channel_members {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 10px;
+    color: #132a39!important;
+}
+.channel_image_metas {
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+}
+
+a:link,
+a:visited {
+    color: #132a39;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+.channel_growth {
+    width: 120px;
+    border: none;
+    color: white;
+    fill: white;
+    margin-top: 7px;
+    display: flex;
+}
+.channel_members {
+    color: grey;
+}
+.svg_arrowup {
+    height: 16px;
+    width: 16px;
+    margin-left: 3px;
+    margin-top: 10px;
+}
+.top_channel_name {
+    color: #0079d3!important;
+    font-size: 12px;
+    font-family: "bentoreg";
+    margin-left: -5px;
+}
+.create_your_channel {
+    width: 100%;
+    height: 35px;
+    background-color: #0079d3;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+}
+.create_channel_content {
+    width: 100%;
+    height: 100%;
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0px 0 -60px;
+}
+.create_channel {
+    color: white;
+
+}
+.add_arrow {
+    margin-right: 5px;
+    height: 16px;
+    width: 16px;
+}
+
+
+
+
+
+
+
+
+.trending_topic_metas_root {
+    display: flex;
+    height: 30px;
+    margin-left: 15px;
+}
+.trending_topic_root {
+    background-color: white;
+    fill: grey;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    overflow: visible;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.trending_topic {
+    padding: 12px 0 0;
+    margin-left: 10px;
+    font-size: 17px;
+    color: #132a39;
+
+}
+.topic_metas {
+    width: 100%;
+    margin-left: 5px;
+    margin-left: 15px;
+    display: block;
+    padding-top: 15px;
+}
+.topic_link {
+    font-size: 13px;
+    line-height: 16px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+a:link,
+a:visited {
+    color: #132a39;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+.topic_members {
+    color: grey;
+}
+.svg_arrowup {
+    height: 16px;
+    width: 16px;
+    margin-left: 3px;
+    margin-top: 10px;
+}
+.top_trending_topic_name {
+    font-size: 12px;
+    color: #132a39!important;
+    font-family: "bentoreg";
+}
+
+.trending_topic_header {
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.fire_img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+.trending_topic_position {
+    display: flex;
+    justify-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #132a39!important;
+}
+
+
