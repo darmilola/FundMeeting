@@ -18,7 +18,7 @@ body {
 	font-family: "Montserrat", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
-	background: #f4fcff!important;
+	background: #ffffff!important;
 }
 
 h1,
@@ -242,7 +242,10 @@ Header section
 
 .header-right .hr-btn {
 	display: inline-block;
-	color: #979aa5;
+	color: #000000!important;
+}
+.login{
+	color: #000000!important;
 }
 
 .header-right .user-panel {
@@ -256,8 +259,16 @@ Header section
 }
 
 .header-right .user-panel .register {
-	color: #fc0254;
+	color: white;
 	margin-right: 0;
+	background:#f72b5c;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 13px;
+	padding-right: 13px;
+	border-radius: 7px;
+	font-weight: normal;
+
 }
 
 .header-right span {
