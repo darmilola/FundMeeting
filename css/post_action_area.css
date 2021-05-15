@@ -290,6 +290,14 @@
     margin-top: -5px;
     word-spacing: 1px;
 }
+.full_post_text{
+    font-family: "bentoreg";
+    font-size: 15px;
+    display:inline-block;
+    color: #505050;
+    margin-top: -5px;
+    word-spacing: 1px;
+}
 #read-more{
 
     font-family: "bento";

@@ -54,7 +54,11 @@ $(document).ready(function() {
             $(this).append(' <a href="javascript:void(0);" id="read-more">read more...</a>');
         }
     });
+    $('#read-more').click(function(){
+        window.location.href = "social-post-detail.html";
+    });
 
 });
+
 
 

@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-black.woff') format('woff2'),
+        url('mazzardh-black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-bold.woff') format('woff2'),
+        url('mazzardh-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-blackitalic.woff') format('woff2'),
+        url('mazzardh-blackitalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-extralightitalic.woff') format('woff2'),
+        url('mazzardh-extralightitalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-italic.woff') format('woff2'),
+        url('mazzardh-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-extrabold.woff') format('woff2'),
+        url('mazzardh-extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-extrabolditalic.woff') format('woff2'),
+        url('mazzardh-extrabolditalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-bolditalic.woff') format('woff2'),
+        url('mazzardh-bolditalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-extralight.woff') format('woff2'),
+        url('mazzardh-extralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-medium.woff') format('woff2'),
+        url('mazzardh-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-light.woff') format('woff2'),
+        url('mazzardh-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-regular.woff') format('woff2'),
+        url('mazzardh-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-mediumitalic.woff') format('woff2'),
+        url('mazzardh-mediumitalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-semibold.woff') format('woff2'),
+        url('mazzardh-semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-lightitalic.woff') format('woff2'),
+        url('mazzardh-lightitalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-semibolditalic.woff') format('woff2'),
+        url('mazzardh-semibolditalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-thin.woff') format('woff2'),
+        url('mazzardh-thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard H';
+    src: url('mazzardh-thinitalic.woff') format('woff2'),
+        url('mazzardh-thinitalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
