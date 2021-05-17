@@ -12733,7 +12733,7 @@ Content Area-1 L-11-2
 }
 
 .hero-area-l-13 .bg-shape-13 {
-  background: url(../image/l3/hero-bg.png);
+  background: url(demos/shade-preview/image/l3/hero-bg.png);
   background-repeat: no-repeat;
   position: absolute;
   top: -50%;
@@ -12922,7 +12922,7 @@ Content Area-1 L-11-2
 }
 
 .testimonial-area-l-13 .bg-shape-3 {
-  background: url(../image/l3/testimonial-bg.svg);
+  background: url(demos/shade-preview/image/l3/testimonial-bg.svg);
   background-repeat: no-repeat;
   position: absolute;
   top: -68%;
@@ -13240,7 +13240,7 @@ Content Area-1 L-11-2
 }
 
 .hero-area-l-14 .bg-shape-14 {
-  background: url(../image/l4/hero-bg.svg);
+  background: url(demos/shade-preview/image/l4/hero-bg.svg);
   background-repeat: no-repeat;
   position: absolute;
   top: 0px;
@@ -13480,7 +13480,7 @@ Content Area-1 L-11-2
 
 @media (min-width: 992px) {
   .features-area-l-14 .bg-shape-img-2 {
-    background: url(../image/l4/features-bg.png);
+    background: url(demos/shade-preview/image/l4/features-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -13899,7 +13899,7 @@ Content Area-1 L-11-2
 
 @media (min-width: 992px) {
   .cta-area-l-14 .bg-shape-img-3 {
-    background: url(../image/l4/cta-bg.png);
+    background: url(demos/shade-preview/image/l4/cta-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -14649,7 +14649,7 @@ Content Area-1 L-11-2
          Pricing-Area-L-15
                 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .pricing-area-l-15 {
-  background: url(../image/l5/l5-pricing-bg.png);
+  background: url(demos/shade-preview/image/l5/l5-pricing-bg.png);
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -15838,7 +15838,7 @@ Content Area-1 L-11-2
      Newsletter Area-L-16
   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .newsletter-area-l-16 {
-  background: url(../image/l7/l7-newslater-bg.png);
+  background: url(demos/shade-preview/image/l7/l7-newslater-bg.png);
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -16087,7 +16087,7 @@ Content Area-1 L-11-2
 }
 
 .hero-area-l-17 {
-  background: url(../image/l8/hero-bg.png);
+  background: url(demos/shade-preview/image/l8/hero-bg.png);
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -16530,7 +16530,7 @@ Content Area-1 L-11-2
           <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .video-area-l-17 {
   position: relative;
-  background: url(../image/l8/video-bg.png);
+  background: url(demos/shade-preview/image/l8/video-bg.png);
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -17774,7 +17774,7 @@ Content Area-1 L-11-2
             Testimonial Area-1-L-18
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .testimonial-area-l-18 {
-  background: url(../image/l9/testimonial-bg.png);
+  background: url(demos/shade-preview/image/l9/testimonial-bg.png);
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -19633,7 +19633,7 @@ Content Area-1 L-11-2
   justify-content: left;
   min-width: 285px;
   height: 57px;
-  background: #F8E587;
+  background: #f72b5c;
   border: 2px solid #2F4B6E;
   border-radius: 30.5px;
   font-family: Nunito;
@@ -19643,7 +19643,7 @@ Content Area-1 L-11-2
   line-height: 22px;
   letter-spacing: 0.888889px;
   text-transform: uppercase;
-  color: #2F4B6E;
+  color: #ffffff;
   margin-top: 40px;
 }
 
@@ -19869,7 +19869,7 @@ Content Area-1 L-11-2
         Sign In 01
     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .sign-in-1 {
-  background: url(../image/sign-in/sign-in-bg-1.png);
+  background: url(demos/shade-preview/image/sign-in/sign-in-bg-1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -20002,7 +20002,7 @@ Content Area-1 L-11-2
         Sign Up 01
     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .sign-up-1 {
-  background: url(../image/sign-in/sign-in-bg-2.png);
+  background: url(demos/shade-preview/image/sign-in/sign-in-bg-2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -20135,7 +20135,7 @@ Content Area-1 L-11-2
         Reset Password 01
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .reset-password-1 {
-  background: url(../image/sign-in/sign-in-bg-3.png);
+  background: url(demos/shade-preview/image/sign-in/sign-in-bg-3.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -20261,7 +20261,7 @@ Content Area-1 L-11-2
         Sign up 02
     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .sign-up-2 {
-  background: url(../image/sign-in/sign-up-2-bg.png);
+  background: url(demos/shade-preview/image/sign-in/sign-up-2-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -20393,7 +20393,7 @@ Content Area-1 L-11-2
         Sign In 02
     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .sign-in-2 {
-  background: url(../image/sign-in/sign-in-2-bg.png);
+  background: url(demos/shade-preview/image/sign-in/sign-in-2-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -20537,7 +20537,7 @@ Content Area-1 L-11-2
        Reset Password 02
     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .reset-pass-2 {
-  background: url(../image/sign-in/reset-pass-2-bg.png);
+  background: url(demos/shade-preview/image/sign-in/reset-pass-2-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -21950,7 +21950,7 @@ Content Area-1 L-11-2
         Blog Details
     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .inner-blog-details-banner {
-  background: url(../image/blog/blog-details-banner.png);
+  background: url(demos/shade-preview/image/blog/blog-details-banner.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23370,7 +23370,7 @@ Content Area-1 L-11-2
 }
 
 .inner-contact-form-area-1 {
-  background: url(../image/contact/contact-bg-1.png);
+  background: url(demos/shade-preview/image/contact/contact-bg-1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -23895,7 +23895,7 @@ Content Area-1 L-11-2
   padding-top: 180px;
   padding-bottom: 165px;
   position: relative;
-  background: url(../image/portfolio/portfolio-details-2-bg.png);
+  background: url(demos/shade-preview/image/portfolio/portfolio-details-2-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -24585,7 +24585,7 @@ Content Area-1 L-11-2
   position: relative;
   padding-top: 115px;
   padding-bottom: 115px;
-  background: url(../image/portfolio/portfolio-bg-4.png);
+  background: url(demos/shade-preview/image/portfolio/portfolio-bg-4.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
