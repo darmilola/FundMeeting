@@ -254,3 +254,81 @@ i {
     border-color: transparent!important;
     padding-bottom: 5px;
 }
+
+
+
+
+.about_root {
+    display: block;
+    background: white;
+    margin-left: 30px;
+    width: 330px;
+    padding-bottom: 30px;
+}
+.group_name_root {
+    height: 50px;
+    width: 100%;
+    background-color: #1877f2;
+    padding-top: 15px;
+    padding-left: 20px;
+    color: white;
+}
+.group_name {
+    margin-left: 20px;
+    font-size: 17px;
+}
+.group_description {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #505050;
+    word-spacing: 1px;
+    line-height: 25px;
+    font-family: "bentoreg";
+}
+.group_metas {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: black;
+}
+.post_rate {
+    margin-left: 40px;
+    color: black;
+}
+.creation_date {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: black;
+}
+
+.topics{
+
+}
+.popular_topics_root{
+    display: block;
+    background: white;
+    margin-left: 30px;
+    width: 330px;
+    padding-bottom: 30px;
+}
+.topic_posts {
+    margin-top: 1px;
+    margin-left: 15px;
+}
+.popular_topics {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 50px;
+    width: 100%;
+    background-color: #1877f2;
+    padding-top: 15px;
+    padding-left: 20px;
+    color: white;
+}
+.topic_name {
+    color: black;
+    margin-left: 15px;
+    font-weight: bold;
+}
