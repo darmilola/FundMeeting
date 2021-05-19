@@ -246,6 +246,11 @@ i {
     border-color: transparent!important;
     padding-bottom: 5px;
 }
+#navbarSupportedContent>ul>li.active>a>.main_profile_name{
+    color: #2f4b6e;
+    font-size: 15px;
+    font-family: 'bentoreg'
+}
 .dm_icon{
     height: 24px;
     width: 24px;
@@ -253,6 +258,12 @@ i {
     outline: none!important;
     border-color: transparent!important;
     padding-bottom: 5px;
+}
+.main_profile_name{
+    color: white;
+    font-size: 15px;
+    margin-left: 5px;
+    font-family: 'bentoreg'
 }
 
 
