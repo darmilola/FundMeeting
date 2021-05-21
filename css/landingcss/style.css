@@ -6,8 +6,8 @@ Generated using nucleoapp.com
 -------------------------------- */
 @font-face {
   font-family: 'Grayic';
-  src: url('../fonts/grayic.eot');
-  src: url('../fonts/grayic.eot') format('embedded-opentype'), url('../fonts/grayic.woff') format('woff2'), url('../fonts/grayic.woff') format('woff'), url('../fonts/grayic.ttf') format('truetype'), url('../fonts/grayic.svg') format('svg');
+  src: url('fonts/landingfonts/grayic.eot');
+  src: url('fonts/landingfonts/grayic.eot') format('embedded-opentype'), url('fonts/landingfonts/grayic.woff') format('woff2'), url('fonts/landingfonts/grayic.woff') format('woff'), url('fonts/landingfonts/grayic.ttf') format('truetype'), url('fonts/landingfonts/grayic.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
