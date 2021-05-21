@@ -15466,7 +15466,6 @@ a.shopping-cart > i {
     position: relative;
 }
 .msg-pepl-list .nav-item {
-    border-bottom: 1px solid #eaeaea;
     display: inline-block;
 	margin-bottom: 0;
     position: relative;
@@ -15480,10 +15479,10 @@ a.shopping-cart > i {
 }
 .msg-pepl-list .nav-item > a:hover,
 .msg-pepl-list .nav-item > a.active{
-	background: rgba(0,0,0,.05);
+	background: rgba(0,0,0,.09);
 }
 .msg-pepl-list .nav-item > a.active{
-	border-left: 1px solid;
+	border-left: 2px solid;
 }
 .msg-pepl-list .nav-item > a figure {
     display: inline-block;
@@ -15492,9 +15491,11 @@ a.shopping-cart > i {
     vertical-align: middle;
 }
 .msg-pepl-list .nav-item > a figure img {
-    border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 100%;
-    max-width: 40px;
+    max-width: 45px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
 }
 .msg-pepl-list .nav-item > a > div.user-name {
     display: inline-block;
