@@ -15666,6 +15666,7 @@ a.shopping-cart > i {
 .conversations > li > figure {
     display: inline-block;
     margin-bottom: 0;
+    border-radius: 100%!important;
     vertical-align: top;
 }
 .text-box {
@@ -15677,28 +15678,40 @@ a.shopping-cart > i {
     vertical-align: top;
 }
 .text-box > p {
-    background: #dae7f1;
+    background: #f8f9fa;
     border-radius: 5px;
     font-size: 13px;
     line-height: 20px;
     margin-bottom: 0;
-    padding: 8px 7px;
+    padding: 15px;
     position: relative;
-	color: #838195;
+	color: #676666;
+    font-family: "bentoreg";
+    font-size: 14px;
 }
 .conversations > li.me .text-box > p{
 	text-align: left;
-	background: #dbf4fd;
+	background: #007bff;
 }
 .conversations > li figure img {
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 100%;
-    max-width: 25px;
+    height: 45px;
+    width: 45px;
 }
 .text-box > p img {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     max-width: 150px;
+}
+
+@font-face {
+    font-family: "bento";
+    src: url('../fonts/bentomed.otf');
+}
+@font-face {
+    font-family: "bentoreg";
+    src: url('../fonts/bentonreg.otf');
 }
 
 .text-box > p span {
@@ -15723,10 +15736,11 @@ a.shopping-cart > i {
 .text-box > span {
     float: right;
     font-size: 11px;
+    color: #8b8989;
 }
 .text-box > span > i {
     color: #23d2e2;
-    margin-left: -7px;
+    margin-left: -15px;
 }
 .conversations > li.me {
     text-align: right;
@@ -15735,29 +15749,24 @@ a.shopping-cart > i {
     float: right;
     margin-left: 0;
     margin-right: 10px;
+    color: white!important;
 }
 .conversations > li.me > figure {
     float: right;
 }
-.text-box > p::before {
-    border-color: transparent #dae7f1 transparent transparent;
-    border-style: solid;
-    border-width: 8px;
-    content: "";
-    left: -14px;
-    position: absolute;
-    top: 7px;
-    z-index: 2;
-}
+
 .me .text-box > p::before {
-    border-left-color: #dbf4fd;
+    border-left-color: #2eb67d;
     border-right-color: transparent;
     left: auto;
+    color: white;!important;
     right: -14px;
 }
 .text-box > p a {
     display: inline;
+    color: white!important;
 }
+
 /*--- messenger writing area ---*/
 .message-writing-box {
     background: #fff;
@@ -15765,6 +15774,9 @@ a.shopping-cart > i {
     margin-top: 20px;
     width: 100%;
 	border-top: 2px solid #bababa;
+}
+.me > .text-box > p{
+    color: white;!important;
 }
 .message-writing-box > form {
     display: inline-block;
