@@ -1,0 +1,194 @@
+.text{
+    color: #002333;
+    font-size: 25px;
+    font-family: "bentobold";
+}
+
+@font-face {
+    font-family: "bento";
+    src: url('../fonts/bentomed.otf');
+}
+@font-face {
+    font-family: "bentoreg";
+    src: url('../fonts/bentonreg.otf');
+}
+@font-face {
+    font-family: "bentobold";
+    src: url('../fonts/bentobold.otf');
+}
+
+.multiple-items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 20px;
+}
+.carousel {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.card {
+    background-color: #fff;
+    max-width: 270px;
+    display: block;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    max-height: 380px;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+.card .banner {
+    background-image: url("https://cdn.pixabay.com/photo/2021/05/22/21/32/man-6274651_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.group_name {
+    text-align: left;
+    margin-left: 25px;
+    font-weight: 500;
+    font-family: "bento";
+    font-size: 15px;
+    height: auto;
+    color: #1d1d1d;
+
+}
+.group_metas {
+    color: #504e4e;
+    font-size: 0.85rem;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.card .actions {
+    padding: 0 2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    order: 99;
+}
+.card .actions .follow-info {
+    display: flex;
+}
+
+.card .actions .follow-btn button {
+    color: inherit;
+    font: inherit;
+    background-color: #0a76ca;
+    height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: bento;
+    transition: background-color 100ms ease-in-out,
+    transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.card .group_desc {
+    text-align: justify;
+    padding-left: 25px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    max-lines: 3;
+    margin-right: 20px;
+    font-family: "bentoreg";
+    color: #767676;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.dot {
+    height: 4px;
+    width: 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-top: 7px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+@font-face {
+    font-family: "bento";
+    src: url("../fonts/bentomed.otf");
+}
+@font-face {
+    font-family: "bentoreg";
+    src: url("../fonts/bentonreg.otf");
+}
+
+.left_arrow_root {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50px;
+    border-color: darkgray;
+    border-width: 15px;
+    float: left;
+    z-index: 2;
+    text-align: center;
+    margin-top: 150px;
+    margin-left: -70px;
+    position: relative;
+    box-shadow: 0.8px 0.8px #888888;
+}
+.right_arrow_root {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50px;
+    border-color: darkgray;
+    border-width: 15px;
+    box-shadow: 0.8px 0.8px #888888;
+    text-align: center;
+    float: right;
+    z-index: 2;
+    margin-right: -70px;
+    margin-top: 150px;
+    position: relative;
+}
+
+.right_arrow {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.left_arrow {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+.navigation_root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
