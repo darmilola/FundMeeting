@@ -4,6 +4,7 @@
     font-weight: bold;
     font-family: "bento";
     margin-top: 30px;
+
 }
 .category_text{
     color: #002333;
@@ -75,24 +76,24 @@
 
 .card {
     background-color: #fff;
-    max-width: 270px;
+    max-width: 360px!important;
+    min-height: 400px!important;
+    max-height: 400px!important;
     display: block;
     overflow: hidden;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;
-    max-height: 380px;
     margin-bottom: 10px;
     border-radius: 0.5rem;
-    margin-top: 0px;
-    box-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0.1rem 0.1rem rgba(118, 118, 118, 0.5);
 }
 .card .banner {
     background-image: url("https://cdn.pixabay.com/photo/2021/05/01/13/11/wasp-6220978_960_720.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 150px;
+    height: 210px;
     display: flex;
     align-items: flex-end;
     margin-bottom: 10px;
