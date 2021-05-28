@@ -266,7 +266,11 @@ i {
     font-family: 'bentoreg'
 }
 
-
+.chat_name{
+    color: white!important;
+    font-family: 'bentoreg';
+    size: 16px!important;
+}
 
 
 .about_root {
@@ -369,4 +373,13 @@ i {
     padding-top: 15px;
     padding-left: 20px;
     color: white;
+}
+
+@font-face {
+    font-family: "bento";
+    src: url('../fonts/bentomed.otf');
+}
+@font-face {
+    font-family: "bentoreg";
+    src: url('../fonts/bentonreg.otf');
 }
