@@ -1,0 +1,77 @@
+.discussion_topic{
+    color: #17283e;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "bento";
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.discussion_date_time{
+    color: #17283e;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "bento";
+    margin-left: 10px;
+}
+.people_attending{
+    color: #383838;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    font-family: "bentothin";
+}
+@font-face {
+    font-family: "bento";
+    src: url("../fonts/bentomed.otf");
+}
+@font-face {
+    font-family: "bentoreg";
+    src: url("../fonts/bentonreg.otf");
+}
+@font-face {
+    font-family: "bentothin";
+    src: url("../fonts/bentolight.otf");
+}
+
+.discussion_info{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    position: relative;
+    top: 50%;
+    left: 35%;
+
+}
+.discussion_info_root{
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+    justify-content: center;
+    align-content: flex-start;
+    text-align: center;
+}
+.icon_background {
+    border: 2px solid #d7d5d5;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    border-radius: 100%;
+    justify-content: center;
+    opacity: 0.7;
+}
+.join_discussion{
+    color: white;
+    background-color: #0a76ca;
+    height: 40px;
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    outline: none;
+    position: relative;
+    top: 50%;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: bento;
+}

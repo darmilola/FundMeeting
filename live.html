@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>TimesBuddy | World Times Social Media</title>
+    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <link rel="stylesheet" href="css/toast-notification.css">
+    <link rel="stylesheet" href="css/page-tour.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/make_discoveries.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/post_action_area.css">
+    <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/videoplayer.css"/>
+    <link rel="stylesheet" href="css/homeheader.css"/>
+    <link rel = "stylesheet" href="css/live.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/css/mdDateTimePicker.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"/>
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="theme-layout">
+
+    <!--- Home Header Starts here   ---->
+
+    <div style="height: 15px; background-color: #2f4b6e;"></div>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="#"><span style="color: #fa2d65">Times</span><span style="color: white;">Buddy</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item active">
+                    <a style="font-size: 16px;" class="nav-link" href="javascript:void(0);"><img class="home_icon"></img><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><img class="community_icon"></img><span>Community</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><img class="discussion_icon"></img><span>Discussion Party</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><img class="dm_icon"></img><span>Chats</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><img class="notification_icon"></img><span>Notifications</span></a>
+
+                </li>
+                <li class="nav-item" style="margin-right: 40px;">
+                    <a class="nav-link" href="javascript:void(0);">	<img  class="home_profile_image" src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg" alt="profile image" style="height: 32px; width: 32px;"/></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home header ends here --->
+
+
+
+
+
+    <section>
+        <div class="gap2 gray-bg" style="min-height: 90vh;">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-10" style="margin-left: -30px!important;">
+
+                            <div class="vertical-tab" role="tabpanel">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="join"><a class="active"  href="#Section1" aria-controls="join now" role="tab" data-toggle="tab" aria-expanded="false"><div class="live_tab_items"><div class="icon_background" id="camera_icon_unsel"><img class="camera_icon" src="images/svg/camera_unsel.svg"/></div> <div class="icon_background_sel" id="camera_sel"><img class="camera_icon" src="images/svg/camera_sel.svg"/></div><div class="icon_text">Go Live Now</div></div></a></li>
+                                    <li role="presentation" class="create"><a href="#Section2" aria-controls="create" role="tab" data-toggle="tab" aria-expanded="true"><div class="live_tab_items"><div class="icon_background_sel" id="live_icon_sel"><img class="live_icon"  src="images/svg/live-time-selected.svg"/></div>  <div class="icon_background" id="live_icon_unsel"><img class="live_icon"  src="images/svg/live-time.svg"/></div><div class="icon_text">Schedule a new  Discussion</div></div></a></li>
+                                    <li role="presentation" class="join"><a href="#Section3" aria-controls="join" role="tab" data-toggle="tab" aria-expanded="false"><div class="live_tab_items"><div class="icon_background" id="create_icon_unsel"><img class="live_icon" src="images/svg/live-date.svg"/></div> <div class="icon_background_sel" id="create_icon_sel"><img class="live_icon" src="images/svg/live-date-selected.svg"/></div><div class="icon_text">View Upcoming Discussions</div></div></a></li>
+                                    <div style="background-color: #dcdcdc; height: 1px; width: 100%; margin-bottom: 10px;"></div>
+
+
+
+                                    <!--- Schedule discussion firstpage starts here ---->
+
+                                    <span class="text" style="margin-left: 20px; font-size: 14px; margin-top: 15px;">Details</span>
+
+                                    <div class="schedule_discussion_firstpage" style="display: block">
+
+
+                                    <div class="form-element form-input">
+                                        <div class="form-element-bar">
+                                            <input
+                                                    class="form-element-field"
+                                                    type="input"
+                                                    placeholder="Discussion Title"
+                                                    required
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-element form-textarea">
+                                        <div class="form-element-bar-text-area">
+                                 <textarea
+                                     id="field-3naeph-0f3yuw-x153ph-dzmahy-qhkmgm"
+                                     class="form-element-field-text-area"
+                                     placeholder="Say Something about this discussion"
+                                      ></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex">
+
+
+                                        <div class="form-element form-input" style="margin-right: 5px;">
+                                            <div class="form-element-bar">
+                                               <div style="display: flex">
+                                                   <img src="images/svg/calender.svg" style="height: 16px!important; width: 16px!important; margin-top: 10px; margin-left: 5px; color: black"></img>
+                                                <input
+                                                        id="start_date"
+                                                        class="form-element-field"
+                                                        type="input"
+                                                        style="margin-top: 10px;"
+                                                        placeholder="Start Date"
+                                                        required
+                                                />
+                                               </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-element form-input" style="margin-left: 5px;">
+                                            <div class="form-element-bar">
+                                                <div style="display: flex">
+                                                    <img src="images/svg/stopwatch.svg" style="height: 22px!important; width: 22px!important; margin-top: 7px; margin-left: 5px; color: black"></img>
+
+                                                    <input
+                                                        id="start_time"
+                                                        class="form-element-field"
+                                                        type="input"
+                                                        style="margin-top: 10px;"
+                                                        placeholder="Start Time"
+                                                        required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="add_end_time" style="display: flex; cursor: pointer; color: #337ab7; margin-top: 10px; font-size: 13px;">
+                                        <img id="colored_add" src="images/svg/addcolored.svg" style="height: 17px!important; width: 17px!important; margin-left: 5px; display: block;"></img>
+                                        <img  id="colored_remove" src="images/svg/removecolored.svg" style="height: 17px!important; width: 17px!important; display: none; margin-left: 5px;"></img>
+                                        Add end time
+                                    </div>
+
+                                    <div class="form-element form-input" id="end_time_form" style="display: none;">
+                                        <div class="form-element-bar">
+                                            <div style="display: flex">
+                                                <img src="images/svg/stopwatch.svg" style="height: 22px!important; width: 22px!important; margin-top: 7px; margin-left: 5px; color: black"></img>
+
+                                                <input
+                                                        id="end_time"
+                                                        class="form-element-field"
+                                                        type="input"
+                                                        style="margin-top: 10px;"
+                                                        placeholder="End Time"
+                                                        required/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <label class="dropdown">
+                                        <div class="dd-button">
+                                            Privacy
+                                        </div>
+
+                                        <input type="checkbox" class="dd-input" id="test" />
+
+                                        <ul class="dd-menu">
+                                            <li>By Invitation</li>
+                                            <li>Another action</li>
+                                            <li>Communities you belong</li>
+                                        </ul>
+                                    </label>
+
+
+                                    <div class="schedule_discussion_next" style="height: 30px; width: 310px; display: flex; justify-content: center; align-items: center; background-color: #1182e3; color: white; font-size: 14px; border-radius: 5px; position:absolute; top: 100%; left: 0; margin-top: -40px;">Next</div>
+                                    </div>
+                                    <!--- Schedule discussion firstpage ends here ---->
+
+
+
+                                    <!---- Schedule discussion secondpage starts here ---->
+
+                                    <div class="schedule_discussion_secondpage" style="display: none">
+
+
+                                        <div style="width: 100%; height: 150px; border: darkgrey solid 1px; border-radius: 7px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
+                                            <div style="font-size:12px; font-family: bento; height: 35px; width: 60%; background-color: lightgrey; border-radius: 7px; display: flex; color: black; justify-content: center; align-items: center;">
+                                              <img src="images/svg/coverphoto.svg" style="height: 16px; width: 24px; margin-right: 10px;"/>Upload Cover Photo
+                                            </div>
+                                        </div>
+
+                                        <div id="add_tags_container"
+                                                class="chip-group"
+                                                style="display: inline-flex; margin-top: 20px;"
+                                        ></div>
+                                        <div style="display: inline-flex;">
+                                            <input
+                                                    aria-labelledby="add_tags_btn"
+                                                    id="add_tags"
+                                                    type="text"
+                                                    style="margin-top: 10px; background-color: transparent; border: darkgrey solid 1px; border-radius: 4px;"
+                                                    placeholder="Tags..."
+                                            />
+                                            <button
+                                                    aria-label="Add Tags"
+                                                    class="btn btn-primary"
+                                                    id="add_tags_btn"
+                                                    style="margin-left: 10px; height: 40px; margin-top: 10px; width: 60px;"
+                                            >
+                                                Add
+                                            </button>
+                                        </div>
+
+
+
+                                        <div style="display: flex; position:absolute; top: 100%; left: 0; width: 310px;margin-top: -40px;">
+
+                                            <div class="schedule_discussion_back" style="height: 30px; width: 30%; display: flex; justify-content: center; align-items: center; background-color: lightgrey; font-family: bento; color: black; font-size: 12px; border-radius: 5px;">Back</div>
+
+                                            <div style="height: 30px; width: 70%; display: flex; justify-content: center; align-items: center; background-color: #1182e3; color: white; font-family: bento; font-size: 12px; border-radius: 5px; margin-left: 10px;">Create Discussion</div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <!---- Schedule discussion secondpage ends here ---->
+
+
+
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content tabs">
+
+
+
+
+
+
+
+
+                                    <!----  Join Now Section Starts here  ----->
+                                    <div role="tabpanel" class="tab-pane active" id="Section1">
+
+
+
+
+
+
+                                    </div>
+
+                                    <!----  Join Now Section Ends here  ----->
+
+
+
+
+
+
+
+
+                                    <!----  Schedule Live Starts here  ----->
+
+                                    <div role="tabpanel" class="tab-pane" id="Section2">
+                                        <h3>Section 2</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                                    </div>
+
+                                    <!----  Schedule live ends here  ----->
+
+
+
+
+
+
+
+
+
+
+                                    <!----  View Upcoming Section Starts here  ----->
+
+                                    <div role="tabpanel" class="tab-pane fade" id="Section3">
+                                        <span class="text" style="margin-left: 60px; font-size: 16px;">Upcoming live Discussions</span>
+
+                                        <div class="grid" style="margin-top: 30px; margin-left: 50px;">
+
+                                            <div class="card">
+                                                <div class="banner">
+                                                    <div class="discussion_date">
+                                                        <span class="discussion_date_info">November 28th 2021</span>
+                                                    </div>
+                                                </div>
+                                                <div class="discussion_topic">
+                                                    Radical Creativity: Nurture Your Truest Self, Create Art With Meaning
+                                                </div>
+                                                <div class="discussion_host">
+                                                    <img
+                                                            class="host_image"
+                                                            src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"
+                                                    />
+                                                    <span class="host_name">Hosted by Maroon 5 The HipHop Artist </span>
+                                                </div>
+                                                <div class="discussion_join">
+                                                    <span class="discussion_join_text">Start Now</span>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="banner">
+                                                    <div class="discussion_date">
+                                                        <span class="discussion_date_info">November 28th 2021</span>
+                                                    </div>
+                                                </div>
+                                                <div class="discussion_topic">
+                                                    Radical Creativity: Nurture Your Truest Self, Create Art With Meaning
+                                                </div>
+                                                <div class="discussion_host">
+                                                    <img
+                                                            class="host_image"
+                                                            src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"
+                                                    />
+                                                    <span class="host_name">Hosted by Maroon 5 The HipHop Artist </span>
+                                                </div>
+                                                <div class="discussion_join">
+                                                    <span class="discussion_join_text">Start Now</span>
+                                                </div>
+                                            </div>
+
+
+                                    </div>
+                                    </div>
+
+                                    <!----  View Upcoming ends here  ----->
+
+
+
+
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+</div>
+
+
+
+
+
+
+    <script src="js/main.min.js"></script>
+    <script src="js/toast-notificatons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script><!-- For timeline slide show -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script><!-- for location picker map -->
+    <script src="js/locationpicker.jquery.js"></script><!-- for loaction picker map -->
+    <script src="js/map-init.js"></script><!-- map initilasition -->
+    <script src="js/script.js"></script>
+    <script src="js/gellery.js"></script>
+    <script src="js/actions.js"></script>
+    <script src="js/homeheader.js"/>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="./dist/js/moment.min.js"></script>
+    <script src="./dist/js/mdDateTimePicker.js"></script>
+    <script src="./dist/js/scroll-into-view-if-needed.min.js"></script>
+    <script src="./dist/js/draggabilly.pkgd.min.js"></script>
+    <script src = "js/live.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+
+    var startDateDialog = new mdDateTimePicker.default({
+        init: moment("2021-09-2", "YYYY-MM-DD"),
+        type: 'date'
+    });
+
+    var toggleStartDate = document.getElementById('start_date');
+    toggleStartDate.addEventListener('focus', function() {
+        startDateDialog.toggle();
+    });
+
+     startDateDialog.trigger = toggleStartDate;
+     toggleStartDate.addEventListener("onOk", function () {
+
+        this.value = startDateDialog.time.toString();
+
+    });
+
+
+    var startTimeDialog = new mdDateTimePicker.default({
+        type: 'time'
+    });
+
+    var endTimeDialog = new mdDateTimePicker.default({
+        type: 'time'
+    });
+
+    var toggleEndTime = document.getElementById('end_time');
+    toggleEndTime.addEventListener('focus', function() {
+        endTimeDialog.toggle();
+    });
+
+    var toggleStartTime = document.getElementById('start_time');
+    toggleStartTime.addEventListener('focus', function() {
+        startTimeDialog.toggle();
+    });
+
+
+    startTimeDialog.trigger = toggleStartTime;
+    toggleStartTime.addEventListener("onOk", function () {
+
+        this.value = startTimeDialog.time.toString();
+
+    });
+    endTimeDialog.trigger = toggleEndTime;
+    toggleEndTime.addEventListener("onOk", function () {
+
+        this.value = endTimeDialog.time.toString();
+
+    });
+
+</script>
+
+
+
+
+
+<script>
+    $("#add_tags_btn").click(function () {
+        let $txt = $("#add_tags");
+        let filter = $txt.val();
+        $txt.val("");
+        $(`
+          <div class = "chip" tabindex = "-1">
+            <span>
+              ${filter}
+            </span>
+            <button title="Remove chip" aria-label="Remove tag" type = "button" onclick = "$(this).parent().remove()">
+              <i class = "material-icons">cancel</i>
+            </button>
+          </div>`).appendTo("#add_tags_container");
+    });
+
+    function autocomplete(inp, arr) {
+        /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function (e) {
+            var a,
+                b,
+                i,
+                val = this.value;
+            /*close any already open lists of autocompleted values*/
+            closeAllLists();
+            if (!val) {
+                return false;
+            }
+            currentFocus = -1;
+            /*create a DIV element that will contain the items (values):*/
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            /*append the DIV element as a child of the autocomplete container:*/
+            this.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (i = 0; i < arr.length; i++) {
+                var pos = arr[i].toUpperCase().indexOf(val.toUpperCase());
+                /*check if the item starts with the same letters as the text field value:*/
+                if (pos > -1) {
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = arr[i].substr(0, pos);
+                    b.innerHTML +=
+                        "<strong>" + arr[i].substr(pos, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(pos + val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function (e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                      (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+            }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function (e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                /*If the arrow DOWN key is pressed,
+            increase the currentFocus variable:*/
+                currentFocus++;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 38) {
+                //up
+                /*If the arrow UP key is pressed,
+            decrease the currentFocus variable:*/
+                currentFocus--;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    /*and simulate a click on the "active" item:*/
+                    if (x) x[currentFocus].click();
+                }
+            }
+        });
+        function addActive(x) {
+            /*a function to classify an item as "active":*/
+            if (!x) return false;
+            /*start by removing the "active" class on all items:*/
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = x.length - 1;
+            /*add class "autocomplete-active":*/
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+            /*a function to remove the "active" class from all autocomplete items:*/
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+        function closeAllLists(elmnt) {
+            /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+    }
+
+    /*An array containing all the country names in the world:*/
+    var countries = [
+        "Afghanistan",
+        "South Korea",
+        "South Sudan",
+        "Spain",
+        "Sri Lanka",
+        "St Kitts & Nevis",
+        "St Lucia",
+        "St Vincent",
+        "Sudan",
+        "Suriname",
+        "Swaziland",
+        "Sweden",
+        "Switzerland",
+        "Syria",
+        "Taiwan",
+        "Tajikistan",
+        "Tanzania",
+        "Thailand",
+        "Timor L'Este",
+        "Togo",
+        "Tonga",
+        "Trinidad & Tobago",
+        "Tunisia",
+        "Turkey",
+        "Turkmenistan",
+        "Turks & Caicos",
+        "Tuvalu",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States of America",
+        "Uruguay",
+        "Uzbekistan",
+        "Vanuatu",
+        "Vatican City",
+        "Venezuela",
+        "Vietnam",
+        "Virgin Islands (US)",
+        "Yemen",
+        "Zambia",
+        "Zimbabwe"
+    ];
+
+    /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+    autocomplete(document.getElementById("add_tags"), countries);
+</script>
+
+
+
+</body>
+</html>
+
+
