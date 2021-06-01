@@ -8,7 +8,7 @@
     <meta name="keywords" content="" />
     <title>TimesBuddy | World Times Social Media</title>
     <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
-
+    <link rel="stylesheet" href="dist/css/mdDateTimePicker.css">
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/weather-icons.min.css">
     <link rel="stylesheet" href="css/toast-notification.css">
@@ -25,6 +25,10 @@
     <link rel="stylesheet" type="text/css" href="css/videoplayer.css"/>
     <link rel="stylesheet" href="css/homeheader.css"/>
     <link rel = "stylesheet" href="css/live.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'
+          rel='stylesheet' type='text/css'>
+
+
 
 </head>
 <body>
@@ -81,23 +85,227 @@
                             <div class="vertical-tab" role="tabpanel">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="create"><a class="active" href="#Section1" aria-controls="create" role="tab" data-toggle="tab" aria-expanded="true"><div class="live_tab_items"><div class="icon_background_sel" id="live_icon_sel"><img class="live_icon"  src="images/svg/live-time-selected.svg"/></div>  <div class="icon_background" id="live_icon_unsel"><img class="live_icon"  src="images/svg/live-time.svg"/></div><div class="live_icon_text">Schedule a new  Discussion</div></div></a></li>
-                                    <li role="presentation" class="join"><a href="#Section2" aria-controls="join" role="tab" data-toggle="tab" aria-expanded="false"><div class="live_tab_items"><div class="icon_background" id="create_icon_unsel"><img class="live_icon" src="images/svg/live-date.svg"/></div> <div class="icon_background_sel" id="create_icon_sel"><img class="live_icon" src="images/svg/live-date-selected.svg"/></div><div class="live_icon_text">View Upcoming Discussions</div></div></a></li>
-                                    <div style="background-color: #0a9c4c; height: 100%; width: 100%">
+                                    <li role="presentation" class="join"><a class="active"  href="#Section1" aria-controls="join now" role="tab" data-toggle="tab" aria-expanded="false"><div class="live_tab_items"><div class="icon_background" id="camera_icon_unsel"><img class="camera_icon" src="images/svg/camera_unsel.svg"/></div> <div class="icon_background_sel" id="camera_sel"><img class="camera_icon" src="images/svg/camera_sel.svg"/></div><div class="icon_text">Go Live Now</div></div></a></li>
+                                    <li role="presentation" class="create"><a href="#Section2" aria-controls="create" role="tab" data-toggle="tab" aria-expanded="true"><div class="live_tab_items"><div class="icon_background_sel" id="live_icon_sel"><img class="live_icon"  src="images/svg/live-time-selected.svg"/></div>  <div class="icon_background" id="live_icon_unsel"><img class="live_icon"  src="images/svg/live-time.svg"/></div><div class="icon_text">Schedule a new  Discussion</div></div></a></li>
+                                    <li role="presentation" class="join"><a href="#Section3" aria-controls="join" role="tab" data-toggle="tab" aria-expanded="false"><div class="live_tab_items"><div class="icon_background" id="create_icon_unsel"><img class="live_icon" src="images/svg/live-date.svg"/></div> <div class="icon_background_sel" id="create_icon_sel"><img class="live_icon" src="images/svg/live-date-selected.svg"/></div><div class="icon_text">View Upcoming Discussions</div></div></a></li>
+                                    <div style="background-color: #dcdcdc; height: 1px; width: 100%; margin-bottom: 10px;"></div>
 
+                                    <span class="text" style="margin-left: 20px; font-size: 14px; margin-top: 15px;">Details</span>
+
+                                    <div class="form-element form-input">
+                                        <div class="form-element-bar">
+                                            <input
+                                                    class="form-element-field"
+                                                    type="input"
+                                                    placeholder="Discussion Title"
+                                                    required
+                                            />
+                                        </div>
                                     </div>
+
+                                    <div class="form-element form-textarea">
+                                        <div class="form-element-bar-text-area">
+                                 <textarea
+                                     id="field-3naeph-0f3yuw-x153ph-dzmahy-qhkmgm"
+                                     class="form-element-field-text-area"
+                                     placeholder="Say Something about this discussion"
+                                      ></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex">
+
+
+                                        <div class="form-element form-input" style="margin-right: 5px;">
+                                            <div class="form-element-bar">
+                                               <div style="display: flex">
+                                                   <img src="images/svg/calender.svg" style="height: 16px!important; width: 16px!important; margin-top: 10px; margin-left: 5px; color: black"></img>
+                                                <input
+                                                        id="start_date"
+                                                        class="form-element-field"
+                                                        type="input"
+                                                        style="margin-top: 10px;"
+                                                        placeholder="Start Date"
+                                                        required
+                                                />
+                                               </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-element form-input" style="margin-left: 5px;">
+                                            <div class="form-element-bar">
+                                                <div style="display: flex">
+                                                    <img src="images/svg/stopwatch.svg" style="height: 22px!important; width: 22px!important; margin-top: 7px; margin-left: 5px; color: black"></img>
+
+                                                    <input
+                                                        id="start_time"
+                                                        class="form-element-field"
+                                                        type="input"
+                                                        style="margin-top: 10px;"
+                                                        placeholder="Start Time"
+                                                        required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex; color: #337ab7; margin-top: 10px; font-size: 13px;">
+                                        <img src="images/svg/addcolored.svg" style="height: 17px!important; width: 17px!important; margin-left: 5px;"></img>
+                                        Add end time
+                                    </div>
+
+                                    <div class="form-element form-input">
+                                        <div class="form-element-bar">
+                                            <div style="display: flex">
+                                                <img src="images/svg/stopwatch.svg" style="height: 22px!important; width: 22px!important; margin-top: 7px; margin-left: 5px; color: black"></img>
+
+                                                <input
+                                                        id="end_time"
+                                                        class="form-element-field"
+                                                        type="input"
+                                                        style="margin-top: 10px;"
+                                                        placeholder="End Time"
+                                                        required/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <label class="dropdown">
+                                        <div class="dd-button">
+                                            Privacy
+                                        </div>
+
+                                        <input type="checkbox" class="dd-input" id="test" />
+
+                                        <ul class="dd-menu">
+                                            <li>Action</li>
+                                            <li>Another action</li>
+                                            <a href="#sub-menu" class="list-group-item active" data-toggle="collapse" data-target="#groups">Item 1 <span class="caret"></span></a>
+                                            <div  class="navbar-collapse collapse"  style="display: grid;" id="groups">
+                                                <a href="#" class="list-group-item" data-parent="#sub-menu">Sub Item 1</a>
+                                                <a href="#" class="list-group-item" data-parent="#sub-menu">Sub Item 2</a>
+                                                <a href="#" class="list-group-item" data-parent="#sub-menu">Sub Item 1</a>
+                                                <a href="#" class="list-group-item" data-parent="#sub-menu">Sub Item 2</a>
+                                                <a href="#" class="list-group-item" data-parent="#sub-menu">Sub Item 1</a>
+                                                <a href="#" class="list-group-item" data-parent="#sub-menu">Sub Item 2</a>
+
+                                            </div>
+
+                                        </ul>
+                                    </label>
+
+
+
+
+
+
 
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content tabs">
+
+
+
+
+
+
+
+
+                                    <!----  Join Now Section Starts here  ----->
                                     <div role="tabpanel" class="tab-pane active" id="Section1">
-                                        <h3>Section 1</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+
+
+
+
+
+
                                     </div>
-                                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+
+                                    <!----  Join Now Section Ends here  ----->
+
+
+
+
+
+
+
+
+                                    <!----  Schedule Live Starts here  ----->
+
+                                    <div role="tabpanel" class="tab-pane" id="Section2">
                                         <h3>Section 2</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
                                     </div>
+
+                                    <!----  Schedule live ends here  ----->
+
+
+
+
+
+
+
+
+
+
+                                    <!----  View Upcoming Section Starts here  ----->
+
+                                    <div role="tabpanel" class="tab-pane fade" id="Section3">
+                                        <span class="text" style="margin-left: 60px; font-size: 16px;">Upcoming live Discussions</span>
+
+                                        <div class="grid" style="margin-top: 30px; margin-left: 50px;">
+
+                                            <div class="card">
+                                                <div class="banner">
+                                                    <div class="discussion_date">
+                                                        <span class="discussion_date_info">November 28th 2021</span>
+                                                    </div>
+                                                </div>
+                                                <div class="discussion_topic">
+                                                    Radical Creativity: Nurture Your Truest Self, Create Art With Meaning
+                                                </div>
+                                                <div class="discussion_host">
+                                                    <img
+                                                            class="host_image"
+                                                            src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"
+                                                    />
+                                                    <span class="host_name">Hosted by Maroon 5 The HipHop Artist </span>
+                                                </div>
+                                                <div class="discussion_join">
+                                                    <span class="discussion_join_text">Start Now</span>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="banner">
+                                                    <div class="discussion_date">
+                                                        <span class="discussion_date_info">November 28th 2021</span>
+                                                    </div>
+                                                </div>
+                                                <div class="discussion_topic">
+                                                    Radical Creativity: Nurture Your Truest Self, Create Art With Meaning
+                                                </div>
+                                                <div class="discussion_host">
+                                                    <img
+                                                            class="host_image"
+                                                            src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"
+                                                    />
+                                                    <span class="host_name">Hosted by Maroon 5 The HipHop Artist </span>
+                                                </div>
+                                                <div class="discussion_join">
+                                                    <span class="discussion_join_text">Start Now</span>
+                                                </div>
+                                            </div>
+
+
+                                    </div>
+                                    </div>
+
+                                    <!----  View Upcoming ends here  ----->
+
+
+
+
                                 </div>
                             </div>
                     </div>
@@ -110,7 +318,11 @@
 
 
 
+
+
+
     <script src="js/main.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/jquery-stories.js"></script>
     <script src="js/toast-notificatons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script><!-- For timeline slide show -->
@@ -122,16 +334,70 @@
     <script src="js/actions.js"></script>
     <script src="js/homeheader.js"/>
     <script src = "js/live.js"/>
-    <style>
-        .video-js .vjs-control-bar {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="./dist/js/moment.min.js"></script>
+    <script src="./dist/js/mdDateTimePicker.js"></script>
+    <script src="./dist/js/scroll-into-view-if-needed.min.js"></script>
+    <script src="./dist/js/draggabilly.pkgd.min.js"></script>
 
-        }
-    </style>
-    <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+
+
+
+<script type="text/javascript">
+
+    var startDateDialog = new mdDateTimePicker.default({
+        type: 'date'
+    });
+
+    var toggleStartDate = document.getElementById('start_date');
+    toggleStartDate.addEventListener('focus', function() {
+        startDateDialog.toggle();
+    });
+
+     startDateDialog.trigger = toggleStartDate;
+     toggleStartDate.addEventListener("onOk", function () {
+
+        this.value = startDateDialog.time.toString();
+
+    });
+
+
+    var startTimeDialog = new mdDateTimePicker.default({
+        type: 'time'
+    });
+
+    var endTimeDialog = new mdDateTimePicker.default({
+        type: 'time'
+    });
+
+    var toggleEndTime = document.getElementById('end_time');
+    toggleEndTime.addEventListener('focus', function() {
+        endTimeDialog.toggle();
+    });
+
+    var toggleStartTime = document.getElementById('start_time');
+    toggleStartTime.addEventListener('focus', function() {
+        startTimeDialog.toggle();
+    });
+
+
+    startTimeDialog.trigger = toggleStartTime;
+    toggleStartTime.addEventListener("onOk", function () {
+
+        this.value = startTimeDialog.time.toString();
+
+    });
+    endTimeDialog.trigger = toggleEndTime;
+    toggleEndTime.addEventListener("onOk", function () {
+
+        this.value = endTimeDialog.time.toString();
+
+    });
+
+
+
+
+</script>
 </body>
 </html>
 
