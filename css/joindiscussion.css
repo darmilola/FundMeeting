@@ -23,6 +23,19 @@
     margin-right: 200px;
 }
 
+.anonymous_desc{
+    color: #504f4f;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "bentothin";
+    margin-top: 3px;
+    justify-content: left;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
 .discussion_date_time{
     color: #17283e;
     font-size: 17px;
@@ -34,6 +47,7 @@
     color: #504f4f;
     font-size: 15px;
     margin-top: 10px;
+    font-weight: bold;
     font-family: "bentothin";
 }
 @font-face {
