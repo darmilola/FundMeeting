@@ -89,11 +89,12 @@
                     <div class="col-lg-10" style="margin-left: -30px!important;">
 
                             <div class="vertical-tab" role="tabpanel">
+
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="join"><a class="active"  href="#Section1" aria-controls="join now" role="tab" data-toggle="tab" aria-expanded="false"><div class="live_tab_items"><div class="icon_background" id="camera_icon_unsel"><img class="camera_icon" src="images/svg/camera_unsel.svg"/></div> <div class="icon_background_sel" id="camera_sel"><img class="camera_icon" src="images/svg/camera_sel.svg"/></div><div class="icon_text">Go Live Now</div></div></a></li>
-                                    <li role="presentation" class="create"><a href="#Section2" aria-controls="create" role="tab" data-toggle="tab" aria-expanded="true"><div class="live_tab_items"><div class="icon_background_sel" id="live_icon_sel"><img class="live_icon"  src="images/svg/live-time-selected.svg"/></div>  <div class="icon_background" id="live_icon_unsel"><img class="live_icon"  src="images/svg/live-time.svg"/></div><div class="icon_text">Schedule a new  Discussion</div></div></a></li>
-                                    <li role="presentation" class="join"><a href="#Section3" aria-controls="join" role="tab" data-toggle="tab" aria-expanded="false"><div class="live_tab_items"><div class="icon_background" id="create_icon_unsel"><img class="live_icon" src="images/svg/live-date.svg"/></div> <div class="icon_background_sel" id="create_icon_sel"><img class="live_icon" src="images/svg/live-date-selected.svg"/></div><div class="icon_text">View Upcoming Discussions</div></div></a></li>
+                                    <li role="presentation" class="join"><a class="active"  href="#Section1" aria-controls="join now" role="tab" data-toggle="tab" aria-expanded="true"><div class="live_tab_items"><div class="icon_background" id="camera_icon_unsel"><img class="camera_icon" src="images/svg/camera_unsel.svg"/></div> <div class="icon_background_sel" id="camera_sel"><img class="camera_icon" src="images/svg/camera_sel.svg"/></div><div class="icon_text">Go Live Now</div></div></a></li>
+                                    <li role="presentation" class="join"><a href="#Section2" aria-controls="create" role="tab" data-toggle="tab"><div class="live_tab_items"><div class="icon_background_sel" id="live_icon_sel"><img class="live_icon"  src="images/svg/live-time-selected.svg"/></div>  <div class="icon_background" id="live_icon_unsel"><img class="live_icon"  src="images/svg/live-time.svg"/></div><div class="icon_text">Schedule a new  Discussion</div></div></a></li>
+                                    <li role="presentation" class="join"><a href="#Section3" aria-controls="join" role="tab" data-toggle="tab"><div class="live_tab_items"><div class="icon_background" id="create_icon_unsel"><img class="live_icon" src="images/svg/live-date.svg"/></div> <div class="icon_background_sel" id="create_icon_sel"><img class="live_icon" src="images/svg/live-date-selected.svg"/></div><div class="icon_text">View Upcoming Discussions</div></div></a></li>
                                     <div style="background-color: #dcdcdc; height: 1px; width: 100%; margin-bottom: 10px;"></div>
 
 
@@ -258,6 +259,8 @@
 
 
                                 </ul>
+
+
                                 <!-- Tab panes -->
                                 <div class="tab-content tabs">
 
@@ -271,10 +274,11 @@
                                     <!----  Join Now Section Starts here  ----->
                                     <div role="tabpanel" class="tab-pane active" id="Section1">
 
+                                        <span class="text" style="margin-left: 60px; font-size: 16px;">Upcoming live Discussions</span>
 
+                                        <div class="grid" style="margin-top: 30px; margin-left: 50px; height: 100%!important; width: 100%!important; background-color: yellow;">
 
-
-
+                                        </div>
 
                                     </div>
 
@@ -289,9 +293,74 @@
 
                                     <!----  Schedule Live Starts here  ----->
 
-                                    <div role="tabpanel" class="tab-pane" id="Section2">
-                                        <h3>Section 2</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+
+                                        <span class="text" style="margin-top: 0px!important;"></span>
+
+                                        <div class="grid2" style="margin-top: -50px; margin-left: 60px; height: 600px; width: 800px; display: flex;">
+
+                                            <div class="schedule-tab" style="height: 400px; width: 45%; display: block">
+
+                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Setup Options</div>
+
+                                                <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                    <div style="display: block; width: 80%;">
+                                                        <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">Allow Join Anonymously</div>
+                                                        <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: normal">Guest can change their names,prevent profile access, and use video filters. </div>
+                                                    </div>
+                                                    <div style="width: 20%; height: 50px; margin-top: 20px;">
+                                                        <div class="row press">
+                                                            <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                            <label for="unchecked" class="lbl"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                    <div style="display: block; width: 80%;">
+                                                        <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">Make this a campaign</div>
+                                                        <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: normal">You can inspire people to help fund a particular cause, project or appeal.(Donate button will be displayed during the discussion) </div>
+                                                    </div>
+                                                    <div style="width: 20%; height: 50px; margin-top: 20px; margin-left: 10px;">
+                                                        <div class="row press">
+                                                            <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                            <label for="unchecked" class="lbl"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div style="width: 90%; margin-top: 10px; background-color: #d2d0d0; height: 0.5px; margin-left: 10px; margin-right: 10px;"></div>
+
+
+                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Discussion Url</div>
+
+
+                                                <div style="display: inline-flex;">
+                                                    <input
+                                                            aria-labelledby="add_tags_btn"
+                                                            type="text"
+                                                            style="margin-top: 10px; background-color: #f0f2f5; border: darkgrey solid 1px; border-radius: 4px; height: 40px;"
+                                                            placeholder="Discussion url will appear here when created"
+                                                    />
+                                                    <button
+                                                            class="btn btn-primary"
+                                                            style="margin-left: 10px; color: #0a74ff; height: 40px; margin-top: 10px; width: 60px; background-color: #d2daf3;"
+                                                    >
+                                                        Copy
+                                                    </button>
+                                                </div>
+
+                                            </div>
+                                            <div class="schedule-tab" style="height: 400px; width: 60%; margin-left: 20px; margin-right: 40px;">
+
+
+
+
+                                            </div>
+
+                                        </div>
+
                                     </div>
 
                                     <!----  Schedule live ends here  ----->
@@ -310,7 +379,7 @@
                                     <div role="tabpanel" class="tab-pane fade" id="Section3">
                                         <span class="text" style="margin-left: 60px; font-size: 16px;">Upcoming live Discussions</span>
 
-                                        <div class="grid" style="margin-top: 30px; margin-left: 50px;">
+                                        <div class="grid3" style="margin-top: 30px; margin-left: 50px;">
 
                                             <div class="card">
                                                 <div class="banner">

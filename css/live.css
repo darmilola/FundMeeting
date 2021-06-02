@@ -4,9 +4,8 @@ a:focus{
     outline: none;
 }
 .vertical-tab{
-    background: #ffffff;
+    background: #f0f2f5;
     display: table;
-    padding: 10px;
     border-radius: 10px;
     width: 95vw;
     margin-left: -40px;
@@ -14,16 +13,25 @@ a:focus{
     overflow: hidden;
     box-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
 }
+
+.schedule-tab{
+    background: #ffffff;
+    display: table;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 0.05rem 0.05rem rgba(0, 0, 0, 0.5);
+}
+
 .vertical-tab .nav-tabs{
     display: table-cell;
-    width: 27%;
-    min-width: 27%;
+    width: 29%;
+    min-width: 29%;
     padding: 10px;
     border: none;
-    height: 300px!important;
-    max-height: 300px!important;
     background: white;
-    border-radius: 10px;
 }
 .vertical-tab .nav-tabs li .active{
     background: #e9f3ff;
@@ -220,6 +228,16 @@ a:focus{
 }
 
 .grid {
+    display: grid;
+    grid-template-columns: repeat(2,370px);
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2,370px);
+}
+
+.grid3 {
     display: grid;
     grid-template-columns: repeat(2,370px);
 }
@@ -447,6 +465,11 @@ a:focus{
 @font-face {
     font-family: "bentoreg";
     src: url('../fonts/bentonreg.otf');
+}
+
+@font-face {
+    font-family: "bentothin";
+    src: url('../fonts/bentolight.otf');
 }
 
 
@@ -1388,6 +1411,60 @@ input[type="submit"] {
     background-color: DodgerBlue !important;
     color: #ffffff;
 }
+
+.lbl {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 44px;
+    background: #b6b5b5;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.lbl:after {
+    position: absolute;
+    left: -2px;
+    top: -3px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+    background: #e7e6e6;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+}
+.lbl:active:after {
+    transform: scale(1.15, 0.85);
+}
+.cbx:checked ~ label {
+    background: #27a1db;
+}
+.cbx:checked ~ label:after {
+    left: 20px;
+    background: #e7e6e6;
+}
+.cbx:disabled ~ label {
+    background: #d5d5d5;
+    pointer-events: none;
+}
+.cbx:disabled ~ label:after {
+    background: #bcbdbc;
+}
+.cntr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.press {
+    margin-bottom: 40px;
+}
+.hidden {
+    display: none;
+}
+
 
 
 
