@@ -4,14 +4,11 @@ a:focus{
     outline: none;
 }
 .vertical-tab{
-    background: #f0f2f5;
     display: table;
-    border-radius: 10px;
-    width: 95vw;
-    margin-left: -40px;
+    width: 100vw;
     height: 100vh;
+    margin-left: -80px;
     overflow: hidden;
-    box-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 .schedule-tab{
@@ -27,9 +24,10 @@ a:focus{
 
 .vertical-tab .nav-tabs{
     display: table-cell;
-    width: 29%;
-    min-width: 29%;
+    width: 25%;
+    min-width: 25%;
     padding: 10px;
+    height: 100vh;
     border: none;
     background: white;
 }
@@ -1582,6 +1580,177 @@ input[type="submit"] {
     justify-content: center;
     opacity: 0.7;
 }
+
+.tab-wrap {
+    transition: 0.3s box-shadow ease;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    list-style: none;
+    background-color: #fff;
+    width: 100% !important;
+    height: 93vh;
+    margin: 10px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.tab {
+    display: none;
+}
+.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+.tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+.tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+.tab:first-of-type:not(:last-of-type) + label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.tab:not(:first-of-type):not(:last-of-type) + label {
+    border-radius: 0;
+}
+.tab:last-of-type:not(:first-of-type) + label {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.tab:checked + label {
+    background-color: #fff;
+    box-shadow: 0 -1px 0 #fff inset;
+    cursor: default;
+    border-bottom: 3px solid darkblue;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    color: blue;
+}
+.tab:checked + label:hover {
+    box-shadow: 0 -1px 0 #fff inset;
+    background-color: #fff;
+}
+.tab + label {
+    box-shadow: 0 -1px 0 #eee inset;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    flex-grow: 3;
+    text-align: center;
+    background-color: #ffffff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    height: 50px;
+    max-width: 150px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.tab + label:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 0 #f4f4f4 inset;
+}
+.tab__content {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+    height: 90%;
+    transform: translateY(-3px);
+    border-radius: 6px;
+    overflow-y: auto;
+}
+
+h1,
+h2 {
+    margin: 0;
+    color: #444;
+    text-align: center;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+p {
+
+}
+
+.live_arena {
+    text-align: center;
+    height: 90%;
+    background: #262626;
+    color: #fff;
+}
+.text h2 {
+    margin: 0;
+    line-height: 100px;
+    font-size: 48px;
+}
+.mnav {
+    color: #fff;
+    display: flex;
+    width: 100%;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
 
 
 
