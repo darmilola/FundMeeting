@@ -185,6 +185,9 @@ a:focus{
     justify-content: left;
     align-items: center;
     height: 24px!important;
+    color: black;
+    font-family: "bentothin";
+    font-weight: bold;
 }
 .icon_background{
     height: 33px;
@@ -1149,10 +1152,15 @@ select.form-element-field {
     display: inline-block;
     border: 1px solid #999;
     border-radius: 4px;
-    padding: 10px 30px 10px 20px;
-    background-color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    background-color: #e4e6eb;
     cursor: pointer;
     color: black;
+    height: 35px;
+    font-weight: bold;
+    font-family: "bentothin";
     white-space: nowrap;
 }
 
@@ -1583,21 +1591,20 @@ input[type="submit"] {
 
 .tab-wrap {
     transition: 0.3s box-shadow ease;
-    border-radius: 6px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
     list-style: none;
-    background-color: #fff;
     width: 100% !important;
     height: 93vh;
     margin: 10px 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .tab {
     display: none;
 }
+
+
 .tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
     opacity: 1;
     transition: 0.5s opacity ease-in, 0.8s transform ease;
@@ -1607,6 +1614,7 @@ input[type="submit"] {
     transform: translateY(0px);
     text-shadow: 0 0 0;
 }
+
 .tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
     opacity: 1;
     transition: 0.5s opacity ease-in, 0.8s transform ease;
@@ -1643,37 +1651,26 @@ input[type="submit"] {
     transform: translateY(0px);
     text-shadow: 0 0 0;
 }
-.tab:first-of-type:not(:last-of-type) + label {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.tab:not(:first-of-type):not(:last-of-type) + label {
-    border-radius: 0;
-}
-.tab:last-of-type:not(:first-of-type) + label {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
+
 .tab:checked + label {
     background-color: #fff;
     box-shadow: 0 -1px 0 #fff inset;
     cursor: default;
-    border-bottom: 3px solid darkblue;
-    border-bottom-left-radius: 1px;
-    border-bottom-right-radius: 1px;
-    color: blue;
+    border-bottom: 3px solid #0a76ca;
+    color: #0a76ca;
 }
 .tab:checked + label:hover {
     box-shadow: 0 -1px 0 #fff inset;
     background-color: #fff;
 }
 .tab + label {
-    box-shadow: 0 -1px 0 #eee inset;
-    border-radius: 6px 6px 0 0;
     cursor: pointer;
     display: block;
     text-decoration: none;
+    font-size: 14px;
+    font-family: bentothin;
     color: #333;
+    font-weight: bold;
     flex-grow: 3;
     text-align: center;
     background-color: #ffffff;
@@ -1750,6 +1747,27 @@ p {
     width: 100%;
 }
 
+.dashboard_tab1_left{
+    width: 200px;
+    height: 40px;
+    float: left;
+    text-align: left;
+    justify-content: left;
+    align-items: flex-start;
+    display: flex;
+}
+.dashboard_tab1_right{
+    width: 200px;
+    height: 40px;
+    float: right;
+    text-align: right;
+}
+.insight_item{
+    display: block;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+}
 
 
 

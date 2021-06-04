@@ -82,7 +82,7 @@
 
 
     <section>
-        <div class="gap2 gray-bg" style="min-height: 90vh;">
+        <div class="gap2 gray-bg" style="min-height: 90vh; padding-top: 0px; padding-bottom: 0px;">
             <div class="container">
                 <div class="row">
 
@@ -272,24 +272,25 @@
 
 
                                     <!----  Join Now Section Starts here  ----->
+
                                     <div role="tabpanel" class="tab-pane active" id="Section1">
 
                                         <span class="text" style="margin-left: 60px; font-size: 16px;"></span>
 
-                                        <div class="grid" style="margin-top: -65px;">
+                                        <div class="grid" style="margin-top: -75px; margin-left: -5px;">
 
 
 
                                             <div style="display: block; height: 95vh; !important; width: 75vw; min-height: 95vh; overflow-x: hidden; overflow-y: scroll; margin-left: -10px;" id="dashboard_root">
 
                                             <div class="live_arena"></div>
-                                            <div class="mnav" style="margin-left: 5px!important" id="live_dashboard">
+                                            <div class="mnav"  id="live_dashboard">
 
 
                                                 <div class="tab-wrap">
                                                     <!-- active tab on page load gets checked attribute -->
-                                                    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked/>
-                                                    <label for="tab1">Stream Setup</label>
+                                                    <input type="radio" id="stream_setup" name="tabGroup1" class="tab" checked/>
+                                                    <label for="stream_setup">Stream Setup</label>
 
                                                     <input type="radio" id="tab2" name="tabGroup1" class="tab" />
                                                     <label for="tab2">Dashboard</label>
@@ -297,119 +298,522 @@
                                                     <input type="radio" id="tab3" name="tabGroup1" class="tab" />
                                                     <label for="tab3">Participants</label>
 
-                                                    <input type="radio" id="tab3" name="tabGroup1" class="tab" />
-                                                    <label for="tab3">Polls</label>
+                                                    <input type="radio" id="tab4" name="tabGroup1" class="tab" />
+                                                    <label for="tab4">Polls</label>
 
-                                                    <input type="radio" id="tab3" name="tabGroup1" class="tab" />
-                                                    <label for="tab3">Help</label>
+                                                    <input type="radio" id="tab5" name="tabGroup1" class="tab" />
+                                                    <label for="tab5">Help</label>
+
+                                                    <input type="radio" id="tab6" name="tabGroup1" class="tab"/>
+                                                    <label style="width: 900px !important; max-width: 400px;" for="tab5"></label>
+
+
+
+
+
+                                                    <!---- Stream Setup starts here ---->
 
                                                     <div class="tab__content">
-                                                        <h3>Short Section</h3>
-                                                        <div>
 
-                                                        <div class="grid3" style="margin-top: 30px; margin-left: 50px;">
+                                                        <div style="display: flex">
 
-                                                            <div class="card">
-                                                                <div class="banner">
-                                                                    <div class="discussion_date">
-                                                                        <span class="discussion_date_info">November 28th 2021</span>
+
+                                                        <!---- Setup tab 1 ---->
+                                                            <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Setup</div>
+
+                                                                <div style="display: flex; margin-left: 20px; margin-top: 10px;">
+                                                                    <img src="images/svg/cam.svg" style="height: 24px; width: 24px; margin-top: 15px; margin-right: 10px;">
+
+
+                                                                    <label class="dropdown" style="margin-top: 10px; height: 30px; width: 250px;">
+                                                                        <div class="dd-button">
+                                                                            Default Camera on your System
+                                                                        </div>
+
+                                                                        <input type="checkbox" class="dd-input" id="test" />
+
+                                                                        <ul class="dd-menu">
+                                                                            <li>By Invitation</li>
+                                                                            <li>Another action</li>
+                                                                            <li>Communities you belong</li>
+                                                                        </ul>
+                                                                    </label>
+
+                                                                </div>
+
+                                                                <div style="display: flex; margin-left: 20px; margin-top: 10px;">
+                                                                    <img src="images/svg/bluemic.svg" style="height: 24px; width: 24px; margin-top: 15px; margin-right: 10px;">
+
+
+                                                                    <label class="dropdown" style="margin-top: 10px; height: 30px; width: 300px;">
+                                                                        <div class="dd-button">
+                                                                            Default Audio Source on your System
+                                                                        </div>
+
+                                                                        <input type="checkbox" class="dd-input" id="test" />
+
+                                                                        <ul class="dd-menu">
+                                                                            <li>By Invitation</li>
+                                                                            <li>Another action</li>
+                                                                            <li>Communities you belong</li>
+                                                                        </ul>
+                                                                    </label>
+
+                                                                </div>
+
+
+                                                                <div style="display: flex; margin-left: 20px; margin-top: 10px;">
+                                                                    <img src="images/svg/laptop.svg" style="height: 24px; width: 24px; margin-top: 15px; margin-right: 10px;">
+
+
+                                                                    <label  style="margin-top: 10px; height: 30px; width: 300px;">
+                                                                        <div class="dd-button">
+                                                                            Share your Screen
+                                                                        </div>
+                                                                    </label>
+
+                                                                </div>
+
+
+                                                            </div>
+
+
+
+
+
+                                                   <!--- Setup Tab 2 ------>
+                                                            <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Anonymous Settings</div>
+
+                                                                <div class="form-element form-input" style="margin-left: 15px; margin-right: 15px;">
+                                                                    <div class="form-element-bar">
+                                                                        <input
+                                                                                class="form-element-field"
+                                                                                type="input"
+                                                                                placeholder="Display name"
+                                                                                required
+                                                                                style="font-weight: bold; font-family: 'bentothin';"
+                                                                        />
                                                                     </div>
                                                                 </div>
-                                                                <div class="discussion_topic">
-                                                                    Radical Creativity: Nurture Your Truest Self, Create Art With Meaning
+
+                                                                <div style="display: flex">
+                                                                    <div class="text" style="margin-top: 15px; bottom: 0px; margin-left: 20px; margin-right: 0px; font-size: 14px; font-family: 'bentothin'; font-weight: bold; color: #616060">Video filter</div>
+                                                                    <div style="width: 100px; height: 25px; background-color: #0a74ff; border-radius: 5px; text-align: center; margin-left: 10px; margin-top: 10px; font-size: 11px; font-family: 'bentothin'; font-weight: bold;">Select</div>
+
                                                                 </div>
-                                                                <div class="discussion_host">
-                                                                    <img
-                                                                            class="host_image"
-                                                                            src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"
-                                                                    />
-                                                                    <span class="host_name">Hosted by Maroon 5 The HipHop Artist </span>
+
+                                                                <div style="display: flex">
+                                                                    <div class="text" style="margin-top: 15px; bottom: 0px; margin-left: 20px; margin-right: 0px; font-size: 14px; font-family: 'bentothin'; font-weight: bold; color: #616060">Virtual Background</div>
+                                                                    <div style="width: 100px; height: 25px; background-color: #0a74ff; border-radius: 5px; text-align: center; margin-left: 10px; margin-top: 10px; font-size: 11px; font-family: 'bentothin'; font-weight: bold;">Select</div>
+
                                                                 </div>
-                                                                <div class="discussion_join">
-                                                                    <span class="discussion_join_text">Start Now</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card">
-                                                                <div class="banner">
-                                                                    <div class="discussion_date">
-                                                                        <span class="discussion_date_info">November 28th 2021</span>
+
+                                                                <div style="display: flex; width: 100%; margin-top: 5px; margin-left: 10px;">
+
+                                                                        <div class="text" style="color:#616060; margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 14px; font-weight: bold; font-family: 'bentothin'">Allow Participant to view your profile</div>
+                                                                    <div style="width: 20%; height: 40px; margin-top: 5px; margin-left: 20px;">
+                                                                        <div class="row press">
+                                                                            <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                                            <label for="unchecked" class="lbl"></label>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="discussion_topic">
-                                                                    Radical Creativity: Nurture Your Truest Self, Create Art With Meaning
-                                                                </div>
-                                                                <div class="discussion_host">
-                                                                    <img
-                                                                            class="host_image"
-                                                                            src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"
-                                                                    />
-                                                                    <span class="host_name">Hosted by Maroon 5 The HipHop Artist </span>
-                                                                </div>
-                                                                <div class="discussion_join">
-                                                                    <span class="discussion_join_text">Start Now</span>
-                                                                </div>
+
+
                                                             </div>
 
 
-                                                        </div>
 
                                                         </div>
 
                                                     </div>
 
+
+                                                    <!---- Stream Setup ends here ---->
+
+
+                                                    <!---- Stream Dashboard starts here ---->
+
                                                     <div class="tab__content">
-                                                        <h3>Long Section</h3>
-                                                        <div>
+
+                                                        <div style="display: flex">
 
 
-                                                        <div class="grid3" style="margin-top: 30px; margin-left: 50px;">
+                                                            <!---- Dashboard tab 1 ---->
+                                                            <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
 
-                                                            <div class="card">
-                                                                <div class="banner">
-                                                                    <div class="discussion_date">
-                                                                        <span class="discussion_date_info">November 28th 2021</span>
+                                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Insight</div>
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Participants
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                122,768
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                 </div>
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Participants
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                122,768
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="discussion_topic">
-                                                                    Radical Creativity: Nurture Your Truest Self, Create Art With Meaning
-                                                                </div>
-                                                                <div class="discussion_host">
-                                                                    <img
-                                                                            class="host_image"
-                                                                            src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"
-                                                                    />
-                                                                    <span class="host_name">Hosted by Maroon 5 The HipHop Artist </span>
-                                                                </div>
-                                                                <div class="discussion_join">
-                                                                    <span class="discussion_join_text">Start Now</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card">
-                                                                <div class="banner">
-                                                                    <div class="discussion_date">
-                                                                        <span class="discussion_date_info">November 28th 2021</span>
+
+
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Participants
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                122,768
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="discussion_topic">
-                                                                    Radical Creativity: Nurture Your Truest Self, Create Art With Meaning
+
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Participants
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                122,768
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="discussion_host">
-                                                                    <img
-                                                                            class="host_image"
-                                                                            src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"
-                                                                    />
-                                                                    <span class="host_name">Hosted by Maroon 5 The HipHop Artist </span>
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Participants
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                122,768
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="discussion_join">
-                                                                    <span class="discussion_join_text">Start Now</span>
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Participants
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                122,768
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
+
+                                                           </div>
+
+
+
+
+
+                                                            <!--- Setup Tab 2 ------>
+                                                            <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Notification</div>
+
+                                                                <div class="form-element form-input" style="margin-left: 15px; margin-right: 15px;">
+                                                                    <div class="form-element-bar">
+                                                                        <input
+                                                                                class="form-element-field"
+                                                                                type="input"
+                                                                                placeholder="Display name"
+                                                                                required
+                                                                                style="font-weight: bold; font-family: 'bentothin';"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div style="display: flex">
+                                                                    <div class="text" style="margin-top: 15px; bottom: 0px; margin-left: 20px; margin-right: 0px; font-size: 14px; font-family: 'bentothin'; font-weight: bold; color: #616060">Video filter</div>
+                                                                    <div style="width: 100px; height: 25px; background-color: #0a74ff; border-radius: 5px; text-align: center; margin-left: 10px; margin-top: 10px; font-size: 11px; font-family: 'bentothin'; font-weight: bold;">Select</div>
+
+                                                                </div>
+
+                                                                <div style="display: flex">
+                                                                    <div class="text" style="margin-top: 15px; bottom: 0px; margin-left: 20px; margin-right: 0px; font-size: 14px; font-family: 'bentothin'; font-weight: bold; color: #616060">Virtual Background</div>
+                                                                    <div style="width: 100px; height: 25px; background-color: #0a74ff; border-radius: 5px; text-align: center; margin-left: 10px; margin-top: 10px; font-size: 11px; font-family: 'bentothin'; font-weight: bold;">Select</div>
+
+                                                                </div>
+
+                                                                <div style="display: flex; width: 100%; margin-top: 5px; margin-left: 10px;">
+
+                                                                    <div class="text" style="color:#616060; margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 14px; font-weight: bold; font-family: 'bentothin'">Allow Participant to view your profile</div>
+                                                                    <div style="width: 20%; height: 40px; margin-top: 5px; margin-left: 20px;">
+                                                                        <div class="row press">
+                                                                            <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                                            <label for="unchecked" class="lbl"></label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
                                                             </div>
+
 
 
                                                         </div>
 
-                                                        </div>
                                                     </div>
+
+
+                                                    <!---- Stream Dashboard ends here ---->
+
+
+                                                    <div class="tab__content">
+
+                                                        <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                            <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Setup Options</div>
+
+                                                            <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                                <div style="display: block; width: 80%;">
+                                                                    <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">SAllow Join Anonymously</div>
+                                                                    <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: bold">Guest can change their names,prevent profile access, and use video filters. </div>
+                                                                </div>
+                                                                <div style="width: 20%; height: 50px; margin-top: 20px;">
+                                                                    <div class="row press">
+                                                                        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                                        <label for="unchecked" class="lbl"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                                <div style="display: block; width: 80%;">
+                                                                    <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">Make this a campaign</div>
+                                                                    <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: bold">You can inspire people to help fund a particular cause, project or appeal.(Donate button will be displayed during the discussion) </div>
+                                                                </div>
+                                                                <div style="width: 20%; height: 50px; margin-top: 20px; margin-left: 10px;">
+                                                                    <div class="row press">
+                                                                        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                                        <label for="unchecked" class="lbl"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div style="width: 90%; margin-top: 10px; background-color: #d2d0d0; height: 0.5px; margin-left: 10px; margin-right: 10px;"></div>
+
+
+                                                            <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Discussion Url</div>
+
+
+                                                            <div style="display: inline-flex;">
+                                                                <input
+                                                                        aria-labelledby="add_tags_btn"
+                                                                        type="text"
+                                                                        style="margin-top: 10px; background-color: #f0f2f5; border: darkgrey solid 1px; border-radius: 4px; height: 40px;"
+                                                                        placeholder="Discussion url will appear here when created"
+                                                                />
+                                                                <button
+                                                                        class="btn btn-primary"
+                                                                        style="margin-left: 10px; color: #0a74ff; height: 40px; margin-top: 10px; width: 60px; background-color: #d2daf3;"
+                                                                >
+                                                                    Copy
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <div class="tab__content">
+
+                                                        <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                            <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Setup Options</div>
+
+                                                            <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                                <div style="display: block; width: 80%;">
+                                                                    <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">SAllow Join Anonymously</div>
+                                                                    <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: bold">Guest can change their names,prevent profile access, and use video filters. </div>
+                                                                </div>
+                                                                <div style="width: 20%; height: 50px; margin-top: 20px;">
+                                                                    <div class="row press">
+                                                                        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                                        <label for="unchecked" class="lbl"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                                <div style="display: block; width: 80%;">
+                                                                    <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">Make this a campaign</div>
+                                                                    <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: bold">You can inspire people to help fund a particular cause, project or appeal.(Donate button will be displayed during the discussion) </div>
+                                                                </div>
+                                                                <div style="width: 20%; height: 50px; margin-top: 20px; margin-left: 10px;">
+                                                                    <div class="row press">
+                                                                        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                                        <label for="unchecked" class="lbl"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div style="width: 90%; margin-top: 10px; background-color: #d2d0d0; height: 0.5px; margin-left: 10px; margin-right: 10px;"></div>
+
+
+                                                            <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Discussion Url</div>
+
+
+                                                            <div style="display: inline-flex;">
+                                                                <input
+                                                                        aria-labelledby="add_tags_btn"
+                                                                        type="text"
+                                                                        style="margin-top: 10px; background-color: #f0f2f5; border: darkgrey solid 1px; border-radius: 4px; height: 40px;"
+                                                                        placeholder="Discussion url will appear here when created"
+                                                                />
+                                                                <button
+                                                                        class="btn btn-primary"
+                                                                        style="margin-left: 10px; color: #0a74ff; height: 40px; margin-top: 10px; width: 60px; background-color: #d2daf3;"
+                                                                >
+                                                                    Copy
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <div class="tab__content">
+
+                                                        <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                            <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Setup Options</div>
+
+                                                            <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                                <div style="display: block; width: 80%;">
+                                                                    <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">SAllow Join Anonymously</div>
+                                                                    <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: bold">Guest can change their names,prevent profile access, and use video filters. </div>
+                                                                </div>
+                                                                <div style="width: 20%; height: 50px; margin-top: 20px;">
+                                                                    <div class="row press">
+                                                                        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                                        <label for="unchecked" class="lbl"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                                <div style="display: block; width: 80%;">
+                                                                    <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">Make this a campaign</div>
+                                                                    <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: bold">You can inspire people to help fund a particular cause, project or appeal.(Donate button will be displayed during the discussion) </div>
+                                                                </div>
+                                                                <div style="width: 20%; height: 50px; margin-top: 20px; margin-left: 10px;">
+                                                                    <div class="row press">
+                                                                        <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                                        <label for="unchecked" class="lbl"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div style="width: 90%; margin-top: 10px; background-color: #d2d0d0; height: 0.5px; margin-left: 10px; margin-right: 10px;"></div>
+
+
+                                                            <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Discussion Url</div>
+
+
+                                                            <div style="display: inline-flex;">
+                                                                <input
+                                                                        aria-labelledby="add_tags_btn"
+                                                                        type="text"
+                                                                        style="margin-top: 10px; background-color: #f0f2f5; border: darkgrey solid 1px; border-radius: 4px; height: 40px;"
+                                                                        placeholder="Discussion url will appear here when created"
+                                                                />
+                                                                <button
+                                                                        class="btn btn-primary"
+                                                                        style="margin-left: 10px; color: #0a74ff; height: 40px; margin-top: 10px; width: 60px; background-color: #d2daf3;"
+                                                                >
+                                                                    Copy
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+
                                                 </div>
 
                                             </div>
@@ -444,7 +848,7 @@
 
                                                 <div style="display: flex; width: 100%; margin-top: 5px;">
                                                     <div style="display: block; width: 80%;">
-                                                        <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">Allow Join Anonymously</div>
+                                                        <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">Allow Joining Anonymously</div>
                                                         <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: bold">Guest can change their names,prevent profile access, and use video filters. </div>
                                                     </div>
                                                     <div style="width: 20%; height: 50px; margin-top: 20px;">
