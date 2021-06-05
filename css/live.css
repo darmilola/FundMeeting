@@ -259,6 +259,90 @@ a:focus{
     margin-bottom: -30px;
 
 }
+
+
+.small_text{
+    color: #3e3e3e;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+    font-family: "bentothin";
+}
+.poll_item{
+    height: 50px;
+    width: 100%;
+    display: block;
+    padding-top: 2px;
+    margin-top: 10px;
+    border-bottom: solid 1px #e3e3e3;
+    background: #e9f3ff;
+    border-radius: 5px;
+}
+
+.poll_question{
+    color: #242424;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: "bentoreg";
+    margin-top: 10px;
+}
+
+.poll_option{
+    border: solid 1px #e7e6e6;
+    border-radius: 25px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #242424;
+    font-weight: bold;
+    font-family: 'bentothin';
+    height: 40px;
+    width: 100%;
+}
+
+.poll_view_actions_root{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+}
+.poll_edit{
+    width: 50%;
+    height: 35px;
+    background: lightgrey;
+    border-radius: 7px;
+    color: #242424;
+    font-family: 'bentothin';
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.poll_activate{
+    width: 50%;
+    height: 35px;
+    background: lightgrey;
+    border-radius: 7px;
+    color: #242424;
+    font-family: 'bentothin';
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 5px;
+}
+
+
 .carousel {
     position: relative;
     margin-top: 20px;
@@ -1771,6 +1855,58 @@ p {
     width: 100%;
     border-bottom: 1px solid lightgrey;
 }
+
+
+.insight_item_root {
+    display: flex;
+}
+
+.participant_img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+.participants_overflow_menu {
+    background: coral;
+    width: 100px;
+    height: 100px;
+    visibility: hidden;
+    position: absolute;
+    left: 20%;
+    top: 0;
+}
+.participant_item_right {
+    width: 100px;
+    height: 40px;
+    float: right;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+
+}
+
+.overflow_menu_icon{
+    height: 18px;
+    width: 18px;
+}
+
+.participant_item_left {
+    width: 250px;
+    height: 40px;
+    float: left;
+    text-align: left;
+    justify-content: left;
+    align-items: flex-start;
+    display: flex;
+}
+.participants_item{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
 
 
 

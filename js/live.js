@@ -35,3 +35,19 @@ $('.schedule_discussion_back').click(function(event) {
     $('.schedule_discussion_secondpage').toggle();
 
 });
+
+
+
+$('#save_poll_button').click(function(event) {
+    event.preventDefault();
+    $('#create_poll_tab').toggle();
+    $('#view_poll_tab').toggle();
+
+});
+
+$('#activate_poll_button').click(function(event) {
+    event.preventDefault();
+    $('#create_poll_tab').toggle();
+    $('#view_poll_tab').toggle();
+
+});
