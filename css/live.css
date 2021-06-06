@@ -7,7 +7,7 @@ a:focus{
     display: table;
     width: 100vw;
     height: 100vh;
-    margin-left: -80px;
+    margin-left: -100px;
     overflow: hidden;
 }
 
@@ -29,7 +29,7 @@ a:focus{
     padding: 10px;
     height: 100vh;
     border: none;
-    background: white;
+    background: #ededed;
 }
 .vertical-tab .nav-tabs li .active{
     background: #e9f3ff;

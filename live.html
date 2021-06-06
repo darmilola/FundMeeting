@@ -90,18 +90,142 @@
 
                             <div class="vertical-tab" role="tabpanel">
 
+
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="join"><a class="active"  href="#Section1" aria-controls="join now" role="tab" data-toggle="tab" aria-expanded="true"><div class="live_tab_items"><div class="icon_background" id="camera_icon_unsel"><img class="camera_icon" src="images/svg/camera_unsel.svg"/></div> <div class="icon_background_sel" id="camera_sel"><img class="camera_icon" src="images/svg/camera_sel.svg"/></div><div class="icon_text">Go Live Now</div></div></a></li>
-                                    <li role="presentation" class="join"><a href="#Section2" aria-controls="create" role="tab" data-toggle="tab"><div class="live_tab_items"><div class="icon_background_sel" id="live_icon_sel"><img class="live_icon"  src="images/svg/live-time-selected.svg"/></div>  <div class="icon_background" id="live_icon_unsel"><img class="live_icon"  src="images/svg/live-time.svg"/></div><div class="icon_text">Schedule a new  Discussion</div></div></a></li>
-                                    <li role="presentation" class="join"><a href="#Section3" aria-controls="join" role="tab" data-toggle="tab"><div class="live_tab_items"><div class="icon_background" id="create_icon_unsel"><img class="live_icon" src="images/svg/live-date.svg"/></div> <div class="icon_background_sel" id="create_icon_sel"><img class="live_icon" src="images/svg/live-date-selected.svg"/></div><div class="icon_text">View Upcoming Discussions</div></div></a></li>
-                                    <div style="background-color: #dcdcdc; height: 1px; width: 100%; margin-bottom: 10px;"></div>
 
 
 
-                                    <!--- Schedule discussion firstpage starts here ---->
+                                    <li role="presentation" class="join"><a class="active"  href="#Section1" style="display: none" aria-controls="join now" role="tab" data-toggle="tab" aria-expanded="true"><div class="live_tab_items"><div class="icon_background" id="camera_icon_unsel"><img class="camera_icon" src="images/svg/camera_unsel.svg"/></div> <div class="icon_background_sel" id="camera_sel"><img class="camera_icon" src="images/svg/camera_sel.svg"/></div><div class="icon_text">Go Live Now</div></div></a></li>
+                                    <li role="presentation" class="join"><a href="#Section2" aria-controls="create" role="tab" style="display: none;" data-toggle="tab"><div class="live_tab_items"><div class="icon_background_sel" id="live_icon_sel"><img class="live_icon"  src="images/svg/live-time-selected.svg"/></div>  <div class="icon_background" id="live_icon_unsel"><img class="live_icon"  src="images/svg/live-time.svg"/></div><div class="icon_text">Schedule a new  Discussion</div></div></a></li>
+                                    <li role="presentation" class="join"><a href="#Section3" aria-controls="join" role="tab" style="display: none" data-toggle="tab"><div class="live_tab_items"><div class="icon_background" id="create_icon_unsel"><img class="live_icon" src="images/svg/live-date.svg"/></div> <div class="icon_background_sel" id="create_icon_sel"><img class="live_icon" src="images/svg/live-date-selected.svg"/></div><div class="icon_text">View Upcoming Discussions</div></div></a></li>
+                                    <div style="background-color: #dcdcdc; height: 1px; width: 100%; margin-bottom: 10px; display: none;"></div>
+
+                                    <li class="hack_list" style="visibility: hidden; height: 0px; width: 0px;"><a role="tab"></a></li>
+
+
+
+                                    <!---- Live Chat Ui Starts ---->
+
+                                    <div style="width: 100%; height: 100%; display: block">
+
+                                        <div>
+                                            <div class="mesge-area" style="margin-top: 10px;">
+                                                <ul class="conversations">
+                                                    <li class="you">
+                                                        <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <p>HI, i have faced a problem with your software. are you available now</p>
+                                                            <span><i class="ti-check"></i><i class="ti-check"></i> 2:32PM</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="me">
+                                                        <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <p>HI, i have checked about your query, there is no any problem like that...</p>
+                                                            <span><i class="ti-check"></i><i class="ti-check"></i> 2:35PM</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="you">
+                                                        <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <p>HI, i have faced a problem with your software. are you available now</p>
+                                                            <span><i class="ti-check"></i><i class="ti-check"></i> 2:32PM</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="you">
+                                                        <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <p>HI, i have faced a problem with your software. are you available now</p>
+                                                            <span><i class="ti-check"></i><i class="ti-check"></i> 2:32PM</span>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li class="you">
+                                                        <figure><img src="images/resources/user1.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <div class="wave">
+                                                                <span class="dot"></span>
+                                                                <span class="dot"></span>
+                                                                <span class="dot"></span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="message-writing-box">
+                                                <form method="post">
+                                                    <div class="text-area">
+                                                        <input type="text" placeholder="write your message here..">
+                                                        <button type="submit"><i  style="margin-left: 10px;" class="fa fa-paper-plane-o"></i></button>
+                                                    </div>
+                                                    <div class="emojies">
+                                                        <i><img src="images/smiles/happy-3.png" alt=""></i>
+                                                        <ul class="emojies-list">
+                                                            <li><a href="#" title=""><img src="images/smiles/unhappy.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/tongue-out-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/suspicious.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/smiling.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/wink.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/bored.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/angry-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/angry.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/bored-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/bored-2.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/confused-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/confused.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/crying-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/crying.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/embarrassed.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/emoticons.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/happy-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/happy-2.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/happy-3.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/happy-4.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/ill.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/in-love.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/kissing.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/mad.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/nerd.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/ninja.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/quiet.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/sad.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/secret.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/smile.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/surprised-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/tongue-out.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/unhappy.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/suspicious.png" alt=""></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!---- Live Chat Ui Ends ---->
+
+
+
+
+
+
+
+
+
+
+
+                                    <!------ Creation Tabs   ---------->
+
+
+
+                                    <div style="display: none">
 
                                     <span class="text" style="margin-left: 20px; font-size: 14px; margin-top: 15px;">Details</span>
+
+                                    <!--- Schedule discussion firstpage starts here ---->
 
                                     <div class="schedule_discussion_firstpage" style="display: block">
 
@@ -201,7 +325,7 @@
                                     </label>
 
 
-                                    <div class="schedule_discussion_next" style="height: 30px; width: 310px; display: flex; justify-content: center; align-items: center; text-align: -webkit-center; background-color: #1182e3; color: white; font-size: 14px; border-radius: 5px; position:absolute; top: 100%; left: 0; margin-top: -40px; margin-left: -60px;">Next</div>
+                                    <div class="schedule_discussion_next" style="height: 30px; width: 310px; display: flex; justify-content: center; align-items: center; text-align: -webkit-center; background-color: #1182e3; color: white; font-size: 14px; border-radius: 5px; position:absolute; top: 90%; left: 0; margin-top: -40px; margin-left: -60px;">Next</div>
                                     </div>
                                     <!--- Schedule discussion firstpage ends here ---->
 
@@ -242,7 +366,7 @@
 
 
 
-                                        <div style="display: flex; position:absolute; top: 100%; left: 0; width: 310px;margin-top: -40px; margin-left: -60px;">
+                                        <div style="display: flex; position:absolute; top: 90%; left: 0; width: 310px;margin-top: -40px; margin-left: -60px;">
 
                                             <div class="schedule_discussion_back" style="height: 30px; width: 30%; display: flex; justify-content: center; align-items: center; background-color: lightgrey; font-family: bento; color: black; font-size: 12px; border-radius: 5px;">Back</div>
 
@@ -257,7 +381,8 @@
                                     <!---- Schedule discussion secondpage ends here ---->
 
 
-
+                                    <!------ Creation Tabs  Ends ---------->
+                                    </div>
                                 </ul>
 
 
