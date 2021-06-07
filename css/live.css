@@ -1812,7 +1812,70 @@ p {
     height: 90%;
     background: #262626;
     color: #fff;
+    position:relative;
+    background: url("https://cdn.pixabay.com/photo/2016/09/17/21/47/audience-1677028_960_720.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.live_arena:hover .live_toolbar{
+    display: flex;
+    transition: visibility 0.5s linear;
+    opacity: 1;
+    visibility: visible;
+    text-align: -webkit-center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.live_toolbar{
+    position: absolute;
+    top: 85%;
+    height: 70px;
+    width: 100%;
+    border-radius: 35px;
+    opacity: 0;
+    width: 600px;
+    margin-bottom: 20px;
+    background-color: rgba(245,245,245,0.8);
+    transition: visibility 0.5s linear;
+    visibility: hidden;
+}
+
+.live_tools_background {
+    background-color: #ffffff;
+    border-radius: 100%;
+    color: #333;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    right: 10px;
+    text-align: -webkit-center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .live_toolbar{
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        background-color: rgba(245,245,245,0.8);
+    }
+
+    .warning {
+        display: none;
+    }
+}
+
+
 .text h2 {
     margin: 0;
     line-height: 100px;
