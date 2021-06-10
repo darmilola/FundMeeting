@@ -51,3 +51,19 @@ $('#activate_poll_button').click(function(event) {
     $('#view_poll_tab').toggle();
 
 });
+
+$('.live_fullscreen').click(function(event) {
+    event.preventDefault();
+    $('.live_fullscreen_arrow').toggle();
+    $('.live_fullscreen_arrow_reverse').toggle();
+    $('.nav-tabs').toggle();
+    $('.live_arena_root').width("100vw");
+    var resizeTimeout;
+    clearTimeout(resizeTimeout);
+     resizeTimeout = setTimeout(function () {
+            layout();
+     }, 20);
+
+
+});
+
