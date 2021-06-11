@@ -52,7 +52,7 @@ $('#activate_poll_button').click(function(event) {
 
 });
 
-$('.live_fullscreen').click(function(event) {
+$('.live_fullscreen_arrow').click(function(event) {
     event.preventDefault();
     $('.live_fullscreen_arrow').toggle();
     $('.live_fullscreen_arrow_reverse').toggle();
@@ -63,6 +63,21 @@ $('.live_fullscreen').click(function(event) {
      resizeTimeout = setTimeout(function () {
             layout();
      }, 20);
+
+
+});
+
+$('.live_fullscreen_arrow_reverse').click(function(event) {
+    event.preventDefault();
+    $('.live_fullscreen_arrow').toggle();
+    $('.live_fullscreen_arrow_reverse').toggle();
+    $('.nav-tabs').toggle();
+    $('.live_arena_root').width("75vw");
+    var resizeTimeout;
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function () {
+        layout();
+    }, 20);
 
 
 });

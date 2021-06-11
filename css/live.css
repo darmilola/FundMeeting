@@ -1843,16 +1843,49 @@ p {
     align-items: center;
 }
 
+#live_arena:hover .live_icon{
+    display: flex;
+    transition: visibility 0.5s linear;
+    opacity: 1;
+    visibility: visible;
+    text-align: -webkit-center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.live_icon{
+    position: absolute;
+    top: 10%;
+    left: 30px;
+    height: 40px;
+    width: 80px;
+    opacity: 0;
+    font-family: "bentothin";
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    border-radius: 2px;
+    background-color: #f31150;
+    transition: visibility 0.5s linear;
+    visibility: hidden;
+    text-align: -webkit-center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .live_toolbar{
     position: absolute;
     top: 85%;
     height: 70px;
     width: 100%;
-    border-radius: 35px;
+    border-radius: 10px;
     opacity: 0;
     width: 600px;
     margin-bottom: 20px;
-    background-color: rgba(245,245,245,0.8);
+    background-color: rgba(245,245,245,0);
     transition: visibility 0.5s linear;
     visibility: hidden;
 }
