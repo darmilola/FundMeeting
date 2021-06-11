@@ -35,3 +35,50 @@ $('.schedule_discussion_back').click(function(event) {
     $('.schedule_discussion_secondpage').toggle();
 
 });
+
+
+
+$('#save_poll_button').click(function(event) {
+    event.preventDefault();
+    $('#create_poll_tab').toggle();
+    $('#view_poll_tab').toggle();
+
+});
+
+$('#activate_poll_button').click(function(event) {
+    event.preventDefault();
+    $('#create_poll_tab').toggle();
+    $('#view_poll_tab').toggle();
+
+});
+
+$('.live_fullscreen_arrow').click(function(event) {
+    event.preventDefault();
+    $('.live_fullscreen_arrow').toggle();
+    $('.live_fullscreen_arrow_reverse').toggle();
+    $('.nav-tabs').toggle();
+    $('.live_arena_root').width("100vw");
+    var resizeTimeout;
+    clearTimeout(resizeTimeout);
+     resizeTimeout = setTimeout(function () {
+            layout();
+     }, 20);
+
+
+});
+
+$('.live_fullscreen_arrow_reverse').click(function(event) {
+    event.preventDefault();
+    $('.live_fullscreen_arrow').toggle();
+    $('.live_fullscreen_arrow_reverse').toggle();
+    $('.nav-tabs').toggle();
+    $('.live_arena_root').width("75vw");
+    var resizeTimeout;
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function () {
+        layout();
+    }, 20);
+
+
+});
+

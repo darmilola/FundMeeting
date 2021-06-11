@@ -15686,7 +15686,8 @@ a.shopping-cart > i {
     padding: 15px;
     position: relative;
 	color: #676666;
-    font-family: "bentoreg";
+    font-weight: bold;
+    font-family: "bentothin";
     font-size: 14px;
 }
 .conversations > li.me .text-box > p{
@@ -15709,6 +15710,12 @@ a.shopping-cart > i {
     font-family: "bento";
     src: url('../fonts/bentomed.otf');
 }
+
+@font-face {
+    font-family: "bentothin";
+    src: url('../fonts/bentothin.otf');
+}
+
 @font-face {
     font-family: "bentoreg";
     src: url('../fonts/bentonreg.otf');
@@ -15795,15 +15802,16 @@ a.shopping-cart > i {
     color: #535165;
     padding: 0;
     position: absolute;
-    right: 5px;
     top: 50%;
+    left: 93%;
     transform: translateY(-50%);
 }
 
 .message-writing-box > form > .text-area {
     display: inline-block;
     position: relative;
-    width: 85.5%;
+    margin-right: 10px;
+    width: 75.5%;
 }
 .message-writing-box > form > label {
     display: inline-block;
@@ -15814,23 +15822,25 @@ a.shopping-cart > i {
 .emojies {
     display: inline-block;
     line-height: 49px;
-    margin: 0 5px;
     position: relative;
+    height: 16px;
+    width: 16px;
     vertical-align: baseline;
 }
 .emojies-list {
     background: #fff none repeat scroll 0 0;
     border-radius: 8px;
-    bottom: 100%;
     box-shadow: -7px 10px 20px rgba(0, 0, 0, 0.1);
     display: inline-block;
     line-height: initial;
     list-style: outside none none;
     margin: 0;
     opacity: 0;
+    margin-left: 300px;
     padding: 6px;
     position: absolute;
-    right: -12px;
+    margin-left: 30px!important;
+    margin-top: -140px!important;
     visibility: hidden;
     width: 382px;
 	z-index: 2;

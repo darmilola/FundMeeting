@@ -23,7 +23,7 @@
     <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/videoplayer.css"/>
     <link rel="stylesheet" href="css/homeheader.css"/>
-    <link rel = "stylesheet" href="css/live.css"/>
+
     <link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'
           rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="dist/css/mdDateTimePicker.css">
@@ -31,11 +31,42 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"/>
 
+    <script src="https://static.opentok.com/v2/js/opentok.js"></script>
+
+    <link rel = "stylesheet" href="css/live.css"/>
+
+    <style type="text/css" media="screen">
+        #layout{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #layout > div {
+            background-color: #000;
+            display: inline-block;
+            border: 1px solid #fff;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+
+        #layout > div {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        #layout > div.ot-layout {
+            opacity: 1;
+        }
 
 
-
-
-
+    </style>
+    <script src="js/opentok-layout.js"></script>
 </head>
 <body>
 
@@ -82,25 +113,150 @@
 
 
     <section>
-        <div class="gap2 gray-bg" style="min-height: 90vh;">
+        <div class="gap2 gray-bg" style="min-height: 90vh; padding-top: 0px; padding-bottom: 0px;">
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-10" style="margin-left: -30px!important;">
+                    <div class="col-lg-12">
 
                             <div class="vertical-tab" role="tabpanel">
+
+
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="join"><a class="active"  href="#Section1" aria-controls="join now" role="tab" data-toggle="tab" aria-expanded="false"><div class="live_tab_items"><div class="icon_background" id="camera_icon_unsel"><img class="camera_icon" src="images/svg/camera_unsel.svg"/></div> <div class="icon_background_sel" id="camera_sel"><img class="camera_icon" src="images/svg/camera_sel.svg"/></div><div class="icon_text">Go Live Now</div></div></a></li>
-                                    <li role="presentation" class="create"><a href="#Section2" aria-controls="create" role="tab" data-toggle="tab" aria-expanded="true"><div class="live_tab_items"><div class="icon_background_sel" id="live_icon_sel"><img class="live_icon"  src="images/svg/live-time-selected.svg"/></div>  <div class="icon_background" id="live_icon_unsel"><img class="live_icon"  src="images/svg/live-time.svg"/></div><div class="icon_text">Schedule a new  Discussion</div></div></a></li>
-                                    <li role="presentation" class="join"><a href="#Section3" aria-controls="join" role="tab" data-toggle="tab" aria-expanded="false"><div class="live_tab_items"><div class="icon_background" id="create_icon_unsel"><img class="live_icon" src="images/svg/live-date.svg"/></div> <div class="icon_background_sel" id="create_icon_sel"><img class="live_icon" src="images/svg/live-date-selected.svg"/></div><div class="icon_text">View Upcoming Discussions</div></div></a></li>
-                                    <div style="background-color: #dcdcdc; height: 1px; width: 100%; margin-bottom: 10px;"></div>
 
 
 
-                                    <!--- Schedule discussion firstpage starts here ---->
+                                    <li role="presentation" class="join"><a class="active"  href="#Section1" style="display: none" aria-controls="join now" role="tab" data-toggle="tab" aria-expanded="true"><div class="live_tab_items"><div class="icon_background" id="camera_icon_unsel"><img class="camera_icon" src="images/svg/camera_unsel.svg"/></div> <div class="icon_background_sel" id="camera_sel"><img class="camera_icon" src="images/svg/camera_sel.svg"/></div><div class="icon_text">Go Live Now</div></div></a></li>
+                                    <li role="presentation" class="join"><a href="#Section2" aria-controls="create" role="tab" style="display: none;" data-toggle="tab"><div class="live_tab_items"><div class="icon_background_sel" id="live_icon_sel"><img class="live_icon"  src="images/svg/live-time-selected.svg"/></div>  <div class="icon_background" id="live_icon_unsel"><img class="live_icon"  src="images/svg/live-time.svg"/></div><div class="icon_text">Schedule a new  Discussion</div></div></a></li>
+                                    <li role="presentation" class="join"><a href="#Section3" aria-controls="join" role="tab" style="display: none" data-toggle="tab"><div class="live_tab_items"><div class="icon_background" id="create_icon_unsel"><img class="live_icon" src="images/svg/live-date.svg"/></div> <div class="icon_background_sel" id="create_icon_sel"><img class="live_icon" src="images/svg/live-date-selected.svg"/></div><div class="icon_text">View Upcoming Discussions</div></div></a></li>
+                                    <div style="background-color: #dcdcdc; height: 1px; width: 100%; margin-bottom: 10px; display: none;"></div>
+
+                                    <li class="hack_list" style="visibility: hidden; height: 0px; width: 0px;"><a role="tab"></a></li>
+
+
+
+                                    <!---- Live Chat Ui Starts ---->
+
+                                    <div style="width: 100%; height: 100%; display: block">
+
+                                        <div>
+                                            <div class="mesge-area" style="margin-top: 10px;">
+                                                <ul class="conversations">
+                                                    <li class="you">
+                                                        <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <p>HI, i have faced a problem with your software. are you available now</p>
+                                                            <span><i class="ti-check"></i><i class="ti-check"></i> 2:32PM</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="me">
+                                                        <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <p>HI, i have checked about your query, there is no any problem like that...</p>
+                                                            <span><i class="ti-check"></i><i class="ti-check"></i> 2:35PM</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="you">
+                                                        <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <p>HI, i have faced a problem with your software. are you available now</p>
+                                                            <span><i class="ti-check"></i><i class="ti-check"></i> 2:32PM</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="you">
+                                                        <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <p>HI, i have faced a problem with your software. are you available now</p>
+                                                            <span><i class="ti-check"></i><i class="ti-check"></i> 2:32PM</span>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li class="you">
+                                                        <figure><img src="images/resources/user1.jpg" alt=""></figure>
+                                                        <div class="text-box">
+                                                            <div class="wave">
+                                                                <span class="dot"></span>
+                                                                <span class="dot"></span>
+                                                                <span class="dot"></span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="message-writing-box">
+                                                <form method="post">
+                                                    <div class="text-area">
+                                                        <input type="text" placeholder="write your message here..">
+                                                        <button type="submit"><i  style="margin-left: 10px;" class="fa fa-paper-plane-o"></i></button>
+                                                    </div>
+                                                    <div class="emojies">
+                                                        <i><img src="images/smiles/happy-3.png" alt=""></i>
+                                                        <ul class="emojies-list">
+                                                            <li><a href="#" title=""><img src="images/smiles/unhappy.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/tongue-out-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/suspicious.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/smiling.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/wink.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/bored.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/angry-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/angry.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/bored-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/bored-2.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/confused-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/confused.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/crying-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/crying.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/embarrassed.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/emoticons.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/happy-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/happy-2.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/happy-3.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/happy-4.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/ill.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/in-love.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/kissing.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/mad.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/nerd.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/ninja.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/quiet.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/sad.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/secret.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/smile.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/surprised-1.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/tongue-out.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/unhappy.png" alt=""></a></li>
+                                                            <li><a href="#" title=""><img src="images/smiles/suspicious.png" alt=""></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!---- Live Chat Ui Ends ---->
+
+
+
+
+
+
+
+
+
+
+
+                                    <!------ Creation Tabs   ---------->
+
+
+
+                                    <div style="display: none">
 
                                     <span class="text" style="margin-left: 20px; font-size: 14px; margin-top: 15px;">Details</span>
+
+                                    <!--- Schedule discussion firstpage starts here ---->
 
                                     <div class="schedule_discussion_firstpage" style="display: block">
 
@@ -200,7 +356,7 @@
                                     </label>
 
 
-                                    <div class="schedule_discussion_next" style="height: 30px; width: 310px; display: flex; justify-content: center; align-items: center; background-color: #1182e3; color: white; font-size: 14px; border-radius: 5px; position:absolute; top: 100%; left: 0; margin-top: -40px;">Next</div>
+                                    <div class="schedule_discussion_next" style="height: 30px; width: 310px; display: flex; justify-content: center; align-items: center; text-align: -webkit-center; background-color: #1182e3; color: white; font-size: 14px; border-radius: 5px; position:absolute; top: 90%; left: 0; margin-top: -40px; margin-left: -60px;">Next</div>
                                     </div>
                                     <!--- Schedule discussion firstpage ends here ---->
 
@@ -241,7 +397,7 @@
 
 
 
-                                        <div style="display: flex; position:absolute; top: 100%; left: 0; width: 310px;margin-top: -40px;">
+                                        <div style="display: flex; position:absolute; top: 90%; left: 0; width: 310px;margin-top: -40px; margin-left: -60px;">
 
                                             <div class="schedule_discussion_back" style="height: 30px; width: 30%; display: flex; justify-content: center; align-items: center; background-color: lightgrey; font-family: bento; color: black; font-size: 12px; border-radius: 5px;">Back</div>
 
@@ -256,25 +412,1088 @@
                                     <!---- Schedule discussion secondpage ends here ---->
 
 
-
+                                    <!------ Creation Tabs  Ends ---------->
+                                    </div>
                                 </ul>
+
+
                                 <!-- Tab panes -->
                                 <div class="tab-content tabs">
 
 
 
+                                 <!----  Join Now Section Starts here  ----->
 
-
-
-
-
-                                    <!----  Join Now Section Starts here  ----->
                                     <div role="tabpanel" class="tab-pane active" id="Section1">
 
+                                        <span class="text" style="margin-left: 60px; font-size: 16px;"></span>
+
+                                        <div class="grid" style="margin-top: -75px; margin-left: -5px;">
+
+
+
+                                            <div class="live_arena_root" id="dashboard_root">
+
+                                            <div id="live_arena" style="margin-top: 20px;">
+                                                <div id="layout"></div>
+
+                                              <div class="live_fullscreen"><img class="live_fullscreen_arrow" src="images/arrow.svg"/><img class="live_fullscreen_arrow_reverse" src="images/arrow.svg"/></div>
+
+                                                <div class="live_icon">Live</div>
+                                                 <div class="live_toolbar">
+
+                                                    <div class="live_tools_background muteaudio">
+
+                                                    <img src="images/svg/mutelive.svg" style="height: 24px; width: 24px;"/>
+
+                                                    </div>
+
+                                                    <div class="live_tools_background mutevideo">
+
+                                                        <img src="images/svg/livevideomute.svg" style="height: 24px; width: 24px;"/>
+
+                                                    </div>
+
+                                                     <div class="live_tools_background sharescreen">
+
+                                                         <img src="images/svg/sharescreen.svg" style="height: 27px; width: 27px;"/>
+
+                                                     </div>
+
+                                                    <div class="live_tools_background">
+
+                                                        <img src="images/svg/filter.svg" style="height: 30px; width: 30px;"/>
+
+                                                    </div>
+                                                    <div class="live_tools_background">
+
+                                                        <img src="images/svg/donatelive.svg" style="height: 32px; width: 32px;"/>
+
+                                                    </div>
+
+                                                    <div class="live_tools_background" style="background-color: #fa2d65;">
+
+                                                        <img src="images/svg/exitlive.svg" style="height: 20px; width: 20px;"/>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="mnav"  id="live_dashboard">
+
+
+                                                <div class="tab-wrap">
+                                                    <!-- active tab on page load gets checked attribute -->
+                                                    <input type="radio" id="stream_setup" name="tabGroup1" class="tab" checked/>
+                                                    <label for="stream_setup">Stream Setup</label>
+
+                                                    <input type="radio" id="tab2" name="tabGroup1" class="tab" />
+                                                    <label for="tab2">Dashboard</label>
+
+                                                    <input type="radio" id="tab3" name="tabGroup1" class="tab" />
+                                                    <label for="tab3">Participants</label>
+
+                                                    <input type="radio" id="tab4" name="tabGroup1" class="tab" />
+                                                    <label for="tab4">Polls</label>
+
+                                                    <input type="radio" id="tab5" name="tabGroup1" class="tab" />
+                                                    <label for="tab5">Help</label>
+
+                                                    <input type="radio" id="tab6" name="tabGroup1" class="tab"/>
+                                                    <label style="width: 900px !important; max-width: 400px;" for="tab5"></label>
 
 
 
 
+
+                                                    <!---- Stream Setup starts here ---->
+
+                                                    <div class="tab__content">
+
+                                                        <div style="display: flex">
+
+
+                                                        <!---- Setup tab 1 ---->
+                                                            <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Setup</div>
+
+                                                                <div style="display: flex; margin-left: 20px; margin-top: 10px;">
+                                                                    <img src="images/svg/cam.svg" style="height: 24px; width: 24px; margin-top: 15px; margin-right: 10px;">
+
+
+                                                                    <label class="dropdown" style="margin-top: 10px; height: 30px; width: 250px;">
+                                                                        <div class="dd-button">
+                                                                            Default Camera on your System
+                                                                        </div>
+
+                                                                        <input type="checkbox" class="dd-input" id="test" />
+
+                                                                        <ul class="dd-menu">
+                                                                            <li>By Invitation</li>
+                                                                            <li>Another action</li>
+                                                                            <li>Communities you belong</li>
+                                                                        </ul>
+                                                                    </label>
+
+                                                                </div>
+
+                                                                <div style="display: flex; margin-left: 20px; margin-top: 10px;">
+                                                                    <img src="images/svg/bluemic.svg" style="height: 24px; width: 24px; margin-top: 15px; margin-right: 10px;">
+
+
+                                                                    <label class="dropdown" style="margin-top: 10px; height: 30px; width: 300px;">
+                                                                        <div class="dd-button">
+                                                                            Default Audio Source on your System
+                                                                        </div>
+
+                                                                        <input type="checkbox" class="dd-input" id="test" />
+
+                                                                        <ul class="dd-menu">
+                                                                            <li>By Invitation</li>
+                                                                            <li>Another action</li>
+                                                                            <li>Communities you belong</li>
+                                                                        </ul>
+                                                                    </label>
+
+                                                                </div>
+
+
+                                                                <div style="display: flex; margin-left: 20px; margin-top: 10px;">
+                                                                    <img src="images/svg/laptop.svg" style="height: 24px; width: 24px; margin-top: 15px; margin-right: 10px;">
+
+
+                                                                    <label  style="margin-top: 10px; height: 30px; width: 300px;">
+                                                                        <div class="dd-button">
+                                                                            Share your Screen
+                                                                        </div>
+                                                                    </label>
+
+                                                                </div>
+
+
+                                                            </div>
+
+
+
+
+
+                                                   <!--- Setup Tab 2 ------>
+                                                            <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Anonymous Settings</div>
+
+                                                                <div class="form-element form-input" style="margin-left: 15px; margin-right: 15px;">
+                                                                    <div class="form-element-bar">
+                                                                        <input
+                                                                                class="form-element-field"
+                                                                                type="input"
+                                                                                placeholder="Display name"
+                                                                                required
+                                                                                style="font-weight: bold; font-family: 'bentothin';"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div style="display: flex">
+                                                                    <div class="text" style="margin-top: 15px; bottom: 0px; margin-left: 20px; margin-right: 0px; font-size: 14px; font-family: 'bentothin'; font-weight: bold; color: #616060">Video filter</div>
+                                                                    <div style="width: 100px; height: 25px; background-color: #0a74ff; border-radius: 5px; text-align: center; margin-left: 10px; margin-top: 10px; font-size: 11px; font-family: 'bentothin'; font-weight: bold;">Select</div>
+
+                                                                </div>
+
+                                                                <div style="display: flex">
+                                                                    <div class="text" style="margin-top: 15px; bottom: 0px; margin-left: 20px; margin-right: 0px; font-size: 14px; font-family: 'bentothin'; font-weight: bold; color: #616060">Virtual Background</div>
+                                                                    <div style="width: 100px; height: 25px; background-color: #0a74ff; border-radius: 5px; text-align: center; margin-left: 10px; margin-top: 10px; font-size: 11px; font-family: 'bentothin'; font-weight: bold;">Select</div>
+
+                                                                </div>
+
+                                                                <div style="display: flex; width: 100%; margin-top: 5px; margin-left: 10px;">
+
+                                                                        <div class="text" style="color:#616060; margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 14px; font-weight: bold; font-family: 'bentothin'">Allow Participant to view your profile</div>
+                                                                    <div style="width: 20%; height: 40px; margin-top: 5px; margin-left: 20px;">
+                                                                        <div class="row press">
+                                                                            <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                                            <label for="unchecked" class="lbl"></label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+
+
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!---- Stream Setup ends here ---->
+
+
+                                                    <!---- Stream Dashboard starts here ---->
+
+                                                    <div class="tab__content">
+
+                                                        <div style="display: flex">
+
+
+                                                            <!---- Dashboard tab 1 ---->
+                                                            <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Insight</div>
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Participants
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                122,768
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                 </div>
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Participants
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                122,768
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Audio bit rate
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                234 bit/sec
+                                                                            </div>
+                                                                            <img
+                                                                                    src="images/svg/downvotefilled.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 11px;"
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="insight_item">
+                                                                    <div style="display: flex;">
+                                                                        <div class="dashboard_tab1_left">
+                                                                            <img
+                                                                                    src="images/svg/laptop.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 10px;"
+                                                                            />
+
+                                                                            <div style="margin-top: 10px; margin-left: 5px; color: #656464; font-family: 'bentothin'; font-weight: bold;">
+                                                                                Video bit rate
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="dashboard_tab1_right">
+                                                                            <div style="margin-top: 10px; margin-left: 5px; margin-right: 20px; color: #656464; font-family: 'bentothin'; font-weight: bold">
+                                                                                234 bit/sec
+                                                                            </div>
+                                                                            <img
+                                                                                    src="images/svg/upvotefilled.svg"
+                                                                                    style="height: 16px; width: 16px; margin-top: 11px;"
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                           </div>
+
+
+
+
+
+                                                            <!--- Setup Tab 2 ------>
+                                                            <div class="schedule-tab" style="height: 500px; width: 45%; display: block; margin-left: 20px; overflow-y: auto; overflow-x: hidden;">
+
+                                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Notification</div>
+
+                                                                <div style="width: 100%; background-color: lightgrey; height: 0.5px; margin-top: 10px;"></div>
+
+                                                                <div style="display: block; text-align: -webkit-center;">
+
+                                                                    <div class="notification green">
+                                                                        <div class="info">
+                                                                            <p>This is a new notification, $45 has just been donated to your campaign by Jetrixa</p>
+                                                                        </div>
+                                                                        <div class="icon">
+                                                                            <i class="fa fa-asterisk"></i>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="notification red">
+                                                                        <div class="info">
+                                                                            <p>This is a new notification, $45 has just been donated to your campaign by Jetrixa</p>
+                                                                        </div>
+                                                                        <div class="icon">
+                                                                            <i class="fa fa-heart"></i>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="notification blue">
+                                                                        <div class="info">
+                                                                            <p>This is a new notification, $45 has just been donated to your campaign by Jetrixa</p>
+                                                                        </div>
+                                                                        <div class="icon">
+                                                                            <i class="fa fa-newspaper"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!---- Stream Dashboard ends here ---->
+
+
+
+
+                                                    <!---- Stream Participants starts here  ---->
+
+                                                    <div class="tab__content" style="text-align: -webkit-center; text-align: center; width: 100%; display: flex; justify-content: center;">
+
+                                                        <div class="schedule-tab" style="height: 530px; width: 40%; display: block; overflow-x: hidden; overflow-y: auto;">
+
+                                                            <div class="text" style="font-size: 16px; margin-bottom:0px; margin-top: 10px; margin-left: 0px; font-weight: bolder; font-family: 'bentothin'; ">Participants(600)</div>
+
+
+                                                            <div class="user_1" style="display: block; height: 70px; width: 100%;">
+
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="participants_item">
+                                                                    <div class="participant_item_left">
+                                                                        <img
+                                                                                class="participant_img"
+                                                                                src="https://cdn.pixabay.com/photo/2017/01/26/11/30/autumn-2010387_960_720.jpg"
+                                                                        />
+
+                                                                        <div style="margin-top: 10px; margin-left: 5px; font-size: 14px; color: #4e4e4e; font-family: 'bentothin';">
+                                                                            Laura williams
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="participant_item_right">
+                                                                        <div style="margin-left: 3px; margin-right: 15px;">
+                                                                            <img
+                                                                                    src="images/svg/noaudio.svg"
+                                                                                    style="height: 17px; width: 17px; margin-top: 10px;"/>
+                                                                        </div>
+                                                                        <img
+                                                                                src="images/svg/nocam.svg"
+                                                                                style="height: 17px; width: 17px; margin-top: 10px;"
+                                                                        />
+                                                                        <ul class="live-calls">
+                                                                            <li>
+                                                                                <div class="dropdown" style="margin-top: 0px!important;">
+                                                                                    <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img
+                                                                                                class="overflow_menu_icon"
+                                                                                                src="images/svg/overflow.svg" />
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item audio-call" href="#" ><i class="ti-headphone-alt" style="color: #fa2d65"></i>Voice Call</a>
+                                                                                        <a href="#" class="dropdown-item video-call"><i class="ti-video-camera" style="color: #fa2d65"></i>Video Call</a>
+                                                                                        <hr>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-server" style="color: #fa2d65"></i>Clear History</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-hand-stop" style="color: #fa2d65"></i>Block Contact</a>
+                                                                                        <a href="#" class="dropdown-item"><i class="ti-trash" style="color: #fa2d65"></i>Delete Contact</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+
+
+
+
+
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!---- Stream Participants ends here  ---->
+
+
+
+
+                                                    <!---- Stream Polls starts here  ----->
+
+                                                    <div class="tab__content">
+
+                                                        <div style="width: 100%; height: 100%; display: flex">
+
+
+
+                                                            <!---- create poll starts here ----->
+
+                                                            <div class="schedule-tab" id="create_poll_tab" style="height: 350px; width: 45%; display: block; margin-left: 50px; height: auto!important; max-height: 380px;">
+
+                                                                <div class="small_text">Question</div>
+
+                                                                <input
+                                                                        class="form-element-field"
+                                                                        type="input"
+                                                                        placeholder="Poll Question..."
+                                                                        required
+                                                                        style="font-weight: bold; font-family: 'bentothin'; background-color: #efefef; border-radius: 20px; height: 35px;padding: 0px!important;padding-right: 15px!important;padding-left: 15px!important; margin-top: 10px;"/>
+
+                                                                <div class="small_text">Options</div>
+
+                                                                <input
+                                                                        class="form-element-field"
+                                                                        type="input"
+                                                                        placeholder="Poll Question..."
+                                                                        required
+                                                                        style="font-weight: bold; font-family: 'bentothin'; background-color: #efefef; border-radius: 20px; height: 35px;padding: 0px!important;padding-right: 15px!important;padding-left: 15px!important; margin-top: 10px;"/>
+
+                                                                <input
+                                                                        class="form-element-field"
+                                                                        type="input"
+                                                                        placeholder="Poll Question..."
+                                                                        required
+                                                                        style="font-weight: bold; font-family: 'bentothin'; background-color: #efefef; border-radius: 20px; height: 35px;padding: 0px!important;padding-right: 15px!important;padding-left: 15px!important; margin-top: 10px;"/>
+
+
+                                                                <input
+                                                                        class="form-element-field"
+                                                                        type="input"
+                                                                        placeholder="Poll Question..."
+                                                                        required
+                                                                        style="font-weight: bold; font-family: 'bentothin'; background-color: #efefef; border-radius: 20px; height: 35px;padding: 0px!important;padding-right: 15px!important;padding-left: 15px!important; margin-top: 10px;"/>
+
+
+                                                                <input
+                                                                        class="form-element-field"
+                                                                        type="input"
+                                                                        placeholder="Poll Question..."
+                                                                        required
+                                                                        style="font-weight: bold; font-family: 'bentothin'; background-color: #efefef; border-radius: 20px; height: 35px;padding: 0px!important;padding-right: 15px!important;padding-left: 15px!important; margin-top: 7px;"/>
+
+
+
+
+
+                                                                <div class="poll_view_actions_root">
+
+                                                                    <div class="poll_edit">Clear</div>
+                                                                    <div class="poll_activate" id="save_poll_button">Save</div>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                            <!---- create poll ends here ----->
+
+
+
+
+
+
+
+                                                            <!---- edit poll starts here ----->
+
+                                                        <div class="schedule-tab" id="view_poll_tab"  style="height: 350px; width: 45%; display: none; margin-left: 50px; height: auto!important; max-height: 380px;">
+
+                                                            <div class="poll_question">Your Question goes here, any question asked will be going </div>
+
+                                                            <div class="poll_option">
+                                                                This is the first option of the poll
+
+                                                            </div>
+                                                            <div class="poll_option">
+                                                                This is the first option of the poll
+
+                                                            </div>
+
+                                                            <div class="poll_option">
+                                                                This is the first option of the poll
+
+                                                            </div>
+
+                                                            <div class="poll_option">
+                                                                This is the first option of the poll
+
+                                                            </div>
+
+                                                            <div class="poll_view_actions_root">
+
+                                                                <div class="poll_edit">Edit Poll</div>
+                                                                <div class="poll_activate" id="activate_poll_button">Activate Poll</div>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                            <!---- edit poll ends here ----->
+
+                                                            <!---- polls view starts here  --->
+                                                   <div class="schedule-tab" style="height: 350px; width: 35%; display: block; margin-left: 20px;">
+
+                                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Polls</div>
+
+                                                                <div class="poll_item">
+                                                                    <div class="small_text" style="margin-left: 10px; margin-top: 2px; margin-right: 10px!important; font-size: 14px;">The Question is here...</div>
+
+                                                                    <div class="small_text" style="color: #8e8e8e; margin-left: 10px;margin-top: 5px; font-size: 10px;">Not Published</div>
+
+                                                                </div>
+
+                                                       <div class="poll_item">
+                                                           <div class="small_text" style="margin-left: 10px; margin-top: 2px; margin-right: 10px!important; font-size: 14px;">The Question is here...</div>
+
+                                                           <div class="small_text" style="color: #8e8e8e; margin-left: 10px;margin-top: 5px; font-size: 10px;">Not Published</div>
+
+                                                       </div>
+
+                                                       <div class="poll_item">
+                                                           <div class="small_text" style="margin-left: 10px; margin-top: 2px; margin-right: 10px!important; font-size: 14px;">The Question is here...</div>
+
+                                                           <div class="small_text" style="color: #8e8e8e; margin-left: 10px;margin-top: 5px; font-size: 10px;">Not Published</div>
+
+                                                       </div>
+
+                                                       <div class="poll_item">
+                                                           <div class="small_text" style="margin-left: 10px; margin-top: 2px; margin-right: 10px!important; font-size: 14px;">The Question is here...</div>
+
+                                                           <div class="small_text" style="color: #8e8e8e; margin-left: 10px;margin-top: 5px; font-size: 10px;">Not Published</div>
+
+                                                       </div>
+
+                                                            </div>
+                                                            <!---- polls view ends here  --->
+                                                        </div>
+                                                    </div>
+
+                                                    <!---- Stream Polls Ends here  ----->
+
+
+
+                                                    <div class="tab__content">
+
+                                                        <div class="schedule-tab" style="height: 350px; width: 45%; display: block; margin-left: 20px;">
+
+                                                            <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Polling</div>
+
+
+                                                        </div>
+
+                                                    </div>
+
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        </div>
 
                                     </div>
 
@@ -289,9 +1508,153 @@
 
                                     <!----  Schedule Live Starts here  ----->
 
-                                    <div role="tabpanel" class="tab-pane" id="Section2">
-                                        <h3>Section 2</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+
+                                        <span class="text" style="margin-top: 0px!important;"></span>
+
+                                        <div class="grid2" style="margin-top: -50px; margin-left: 60px; height: 800px; width: 800px; display: flex;">
+
+                                            <div class="schedule-tab" style="height: 350px; width: 45%; display: block">
+
+                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Setup Options</div>
+
+                                                <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                    <div style="display: block; width: 80%;">
+                                                        <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">Allow Joining Anonymously</div>
+                                                        <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: bold">Guest can change their names,prevent profile access, and use video filters. </div>
+                                                    </div>
+                                                    <div style="width: 20%; height: 50px; margin-top: 20px;">
+                                                        <div class="row press">
+                                                            <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                            <label for="unchecked" class="lbl"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div style="display: flex; width: 100%; margin-top: 5px;">
+                                                    <div style="display: block; width: 80%;">
+                                                        <div class="text" style="margin-bottom:0px; margin-left: 10px; margin-top: 5px; margin-right: 10px; font-size: 12px; font-weight: normal;">Make this a campaign</div>
+                                                        <div style="line-height:15px; margin-left: 10px; margin-right: 10px; color: #636262; font-size: 12px; font-family: 'bentothin'; margin-bottom: 0px; margin-top: 2px; font-weight: bold">You can inspire people to help fund a particular cause, project or appeal.(Donate button will be displayed during the discussion) </div>
+                                                    </div>
+                                                    <div style="width: 20%; height: 50px; margin-top: 20px; margin-left: 10px;">
+                                                        <div class="row press">
+                                                            <input type="checkbox" id="unchecked" class="cbx hidden"/>
+                                                            <label for="unchecked" class="lbl"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div style="width: 90%; margin-top: 10px; background-color: #d2d0d0; height: 0.5px; margin-left: 10px; margin-right: 10px;"></div>
+
+
+                                                <div class="text" style="font-size: 14px; margin-bottom:0px; margin-top: 10px;">Discussion Url</div>
+
+
+                                                <div style="display: inline-flex;">
+                                                    <input
+                                                            aria-labelledby="add_tags_btn"
+                                                            type="text"
+                                                            style="margin-top: 10px; background-color: #f0f2f5; border: darkgrey solid 1px; border-radius: 4px; height: 40px;"
+                                                            placeholder="Discussion url will appear here when created"
+                                                    />
+                                                    <button
+                                                            class="btn btn-primary"
+                                                            style="margin-left: 10px; color: #0a74ff; height: 40px; margin-top: 10px; width: 60px; background-color: #d2daf3;"
+                                                    >
+                                                        Copy
+                                                    </button>
+                                                </div>
+
+                                            </div>
+                                            <div class="schedule-tab" style="height: 550px; width: 65%; margin-left: 20px; margin-right: 40px;">
+
+                                                <div style="display: block;  text-align: center; justify-content: center; align-content: flex-start; text-align: -webkit-center">
+                                                       <div style="width: 350px; height: 200px; border-radius: 5px;  position: relative; background:url('https://cdn.pixabay.com/photo/2016/10/14/17/32/dallas-1740681_960_720.jpg'); background-repeat: no-repeat; background-size: cover;">
+                                                        <div class="date-tab" style="width: 60px; height: 55px; position: absolute; top:75%; left: 7%; background: white;">
+                                                            <div style="height: 15px; width: 100%; background-color: #fa2d65"></div>
+                                                            <div class="text" style="width: 100%; display: flex; justify-content: center; align-items: center;margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: 7px;">25</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="discussion_topic">The discussion about the Science of Well-Being and Things around, making the topic a little longer and even longer</div>
+
+                                                    <div style="width: 100%;  display: flex; margin-top: 20px; text-align: center;">
+                                                        <div class="users-thumb-list" style="width: 100%;">
+                                                            <a data-toggle="tooltip" title="Ema" href="#">
+                                                                <img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2021/05/06/13/16/bee-6233397_960_720.jpg">
+                                                            </a>
+                                                            <a data-toggle="tooltip" title="Ema" href="#">
+                                                                <img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2021/05/10/08/06/child-6242849_960_720.jpg">
+                                                            </a>
+                                                            <a data-toggle="tooltip" title="Ema" href="#">
+                                                                <img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2021/05/06/13/16/bee-6233397_960_720.jpg">
+                                                            </a>
+                                                            <a data-toggle="tooltip" title="Ema" href="#">
+                                                                <img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2017/06/15/22/05/girl-2406963_960_720.jpg">
+                                                            </a>
+                                                            <a data-toggle="tooltip" title="Ema" href="#">
+                                                                <img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2021/05/10/08/06/child-6242849_960_720.jpg">
+                                                            </a>
+                                                            <a data-toggle="tooltip" title="Ema" href="#">
+                                                                <img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2017/06/15/22/05/girl-2406963_960_720.jpg">
+                                                            </a>
+                                                            <a data-toggle="tooltip" title="Ema" href="#">
+                                                                <img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2021/05/10/08/06/child-6242849_960_720.jpg">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="people_attending">Jeff Ogah and 2,225 others are attending</div>
+
+
+                                                    <div class="discussion_info">
+                                                        <div class="icon_background_i">
+                                                            <img style="height: 20px; width: 20px; margin-top: 7px;" src="images/svg/time.svg"/>
+                                                        </div>
+
+                                                        <span class="discussion_date_time">September 25th, 08:00 GMT</span>
+                                                    </div>
+                                                    <div class="discussion_info">
+                                                        <div class="icon_background_i">
+                                                            <img style="height: 20px; width: 20px; margin-top: 7px;" src="images/svg/podcast.svg"/>
+                                                        </div>
+
+                                                        <span class="discussion_date_time">Jeff Ogah</span>
+                                                    </div>
+
+                                                    <div class="discussion_info">
+                                                        <div class="icon_background_i">
+                                                            <img style="height: 20px; width: 20px; margin-top: 7px;" src="images/svg/mask.svg"/>
+                                                        </div>
+                                                        <div style="display: block; width: 300px; height: 60px; align-items: flex-start; justify-content: left; text-align: left;">
+                                                            <span class="discussion_date_time">Join Anonymously</span>
+                                                            <div class="anonymous_desc">Host allows joining anonymously,you can hide your profile and also use filters to protect your identity </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <div class="discussion_info" style="margin-top: 25px;">
+                                                        <div class="icon_background_i">
+                                                            <img style="height: 20px; width: 20px; margin-top: 7px;" src="images/svg/campaign.svg"/>
+                                                        </div>
+
+                                                        <span class="discussion_date_time">Campaign</span>
+                                                    </div>
+
+                                                    <div class="discussion_desc" style="text-align: left">discussion about the Science of Well-Being and Things around The discussion about the Science of Well-Being and Things around The discussion about the Science of Well-Being and Things around The discussion about the Science of Well-Being and Things around making the topic a little longer and even longer</div>
+
+
+
+                                                </div>
+
+
+
+                                            </div>
+
+                                        </div>
+
                                     </div>
 
                                     <!----  Schedule live ends here  ----->
@@ -310,7 +1673,7 @@
                                     <div role="tabpanel" class="tab-pane fade" id="Section3">
                                         <span class="text" style="margin-left: 60px; font-size: 16px;">Upcoming live Discussions</span>
 
-                                        <div class="grid" style="margin-top: 30px; margin-left: 50px;">
+                                        <div class="grid3" style="margin-top: 30px; margin-left: 50px;">
 
                                             <div class="card">
                                                 <div class="banner">
@@ -377,15 +1740,9 @@
 
 
 
+
     <script src="js/main.min.js"></script>
-    <script src="js/toast-notificatons.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script><!-- For timeline slide show -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script><!-- for location picker map -->
-    <script src="js/locationpicker.jquery.js"></script><!-- for loaction picker map -->
-    <script src="js/map-init.js"></script><!-- map initilasition -->
     <script src="js/script.js"></script>
-    <script src="js/gellery.js"></script>
-    <script src="js/actions.js"></script>
     <script src="js/homeheader.js"/>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="./dist/js/moment.min.js"></script>
@@ -393,8 +1750,6 @@
     <script src="./dist/js/scroll-into-view-if-needed.min.js"></script>
     <script src="./dist/js/draggabilly.pkgd.min.js"></script>
     <script src = "js/live.js"></script>
-
-
 
 
 
@@ -626,6 +1981,272 @@
 
     /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
     autocomplete(document.getElementById("add_tags"), countries);
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Handler for .ready() called.
+        $('#dashboard_root').animate({
+            scrollTop: $('#live_dashboard').offset().top
+        }, 'slow');
+    });
+</script>
+
+
+
+
+
+
+   <!--- Vonage Streaming Live Starts --->
+
+   <!--- Vonage Streaming Live Ends  --->
+
+<script type="text/javascript" charset="utf-8">
+
+    //These credentials are usually generated by your server
+
+
+    const apiKey = '47248174';
+    const sessionId = '1_MX40NzI0ODE3NH5-MTYyMzQxODI5NzcyNH4xSUdaeVVUNU1aK0pTY3FidmhMc2xZbjR-UH4';
+    let session = OT.initSession(apiKey, sessionId);
+    var token1 = "T1==cGFydG5lcl9pZD00NzI0ODE3NCZzaWc9OWIxNTU4MWVmZTMyZWE1OGY3NjM0YzJmYmI0OWQzMzA3ZWQzMTA2NjpzZXNzaW9uX2lkPTFfTVg0ME56STBPREUzTkg1LU1UWXlNelF4T0RJNU56Y3lOSDR4U1VkYWVWVlVOVTFhSzBwVFkzRmlkbWhNYzJ4WmJqUi1VSDQmY3JlYXRlX3RpbWU9MTYyMzQxODA2OSZyb2xlPXB1Ymxpc2hlciZub25jZT0xNjIzNDE4MDY5Ljc4MTgxNDE5NzIyNCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ==";
+    var token2 = " T1==cGFydG5lcl9pZD00NzI0ODE3NCZzaWc9NzRjNWU4MWVjYzYwMmFjZGJlNDE4MWU2OTE1NmVlZmE5ODU2YzNjNjpzZXNzaW9uX2lkPTFfTVg0ME56STBPREUzTkg1LU1UWXlNelF4T0RJNU56Y3lOSDR4U1VkYWVWVlVOVTFhSzBwVFkzRmlkbWhNYzJ4WmJqUi1VSDQmY3JlYXRlX3RpbWU9MTYyMzQxODEwOSZyb2xlPXB1Ymxpc2hlciZub25jZT0xNjIzNDE4MTA5LjkxNzQxMjA0NzAzMzk3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
+    var layoutEl = document.getElementById("layout");
+    var layout;
+
+
+    //Handling all of our errors here by alerting them
+    function handleError(error) {
+        if (error) {
+            //alert(error.message);
+        }
+    }
+
+
+    function updateLayoutValues() {
+
+        layout = initLayoutContainer(layoutEl, {
+            maxRatio: 9/16,
+            minRatio: 9/16,
+            fixedRatio:false,
+            alignItems: "center",
+            bigPercentage:0.8,
+            bigFixedRatio: false,
+            bigMaxRatio: 3/2,
+            bigMinRatio: 9/16,
+            bigFirst: true,
+            smallMaxWidth: Infinity,
+            smallMaxHeight: Infinity,
+            bigMaxWidth: Infinity,
+            bigMaxHeight: Infinity,
+            bigAlignItems: "center",
+            smallAlignItems: "center",
+            scaleLastRow: true,
+            bigScaleLastRow: true,
+        }).layout;
+    }
+
+    updateLayoutValues();
+    addPublisher();
+
+
+    $('.sharescreen').click(function(event) {
+       startShareScreen();
+    });
+
+    function startShareScreen(){
+
+        OT.checkScreenSharingCapability(function(response) {
+            if(!response.supported || response.extensionRegistered === false) {
+
+                // This browser does not support screen sharing.
+
+
+            } else if (response.extensionInstalled === false) {
+
+
+                // Prompt to install the extension.
+
+
+            } else {
+
+                // Screen sharing is available. Publish the screen.
+
+
+                var screen = document.createElement("div");
+
+                var publisher = OT.initPublisher(screen,
+                    {videoSource: 'screen',publishAudio:true},
+                    function(error) {
+                        if (error) {
+
+                            // Look at error.message to see what went wrong.
+
+                        } else {
+                            session.publish(publisher, function(error) {
+
+                                if (error) {
+
+                                    // Look error.message to see what went wrong.
+
+                                }
+                            });
+
+                        }
+
+                    }
+
+                );
+
+                publisher.on('streamDestroyed', function(event) {
+                    if (event.reason === 'mediaStopped') {
+                        // User clicked stop sharing
+                    } else if (event.reason === 'forceUnpublished') {
+                        // A moderator forced the user to stop sharing.
+                    }
+                });
+
+            }
+
+        });
+
+    }
+
+
+    function addPublisher() {
+
+        var ratios = [4/3, 3/4, 16/9];
+        var el = document.createElement("div");
+        el.videoHeight = 480;
+        // Pick a random ratio
+        var ratio = ratios[Math.round(Math.random() * (ratios.length - 1))];
+        el.videoWidth = 480 * ratio;
+
+        var publisherOptions = {
+            showControls: false
+        };
+        var publisher = OT.initPublisher(el, {
+            insertMode: 'append',
+            width:"100%",
+            height:"100%",
+            audioBitrate:30000,
+            autoGainControl:true,
+            publisherOptions
+        }, handleError);
+
+
+        $('.muteaudio').click(function(event) {
+            publisher.publishAudio(false);
+        });
+
+        $('.mutevideo').click(function(event) {
+            publisher.publishVideo(false);
+        });
+
+
+        session.on("streamPropertyChanged", function (event) {
+            var subscribers = session.getSubscribersForStream(event.stream);
+            for (var i = 0; i < subscribers.length; i++) {
+                // You may want to display some UI text for each
+                // subscriber, or make some other UI change,
+                // based on event.changedProperty and
+                // event.newValue
+            }
+        });
+
+
+        var subscriberOptions = {
+            showControls: false
+        };
+        //Once a new user joins the stream this automatically Subscribe to the newly created stream
+        session.on('streamCreated',function (event) {
+            var sub = document.createElement("div");
+         subscriber =  session.subscribe(event.stream, sub, {
+                insertMode: 'append',
+                width:"100%",
+                height:"100%",
+                audioBitrate:30000,
+                autoGainControl:true,
+
+
+                subscriberOptions
+            }, handleError);
+            addSubscriber(sub,subscriber);
+        });
+
+
+        // Connect to the session
+        session.connect(token1, function (error) {
+            // If the connection is successful, initialize a publisher and publish to the session
+            if (error) {
+                handleError(error);
+            } else {
+                session.publish(publisher, handleError);
+                layout();
+            }
+        });
+
+
+        el.addEventListener('click', function () {
+            if (el.classList.contains('OT_big')) {
+                el.classList.remove('OT_big');
+            } else {
+                el.classList.add('OT_big');
+            }
+            layout();
+        });
+
+        layoutEl.appendChild(el);
+        layout();
+
+    }
+
+    function addSubscriber(sub,subscriber) {
+        sub.videoHeight = 480;
+        // Pick a random ratio
+        var ratios = [4/3, 3/4, 16/9];
+        var ratio = ratios[Math.round(Math.random() * (ratios.length - 1))];
+        sub.videoWidth = 480 * ratio;
+        sub.addEventListener('click', function () {
+            if (sub.classList.contains('OT_big')) {
+                sub.classList.remove('OT_big');
+            } else {
+                sub.classList.add('OT_big');
+            }
+            layout();
+        });
+
+        $('.muteaudio').click(function(event) {
+            subscriber.subscribeToAudio(false);
+        });
+
+        $('.mutevideo').click(function(event) {
+            subscriber.subscribeToVideo(false);
+        });
+
+
+
+        layoutEl.appendChild(sub);
+        layout();
+    }
+
+
+    function removeElement() {
+        layoutEl.firstChild.classList.remove('ot-layout');
+        setTimeout(function() {
+            layoutEl.removeChild(layoutEl.firstChild);
+            layout();
+        }, 200);
+    }
+
+    var resizeTimeout;
+    window.onresize = function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function () {
+            layout();
+        }, 20);
+    };
+
 </script>
 
 
