@@ -339,12 +339,13 @@
     background-color: white;
     height: 60px;
     border-bottom: 1px solid lightgrey;
-    padding-right: 120px;
+    padding-right: 80px;
     position: sticky;
     top: 0;
     left: 0;
     z-index: 5;
 }
+
 
 .header_profile_image {
     height: 35px;
