@@ -299,10 +299,11 @@
     font-weight: bold;
 }
 .full_post_text{
-    font-family: "bentoreg";
+    font-family: "bentothin";
     font-size: 15px;
     display:inline-block;
     color: #505050;
+    font-weight: bold;
     margin-top: -5px;
     word-spacing: 1px;
 }
@@ -572,5 +573,311 @@ a:active {
     background: transparent!important;
     margin-bottom: 0px!important;
 }
+
+.compose_card {
+    background-color: #fff;
+    display: block;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 106%;
+    height: 110px;
+    margin-left: -20px;
+    margin-right: -40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    border: 1px solid #d4d1d1;
+}
+
+.compose_profile_image {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+.compose_textarea {
+    width: 90%;
+    height: 35px;
+    border-radius: 18px;
+    background: rgb(248, 248, 248);
+    color: #262626;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.img_textarea_div {
+    display: flex;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background: rgb(224, 224, 224);
+    margin-top: 10px;
+}
+.compose_action_div {
+    width: 95%;
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.share_it_live {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    padding-left: 20px;
+    text-align: center;
+    text-align: -webkit-center;
+    justify-content: center;
+    align-items: center;
+    color: #262626;
+    font-size: 12px;
+    font-family: 'bentothin';
+    font-weight: bold;
+}
+
+.share_image_video {
+    width: 34%;
+    height: 100%;
+    display: flex;
+    padding-left: 20px;
+    text-align: center;
+    text-align: -webkit-center;
+    justify-content: center;
+    align-items: center;
+    color: #262626;
+    font-size: 12px;
+    font-family: 'bentothin';
+    font-weight: bold;
+}
+.share_feeling_activity {
+    width: 34%;
+    height: 100%;
+    display: flex;
+    padding-left: 20px;
+    text-align: center;
+    text-align: -webkit-center;
+    justify-content: center;
+    align-items: center;
+    color: #262626;
+    font-size: 12px;
+    font-family: 'bentothin';
+    font-weight: bold;
+}
+
+.compose_action_img {
+    height: 20px;
+    width: 20px;
+    margin-right: 3px;
+}
+
+.comment_on_post_root {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    height: 35px;
+    padding-top: 10px;
+}
+
+.comment_on_post_profile_image {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+.comment_on_post_text_area {
+    width: 88%;
+    height: 15px;
+    color: #262626;
+    border: none;
+    margin-top: 7px;
+    background: none;
+    margin-left: 5px;
+}
+
+.comment_on_post_send {
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 13px;
+    margin-top: 2px;
+    font-family: 'bentothin';
+    font-weight: bold;
+    color: #7ac0f1;
+}
+
+.post_actions_root {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.post_action_div {
+    width: auto;
+    height: 100%;
+    display: flex;
+    padding-left: 20px;
+    text-align: center;
+    text-align: -webkit-center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'bentothin';
+    font-weight: bold;
+    font-size: 13px;
+    color: #262626;
+}
+
+.share_image_video {
+    width: 34%;
+    height: 100%;
+    display: flex;
+    padding-left: 20px;
+    text-align: center;
+    text-align: -webkit-center;
+    justify-content: center;
+    align-items: center;
+}
+
+.share_feeling_activity {
+    width: 34%;
+    height: 100%;
+    display: flex;
+    padding-left: 20px;
+    text-align: center;
+    text-align: -webkit-center;
+    justify-content: center;
+    align-items: center;
+}
+
+.post_action_img {
+    height: 20px;
+    width: 20px;
+    margin-right: 3px;
+}
+
+.post_comment_img {
+    height: 23px;
+    width: 23px;
+    margin-right: 3px;
+}
+
+.post_bookmark_img {
+    height: 20px;
+    width: 20px;
+    margin-right: 3px;
+}
+
+.actions_float_left {
+    display: flex;
+    float: left;
+    width: 70%;
+    margin-left: -20px;
+    justify-content: flex-start;
+}
+.action_float_right {
+    display: flex;
+    float: right;
+    width: 40%;
+    text-align: right;
+    display: flex;
+    text-align: -webkit-right;
+    justify-content: flex-end;
+}
+
+.jquery-comments .textarea-wrapper .textarea {
+    margin: 0;
+    outline: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: text;
+    border-radius: 8px;
+    border: 1px solid #CCC;
+    background: transparent!important;
+    font-size: 1em;
+    color: #505050!important;
+    font-family: "bentoreg";
+    line-height: 1.45em;
+    padding: .25em .8em;
+    padding-right: 2em;
+}
+.jquery-comments .textarea-wrapper .control-row > .attachments {
+    padding-top: .3em;
+    display: none!important;
+}
+
+.jquery-comments .textarea-wrapper .control-row > span.upload {
+    position: relative;
+    overflow: hidden;
+    background-color: #999;
+    display: none;
+}
+.jquery-comments ul.navigation li[data-sort-key="attachments"] {
+    float: right;
+    display: none!important;
+}
+
+.jquery-comments ul.main li.comment .comment-header .new {
+    background: #2793e6;
+    font-size: 0.8em;
+    padding: 0.2em 0.6em;
+    color: #fff;
+    font-weight: normal;
+    border-radius: 1em;
+    vertical-align: bottom;
+    word-break: normal;
+    display: none!important;
+    font-size: 13px!important;
+}
+.comments-container{
+    height: 100vh!important;
+    overflow-x: auto!important;
+}
+
+.fa-thumbs-up {
+    content:url("./images/svg/post_like.svg");
+    height: 16px!important;
+    width: 16px!important;
+}
+
+.jquery-comments ul.main li.comment .comment-header .name {
+    color: #505050;
+    font-family: "bento";
+    font-weight: normal!important;
+    font-size: 13px!important;
+}
+
+.jquery-comments ul.main li.comment .wrapper .content {
+    white-space: pre-line;
+    word-break: break-word;
+    color: #505050;
+    font-family: 'bentothin';
+    font-weight: bold;
+}
+
+
+.jquery-comments .textarea-wrapper:after {
+    content: " ";
+    position: absolute;
+    border: 7px solid #FFF;
+    left: 7px;
+    top: 1px;
+    width: 10px;
+    display: none!important;
+    height: 10px;
+    box-sizing: border-box;
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+}
+
+
+
 
 

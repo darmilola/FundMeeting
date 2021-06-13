@@ -1519,15 +1519,14 @@ header.sticky {
 /*--- central posts meta box ---*/
 .central-meta {
     background: #fff none repeat scroll 0 0;
-    border: 1px solid #ede9e9;
+    border: 1px solid #d4d1d1;
     border-radius: 5px;
     display: inline-block;
-    width: 100%;
+    width: 95%;
     margin-bottom: 20px;
     margin-left:40px;
     margin-right: 0px;
     padding: 20px;
-    width: 100%;
     height: auto;
     position: relative;
 }

@@ -58,13 +58,7 @@ var commentsArray = [
         "created": "2015-01-04",
         "modified": "2015-01-04",
         "content": "",
-        "attachments": [
-            {
-                "id": 1,
-                "file": "http://www.w3schools.com/html/mov_bbb.mp4",
-                "mime_type": "video/mp4",
-            },
-        ],
+        "attachments": [],
         "creator": 4,
         "fullname": "Todd Brown",
         "profile_picture_url": "https://cdn.pixabay.com/photo/2020/09/19/12/50/woman-5584377_960_720.jpg",
@@ -165,13 +159,7 @@ var commentsArray = [
         "created": "2015-01-10",
         "modified": "2015-01-10",
         "content": "Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.",
-        "attachments": [
-            {
-                "id": 2,
-                "file": "https://www.w3schools.com/images/w3schools_green.jpg",
-                "mime_type": "image/jpeg",
-            },
-        ],
+        "attachments": [],
         "pings": [],
         "creator": 1,
         "fullname": "You",
