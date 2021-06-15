@@ -28,47 +28,73 @@
 	<link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet"/>
 	<link rel="stylesheet" type="text/css" href="css/videoplayer.css"/>
 	<link rel="stylesheet" href="css/homeheader.css"/>
+	<link rel="stylesheet" href="css/userprofile.css"/>
 
 
 </head>
 <body>
-
 <div class="theme-layout">
 
-	<!--- Home Header Starts here   ---->
 
-	<div style="height: 15px; background-color: #2f4b6e;"></div>
-	<nav class="navbar navbar-expand-custom navbar-mainbg">
-		<a class="navbar-brand navbar-logo" href="#"><span style="color: #fa2d65">Times</span><span style="color: white;">Buddy</span></a>
+	<!--- Home Header Starts here   ---->
+	<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark navbar_ext">
+		<a class="navbar-brand" href="#">Navbar</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<i class="fas fa-bars text-white"></i>
+			<span class="navbar-toggler-icon"></span>
 		</button>
+
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto">
-				<div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-				<li class="nav-item active">
-					<a style="font-size: 16px;" class="nav-link" href="javascript:void(0);"><img class="home_icon"></img><span>Home</span></a>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<span class="notification_badge">11</span>
+						<img src="images/svg/header_home_filled.svg" style="height: 24px; width:24px;"/>
+					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="javascript:void(0);"><img class="community_icon"></img><span>Community</span></a>
+					<a class="nav-link" href="#">
+						<span class="notification_badge">11</span>
+						<img src="images/svg/header_explore_outline.svg" style="height: 24px; width:24px;"/>
+					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="javascript:void(0);"><img class="discussion_icon"></img><span>Discussion Party</span></a>
+					<a class="nav-link" href="#">
+						<span class="notification_badge">11</span>
+						<img src="images/svg/header_notify_outlined.svg" style="height: 24px; width:24px;"/>
+					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="javascript:void(0);"><img class="dm_icon"></img><span>Chats</span></a>
+					<a class="nav-link" href="#">
+						<span class="notification_badge">11</span>
+						<img src="images/svg/header_message_outlined.svg" style="height: 28px; width:28px;"/>
+					</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="javascript:void(0);"><img class="notification_icon"></img><span>Notifications</span></a>
-				</li>
-				<li class="nav-item" style="margin-right: 40px;">
-					<a class="nav-link" href="javascript:void(0);">	<img  class="home_profile_image" src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg" alt="profile image" style="height: 32px; width: 32px;"/><span class="main_profile_name">Damilola</span></span></a>
-				</li>
-			</ul>
+             </ul>
+
+
+			<img class="navbar-nav mr-auto" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" style="height: 40px; width: 140px;"/>
+
+
+			<form class="form-inline my-2 my-lg-0">
+				<input  class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="height: 30px; font-size: 12px; background-color: #e3e2e2">
+			</form>
+			<li class="nav-item dropdown">
+				<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img class="header_profile_image"
+						 src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"/>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div>
+			</li>
 		</div>
 	</nav>
 
 	<!-- Home header ends here --->
+
 
 
 	<section>
@@ -77,87 +103,118 @@
 				<div class="row">
 					<div class="col-lg-12" style="padding-left: 100px; padding-right: 100px;">
 						<div class="row merged20" id="page-contents">
-							<div class="user-profile">
-								<figure>
+							<div class="user-profile" style="margin-top: -20px;">
+
+								<figure style="position:relative;">
+
 									<div class="edit-pp">
 										<label class="fileContainer">
 											<i class="fa fa-camera"></i>
 											<input type="file">
 										</label>
 									</div>
+
+									<a class="group-thumb" href="#">
+										<img alt="author" src="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg">
+										<div class="edit-dp">
+											<label class="fileContainer">
+												<i class="fa fa-camera"></i>
+												<input type="file">
+											</label>
+										</div>
+									</a>
 									<img style="height: 350px;" src="https://cdn.pixabay.com/photo/2021/04/05/18/02/villa-balbiano-6154200_960_720.jpg" alt="">
+									<div class="community_header_blur" style="width: 30%; height: 350px; position: absolute; top: 0; left: 0;"></div>
+
 								</figure>
-								<div class="community_creator">
-                                   Group by Damilola Akinterinwa
-								</div>
-								<div style="height: 100px; width: 100%; background-color: white; padding-top: 10px;">
-									<div style="width: 100%; font-size: 25px; font-weight: bold; margin-left: 30px; padding-top: 10px; color: #2f4b6e;!important;">I am a Programmer, i have no Life</div>
-								    <div style="width: 100%; height: 100%;  padding-left: 30px;">
+								<div style="height: 100px; width: 100%; margin-top: 50px; display: block;">
+
+									<div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+
+
+										<div style="width: 80%; font-size: 25px; font-weight: bold; margin-left: 30px; padding-top: 10px; color: #2f4b6e;!important;">I am a Programmer, i have no Life</div>
+
+										<div class="group_overflow_menu" style="margin-right: 10px;"><img src="images/svg/group_search.svg" style="width: 20px; height: 20px;" /></div>
+										<div class="group_overflow_menu"><img src="images/svg/overflow_menu.svg" style="width: 20px; height: 20px;" /></div>
+										<div class="subscribe_button">Subscribed</div>
+
+									</div>
+
+									<div style="width: 100%; height: 100%;  padding-left: 30px;">
 										<div style="margin-top: 5px; width: 40%; float: left;"><i class="fa fa-globe" style="color: #2f4b6e!important;"></i><span style="margin-left: 7px; color: #2f4b6e!important;">Public Group</span><span style="margin-left: 3px; margin-right:3px; font-size: 7px; margin-bottom: 5px;">.</span></span><span style="color: #2f4b6e!important;">452.6k Members</span></span></div>
 
-									    <div style="width: 60%; float: right; display: flex;">
-											<div class="users-thumb-list" style="margin-left: 220px; width: 70%;">
-												<a data-toggle="tooltip" title="Ema" href="#">
-													<img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2021/05/06/13/16/bee-6233397_960_720.jpg">
-												</a>
-												<a data-toggle="tooltip" title="Ema" href="#">
-													<img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2021/05/10/08/06/child-6242849_960_720.jpg">
-												</a>
-												<a data-toggle="tooltip" title="Ema" href="#">
-													<img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2021/05/06/13/16/bee-6233397_960_720.jpg">
-												</a>
-												<a data-toggle="tooltip" title="Ema" href="#">
-													<img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2017/06/15/22/05/girl-2406963_960_720.jpg">
-												</a>
-												<a data-toggle="tooltip" title="Ema" href="#">
-													<img style="height: 42px; width: 46px;" alt="" src="https://cdn.pixabay.com/photo/2021/05/10/08/06/child-6242849_960_720.jpg">
-												</a>
-											</div>
-											<a  title="Add Friends" href="#" style="margin-left: 10px; margin-right: 20px;">
-												<div style="background-color: #1877f2; height: 35px; width: 80px; border-radius: 5px; display: flex;">
-													<img src="images/svg/add.svg" style="height: 16px; width: 16px; margin-left: 10px; margin-top: 10px;"/><span style="color: white; size: 16px; margin-top: 7px; margin-left: 5px; font-family: 'bentoreg';">Invite</span>
-												</div>
-											</a>
-
-										</div>
 									</div>
+
 								</div>
 								<div class="profile-section">
 									<div class="row">
 										<div class="col-lg-12">
-											<ul class="profile-menu">
 
-												<li>
-													<a class="active" href="fav-favers.html">Discussions</a>
-												</li>
-												<li>
-													<a class="" href="fav-event-invitations.html">Topics</a>
-												</li>
-												<li>
-													<a class="" href="event-calendar.html">Members</a>
-												</li>
-												<li>
-													<a class="" href="event-calendar.html">Media</a>
-												</li>
+											<ul class="tabs">
+												<li data-tab-target="#posts" class="active tab"><img class= "profile_tab_icon" src = "images/svg/profile_posts.svg"/><span class = "profile_tab_text">Posts</span></li>
+												<li data-tab-target="#media" class="tab"><img class = "profile_media_icon" src = "images/svg/profile_media.svg"/><span class = "profile_tab_text">Media</span></li>
+												<li data-tab-target="#saved" class="tab"><img class= "profile_tab_icon" src = "images/svg/profile_saved.svg"/><span class = "profile_tab_text">Saved</span></li>
 											</ul>
+
+
 										</div>
 									</div>
-								</div>	
+								</div>
 							</div>
 
 
 
 							<div class="col-lg-8"style="margin-left: -60px!important;">
 
-								<div class="loadMore"  style="margin-left: 20px;">
+								<div class="loadMore">
 
+
+
+
+									<!-- compose starts here -->
+
+									<div class="central-meta item widget_ext" style="margin-top: -20px;">
+										<div class="compose_card">
+											<div class="img_textarea_div">
+												<img
+														class="compose_profile_image"
+														src="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg"
+												/>
+
+												<input
+														class="compose_textarea"
+														type="text"
+														placeholder="Share Something Amazing"
+														aria-label="Share Something Amazing"
+												/>
+											</div>
+											<div class="line"></div>
+
+											<div class="compose_action_div">
+												<div class="share_it_live">
+													<img class="compose_action_img" src="images/svg/compose_live.svg" />
+													Share it Live
+												</div>
+												<div class="share_image_video">
+													<img class="compose_action_img" src="images/svg/compose_media.svg"/>
+													Picture/Video
+												</div>
+												<div class="share_feeling_activity">
+													<img class="compose_action_img" src="images/svg/compose_activity.svg"/>
+													Activity
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- compose ends here -->
 
 									<!-------- User post Starts here --->
+
 									<div class="central-meta item">
 										<div class="user-post">
 											<div class="friend-info">
 												<figure>
-													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
+													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 30px; width: 30px;" alt="">
 												</figure>
 												<div class="friend-name">
 													<div class="more">
@@ -174,49 +231,24 @@
 														</div>
 													</div>
 													<div class="post_header_meta">
-														<a id="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
-														<a id="posted_by_link" href="time-line.html" title="">Posted by u/jack 35mins ago</a>
+														<a id="posted_by_link" href="time-line.html" title="">Jack Dorsey</a>
 													</div>
 												</div>
 												<div class="post-meta">
 
 													<!--- post title starts here ---->
-													<p class="post_title">
-														JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software</p>
 													<p class="post_text">JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. </p>
 
 
 
 													<!----- Image Slider is  here ------>
 													<figure>
-														<div id="image-slider" class="splide">
+														<div id="image-slider" class="splide" style="margin-left: -20px; margin-right: -20px;">
 															<div class="splide__track">
 																<ul class="splide__list">
 																	<li class="splide__slide" role="button" tabindex="0">
 																		<img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_960_720.jpg" class="img-fluid" alt="">
 																	</li>
-																	<li class="splide__slide">
-																		<video controls disablePictureInPicture controlsList="nodownload"
-																			   id="vjs_video_1"
-																			   class="video-js vjs-default-skin"
-																			   data-setup='{  "aspectRatio":"500:400", "playbackRates": [1, 1.5, 2] }'
-																			   preload="none"
-																			   poster="https://content.bitsontherun.com/thumbs/3XnJSIm4-480.jpg"
-																			   data-setup='{ "aspectRatio":"500:400", "playbackRates": [1, 1.5, 2] }'>
-																			<source
-																					src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
-																					type="video/mp4"/>
-																			<source
-																					src="https://content.bitsontherun.com/videos/bkaovAYt-27m5HpIu.webm"
-																					type="video/webm"/>
-																			<track
-																					label="pt"
-																					kind="subtitles"
-																					src="sintel.srt"
-																					default  />
-																		</video>
-																	</li>
-
 																	<li class="splide__slide" role="button" tabindex="0">
 																		<img src="https://cdn.pixabay.com/photo/2020/09/25/06/07/portrait-5600556_960_720.jpg" class="img-fluid" alt="">
 																	</li>
@@ -231,62 +263,56 @@
 														</div>
 													</figure>
 
-													<!---- image and video slider ends here ----->
+													<!---- image slider ends here ----->
 
 
 													<!-- post reactions and user interaction starts here  ---->
 
 
-													<!----- bubble like dislike goes here  --->
-													<ul class="like-dislike">
-														<li><a  id="vote_icon_link_upvote" href="#" title="dislike Post">  <img id="upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
-
-
-														<li><a id="vote_icon_link_downvote" href="#" title="Downvote">  <img  id="downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
-													</ul>
 
 
 													<!----- post activity metas continues in these area --->
-													<div class="we-video-info">
-														<ul>
-															<li id="upvote_li">
-																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
-															</li>
-															<li id="reactions_count">
-																<div title="Like/Dislike Count">265k</div>
-															</li>
-															<li id="downvote_li">
-																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
-															</li>
 
-															<li id="comments_li">
-																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
-															</li>
-
-															<li id="comments_count_li">
-																<div title="Comments Count">100k Comments</div>
-															</li>
-
-															<li id="share_li">
-																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
-															</li>
-
-															<li id="share_count_li">
-																<div title="Share Count">4k Share</div>
-															</li>
-
-															<li id="save_li">
-																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
-															</li>
-
-															<li id="save_count_li">
-																<div title="Share Count">Save</div>
-															</li>
-														</ul>
+													<div class="post_actions_root">
+														<div class="actions_float_left">
+															<div class="post_action_div">
+																<img class="post_action_img" src="images/svg/post_like.svg" />
+																25 likes
+															</div>
+															<div class="post_action_div">
+																<img class="post_comment_img" src="images/svg/post_comment.svg" />
+																78k comments
+															</div>
+															<div class="post_action_div">
+																<img class="post_comment_img" src="images/svg/post_share.svg" />
+																Share
+															</div>
+														</div>
+														<div class="action_float_right">
+															<div class="post_action_div">
+																<img class="post_bookmark_img" src="images/svg/post_bookmark.svg" />
+															</div>
+														</div>
 													</div>
-
 													<!---- user post interaction ends here  --->
 
+													<!---- Add a comment --->
+													<div class="comment_on_post_root">
+														<img
+																class="comment_on_post_profile_image"
+																src="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg"
+														/>
+
+														<input
+																class="comment_on_post_text_area"
+																type="text"
+																placeholder="Write a comment"
+																aria-label="Write a comment"
+														/>
+
+														<div class="comment_on_post_send">Send</div>
+													</div>
+													<!-- Add a comment ends --->
 
 												</div>
 											</div>
@@ -295,529 +321,6 @@
 
 
 									<!------ user post ends here  ----->
-
-
-
-
-
-
-									<!-- youtube scraped post goes here -->
-									<div class="central-meta item">
-										<div class="user-post">
-											<div class="friend-info">
-												<figure>
-													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
-												</figure>
-												<div class="friend-name">
-													<div class="more">
-														<div class="more-post-optns"><i class="ti-more-alt"></i>
-															<ul>
-																<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
-																<li><i class="fa fa-trash-o"></i>Delete Post</li>
-																<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
-																<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
-																<li><i class="fa fa-clock-o"></i>Schedule Post</li>
-																<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
-																<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
-															</ul>
-														</div>
-													</div>
-													<div class="post_header_meta">
-														<a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
-														<a class="posted_by_link" href="time-line.html" title="">Posted by u/jack 35mins ago</a>
-													</div>
-												</div>
-												<div class="post-meta">
-
-													<!--- post title starts here --->
-													<p class="post_title">
-														JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. <a class="youtube_see-more" href="social-post-detail.html" title="">read more</a>
-													</p>
-
-													<!-- youtube figures starts here  ---->
-													<figure>
-														<a href="https://www.youtube.com/watch?v=fF382gwEnG8" title="" data-strip-group="mygroup" class="strip vdeo-link" data-strip-options="width: 700,height: 450,youtube: { autoplay: 1 }">
-															<img src="images/resources/user-post.jpg" alt="">
-															<i>
-																<svg version="1.1" class="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="55px" width="55px"
-																	 viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-															  <path class="stroke-solid" fill="none" stroke=""  d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
-																C97.3,23.7,75.7,2.3,49.9,2.5"/>
-																	<path class="icon" fill="" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
-																</svg>
-															</i>
-															<h2>Canada tourist spots you must visit in 2020</h2>
-														</a>
-													</figure>
-													<!--- youtube figures ends here  --->
-
-
-													<!-- post reactions and user interaction starts here  ---->
-
-
-													<!----- bubble like dislike goes here  --->
-													<ul class="like-dislike">
-														<li><a  id ="youtube_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="youtube_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="youtube_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
-
-
-														<li><a id="youtube_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="youtube_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="youtube_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
-													</ul>
-
-
-
-													<!----- post activity metas continues in these area --->
-													<div class="we-video-info">
-														<ul>
-															<li id="youtube_upvote_li">
-																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
-															</li>
-															<li id="youtube_reactions_count">
-																<div title="Like/Dislike Count">265k</div>
-															</li>
-															<li id="youtube_downvote_li">
-																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
-															</li>
-
-															<li id="youtube_comments_li">
-																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
-															</li>
-
-															<li id="youtube_comments_count_li">
-																<div title="Comments Count">100k Comments</div>
-															</li>
-
-															<li id="youtube_share_li">
-																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
-															</li>
-
-															<li id="youtube_share_count_li">
-																<div title="Share Count">4k Share</div>
-															</li>
-
-															<li id="youtube_save_li">
-																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
-															</li>
-
-															<li id="youtube_save_count_li">
-																<div title="Share Count">Save</div>
-															</li>
-														</ul>
-													</div>
-
-													<!---- user post interaction ends here  --->
-
-												</div>
-											</div>
-										</div>
-									</div>
-
-
-
-
-
-									<!-- Sponsored Post -->
-									<div class="central-meta item">
-										<div class="user-post">
-											<div class="friend-info">
-												<figure>
-													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
-												</figure>
-												<div class="friend-name">
-													<div class="more">
-														<div class="more-post-optns"><i class="ti-more-alt"></i>
-															<ul>
-																<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
-																<li><i class="fa fa-trash-o"></i>Delete Post</li>
-																<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
-																<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
-																<li><i class="fa fa-clock-o"></i>Schedule Post</li>
-																<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
-																<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
-															</ul>
-														</div>
-													</div>
-													<div class="post_header_meta">
-														<a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
-														<a class="posted_by_link" href="time-line.html" title=""><span>sponsored <i class="fa fa-globe"></i></span></a>
-													</div>
-												</div>
-												<div class="post-meta">
-													<figure>
-														<img src="images/sponsors.gif" alt="">
-													</figure>
-													<div class="description">
-														<a href="#" class="learnmore" data-ripple="">Learn More</a>
-														<p>
-															Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc. <a href="social-post-detail.html" title="">Read More</a>
-														</p>
-													</div>
-
-
-
-													<!-- post reactions and user interaction starts here  ---->
-
-
-													<!----- bubble like dislike goes here  --->
-													<ul class="like-dislike">
-														<li><a  id ="sponsored_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="sponsored_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="sponsored_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
-
-
-														<li><a id="sponsored_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="sponsored_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="sponsored_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
-													</ul>
-
-
-
-													<!----- post activity metas continues in these area --->
-													<div class="we-video-info">
-														<ul>
-															<li id="sponsored_upvote_li">
-																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
-															</li>
-															<li id="sponsored_reactions_count">
-																<div title="Like/Dislike Count">265k</div>
-															</li>
-															<li id="sponsored_downvote_li">
-																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
-															</li>
-
-															<li id="sponsored_comments_li">
-																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
-															</li>
-
-															<li id="sponsored_comments_count_li">
-																<div title="Comments Count">100k Comments</div>
-															</li>
-
-															<li id="sponsored_share_li">
-																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
-															</li>
-
-															<li id="sponsored_share_count_li">
-																<div title="Share Count">4k Share</div>
-															</li>
-
-															<li id="sponsored_save_li">
-																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
-															</li>
-
-															<li id="sponsored_save_count_li">
-																<div title="Share Count">Save</div>
-															</li>
-														</ul>
-													</div>
-
-													<!---- user post interaction ends here  --->
-
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<!-- digital sponsors ends here -->
-
-
-
-
-
-									<!---- scraped links goes here ---->
-									<div class="central-meta item">
-										<div class="user-post">
-											<div class="friend-info">
-												<figure>
-													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
-												</figure>
-												<div class="friend-name">
-													<div class="more">
-														<div class="more-post-optns"><i class="ti-more-alt"></i>
-															<ul>
-																<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
-																<li><i class="fa fa-trash-o"></i>Delete Post</li>
-																<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
-																<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
-																<li><i class="fa fa-clock-o"></i>Schedule Post</li>
-																<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
-																<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
-															</ul>
-														</div>
-													</div>
-													<div class="post_header_meta">
-														<a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
-														<a class="posted_by_link" href="time-line.html" title=""><span>posted by u/jackOblack</span></a>
-													</div>
-												</div>
-												<div class="description">
-													<p>
-														Curabitur World's most beautiful car in <a title="" href="#">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website <a href="social-post-detail.html" title="">Read More</a>
-													</p>
-												</div>
-												<div class="post-meta">
-													<div class="linked-image align-left">
-														<a title="" href="#"><img alt="" src="images/resources/page1.jpg"></a>
-													</div>
-													<div class="detail">
-														<span>Love Maid - HighChill</span>
-														<p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... </p>
-														<a title="" href="#">www.sample.com</a>
-													</div>
-
-
-
-													<!-- post reactions and user interaction starts here  ---->
-
-
-													<!----- bubble like dislike goes here  --->
-													<ul class="like-dislike">
-														<li><a  id ="linkpost_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="linkpost_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="linkpost_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
-
-
-														<li><a id="linkpost_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="linkpost_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="linkpost_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
-													</ul>
-
-
-
-													<!----- post activity metas continues in these area --->
-													<div class="we-video-info">
-														<ul>
-															<li id="linkpost_upvote_li">
-																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
-															</li>
-															<li id="linkpost_reactions_count">
-																<div title="Like/Dislike Count">265k</div>
-															</li>
-															<li id="linkpost_downvote_li">
-																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
-															</li>
-
-															<li id="linkpost_comments_li">
-																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
-															</li>
-
-															<li id="linkpost_comments_count_li">
-																<div title="Comments Count">100k Comments</div>
-															</li>
-
-															<li id="linkpost_share_li">
-																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
-															</li>
-
-															<li id="linkpost_share_count_li">
-																<div title="Share Count">4k Share</div>
-															</li>
-
-															<li id="linkpost_save_li">
-																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
-															</li>
-
-															<li id="linkpost_save_count_li">
-																<div title="Share Count">Save</div>
-															</li>
-														</ul>
-													</div>
-
-													<!---- user post interaction ends here  --->
-
-												</div>
-											</div>
-										</div>
-									</div>
-									<!---- scraped linkspost ends here  ----->
-
-
-
-
-
-									<!-- Empty post no image no video no link -->
-									<div class="central-meta item">
-										<div class="user-post">
-											<div class="friend-info">
-												<figure>
-													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
-												</figure>
-												<div class="friend-name">
-													<div class="more">
-														<div class="more-post-optns"><i class="ti-more-alt"></i>
-															<ul>
-																<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
-																<li><i class="fa fa-trash-o"></i>Delete Post</li>
-																<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
-																<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
-																<li><i class="fa fa-clock-o"></i>Schedule Post</li>
-																<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
-																<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
-															</ul>
-														</div>
-													</div>
-													<div class="post_header_meta">
-														<a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
-														<a class="posted_by_link" href="time-line.html" title=""><span>posted by u/jackOblack</span></a>
-													</div>
-												</div>
-												<div class="post-meta">
-													<div class="description">
-														<p>
-															World's most beautiful car in Curabitur <a href="#" title="">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website <a href="social-post-detail.html" title="">read more</a>
-														</p>
-													</div>
-
-													<!-- post reactions and user interaction starts here  ---->
-
-
-													<!----- bubble like dislike goes here  --->
-													<ul class="like-dislike">
-														<li><a  id ="linkpost_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="linkpost_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="linkpost_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
-
-
-														<li><a id="linkpost_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="linkpost_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="linkpost_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
-													</ul>
-
-
-
-													<!----- post activity metas continues in these area --->
-													<div class="we-video-info">
-														<ul>
-															<li id="linkpost_upvote_li">
-																<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
-															</li>
-															<li id="linkpost_reactions_count">
-																<div title="Like/Dislike Count">265k</div>
-															</li>
-															<li id="linkpost_downvote_li">
-																<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
-															</li>
-
-															<li id="linkpost_comments_li">
-																<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
-															</li>
-
-															<li id="linkpost_comments_count_li">
-																<div title="Comments Count">100k Comments</div>
-															</li>
-
-															<li id="linkpost_share_li">
-																<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
-															</li>
-
-															<li id="linkpost_share_count_li">
-																<div title="Share Count">4k Share</div>
-															</li>
-
-															<li id="linkpost_save_li">
-																<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
-															</li>
-
-															<li id="linkpost_save_count_li">
-																<div title="Share Count">Save</div>
-															</li>
-														</ul>
-													</div>
-
-													<!---- user post interaction ends here  --->
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Empty post no image no video no link -->
-
-
-
-
-
-
-									<!--- location post ---->
-									<div class="central-meta item">
-										<div class="user-post">
-											<div class="friend-info">
-												<figure>
-													<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 25px; width: 25px;" alt="">
-												</figure>
-												<div class="friend-name">
-													<div class="more">
-														<div class="more-post-optns"><i class="ti-more-alt"></i>
-															<ul>
-																<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
-																<li><i class="fa fa-trash-o"></i>Delete Post</li>
-																<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
-																<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
-																<li><i class="fa fa-clock-o"></i>Schedule Post</li>
-																<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
-																<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
-															</ul>
-														</div>
-													</div>
-													<div class="post_header_meta">
-														<a class="posted_to_link" href="time-line.html" title="">t/yCombinator</a>
-														<a class="posted_by_link" href="time-line.html" title=""><span>posted by u/jackOblack</span></a>
-													</div>
-												</div>
-
-												<div class="post-meta">
-													<div class="post-map">
-														<div class="nearby-map">
-															<div id="map-canvas"></div>
-														</div>
-														<!----- bubble like dislike goes here  --->
-														<ul class="like-dislike">
-															<li><a  id ="linkpost_vote_icon_link_upvote" href="#" title="dislike Post">  <img id="linkpost_upvote_icon_voted"style="display: none;"  src="./images/svg/upvotefilled.svg" height="54px" width="54px"/> <img id="linkpost_upvote_icon_notvoted"  src="./images/svg/upvote.svg" height="54px" width="54px"/></a></li>
-
-
-															<li><a id="linkpost_vote_icon_link_downvote" href="#" title="Downvote">  <img  id="linkpost_downvote_icon_voted" style="display: none;" src="./images/svg/downvotefilled.svg" height="54px" width="54px"/>  <img id="linkpost_downvote_icon_notvoted"  src="./images/svg/downvote.svg" height="54px" width="54px"/> </a></li>
-														</ul>
-
-													</div>
-													<!-- near by map -->
-
-													<div class="description">
-														<p>
-															Curabitur Lonely Cat Enjoying in Summer <a href="#" title="">#mypage</a> ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, <a href="social-post-detail.html" title="">Read More</a>
-														</p>
-													</div>
-												</div>
-
-
-												<!----- post activity metas continues in these area --->
-												<div class="we-video-info">
-													<ul>
-														<li id="linkpost_upvote_li">
-															<img class="post_reaction_area_img"  src="./images/svg/neutraupvote.svg"/>
-														</li>
-														<li id="linkpost_reactions_count">
-															<div title="Like/Dislike Count">265k</div>
-														</li>
-														<li id="linkpost_downvote_li">
-															<div title="Like/Dislike"><img class="post_reaction_area_img"  src="./images/svg/neutraldownvote.svg"/></div>
-														</li>
-
-														<li id="linkpost_comments_li">
-															<div title="Comments"><img class="post_comment_area_img" src="./images/svg/comments.svg"/></div>
-														</li>
-
-														<li id="linkpost_comments_count_li">
-															<div title="Comments Count">100k Comments</div>
-														</li>
-
-														<li id="linkpost_share_li">
-															<div title="Comments"><img class="post_share_area_img" src="./images/svg/share.svg"/></div>
-														</li>
-
-														<li id="linkpost_share_count_li">
-															<div title="Share Count">4k Share</div>
-														</li>
-
-														<li id="linkpost_save_li">
-															<div title="Comments"><img class="post_save_area_img"  src="./images/svg/save.svg"/></div>
-														</li>
-
-														<li id="linkpost_save_count_li">
-															<div title="Share Count">Save</div>
-														</li>
-													</ul>
-												</div>
-
-
-
-											</div>
-										</div>
-									</div>
 								</div>
 
 
@@ -826,9 +329,6 @@
 							<div class="col-lg-4">
 
 								<div class="about_root">
-									<div class="group_name_root">
-										The group name goes here
-									</div>
 									<div class="group_description">
 										Y Combinator created a new model for funding early stage startups. Twice
 										a year we invest a small amount of money ($150k) in a large number of
@@ -848,41 +348,18 @@
 											<p style="margin-top: 3px;color: #2f4b6e;">Post per day</p>
 										</div>
 									</div>
+
+									<div class="creation_date" style="display: flex; margin-bottom: 10px;"><i style="margin-right: 5px;" class="fas fa-clock"></i>Created April 11 2021</div>
+
 									<div
 											style="
           height: 1px;
           background-color: lightgray;
           margin-left: 20px;
-          margin-right: 20px;
-        "
+          margin-right: 20px;"
 									></div>
-									<div class="creation_date" style="display: flex"><i style="margin-right: 5px;" class="fas fa-clock"></i>Created April 11 2021</div>
 								</div>
 
-								<div class="popular_topics_root">
-									<div class="popular_topics">Popular Topics in this group</div>
-
-									<div class="topics">
-										<span class="topic_name">#Python</span>
-										<p class="topic_posts">156 posts</p>
-									</div>
-									<div class="topics">
-										<span class="topic_name">#Python</span>
-										<p class="topic_posts">156 posts</p>
-									</div>
-									<div class="topics">
-										<span class="topic_name">#Python</span>
-										<p class="topic_posts">156 posts</p>
-									</div>
-									<div class="topics">
-										<span class="topic_name">#Python</span>
-										<p class="topic_posts">156 posts</p>
-									</div>
-									<div class="topics">
-										<span class="topic_name">#Python</span>
-										<p class="topic_posts">156 posts</p>
-									</div>
-								</div>
 
 								<div class="rules_root sticky-top">
 									<div class="rules">Rules</div>
@@ -901,16 +378,16 @@
 
 							</div>
 							<!-- sidebar -->
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</section><!-- content -->
 
 </div>
 
-	
+
 	<div class="popup-wraper2">
 		<div class="popup post-sharing">
 			<span class="popup-closed"><i class="ti-close"></i></span>
@@ -956,7 +433,7 @@
 							</div>
 
 							<button type="submit"></button>
-						</form>	
+						</form>
 					</div>
 					<figure><img src="images/resources/share-post.jpg" alt=""></figure>
 					<div class="friend-info">
@@ -1004,10 +481,10 @@
 						<button class="main-btn cancel" data-ripple="">Cancel</button>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div><!-- share popup -->
-	
+
 	<div class="popup-wraper3">
 		<div class="popup">
 			<span class="popup-closed"><i class="ti-close"></i></span>
@@ -1048,12 +525,12 @@
 						<button data-ripple="" type="submit" class="main-btn">Submit</button>
 						<a href="#" data-ripple="" class="main-btn3 cancel">Close</a>
 					</div>
-					</form>	
+					</form>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div><!-- report popup -->
-	
+
 	<div class="popup-wraper1">
 		<div class="popup direct-mesg">
 			<span class="popup-closed"><i class="ti-close"></i></span>
@@ -1090,12 +567,13 @@
 							<i class="em em-stuck_out_tongue"></i>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
-	</div><!-- send message popup -->	
-	
+	</div><!-- send message popup -->
+
+
 	<script src="js/main.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 	<script src="js/locationpicker.jquery.js"></script>
@@ -1132,7 +610,7 @@
 </script>
 	<script>
 		jQuery(document).ready(function($) {
-			
+
 			$('#us3').locationpicker({
 			  location: {
 			    latitude: -8.681013,
@@ -1152,8 +630,8 @@
 			  }
 			});
 
-		});	
+		});
 </script>
 
-</body>	
+</body>
 </html>
