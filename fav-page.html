@@ -146,69 +146,196 @@
 									</div>
 
 								</div>
-								<div class="profile-section">
-									<div class="row">
-										<div class="col-lg-12">
-
-											<ul class="tabs">
-												<li data-tab-target="#posts" class="active tab"><img class= "profile_tab_icon" src = "images/svg/profile_posts.svg"/><span class = "profile_tab_text">Posts</span></li>
-												<li data-tab-target="#media" class="tab"><img class = "profile_media_icon" src = "images/svg/profile_media.svg"/><span class = "profile_tab_text">Media</span></li>
-												<li data-tab-target="#saved" class="tab"><img class= "profile_tab_icon" src = "images/svg/profile_saved.svg"/><span class = "profile_tab_text">Saved</span></li>
-											</ul>
-
-
-										</div>
-									</div>
-								</div>
 							</div>
 
 
 
-							<div class="col-lg-8"style="margin-left: -60px!important;">
-
-								<div class="loadMore">
 
 
+							<div class="col-lg-8"style="margin-left: 0px!important;">
 
 
-									<!-- compose starts here -->
 
-									<div class="central-meta item widget_ext" style="margin-top: -20px;">
-										<div class="compose_card">
-											<div class="img_textarea_div">
-												<img
-														class="compose_profile_image"
-														src="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg"
-												/>
+								<ul class="tabs">
+									<li data-tab-target="#discussions" class="active tab"><img class= "profile_tab_icon" src = "images/svg/profile_posts.svg"/><span class = "profile_tab_text">Discussions</span></li>
+									<li data-tab-target="#media" class="tab"><img class = "profile_media_icon" src = "images/svg/profile_media.svg"/><span class = "profile_tab_text">Media</span></li>
+									<li data-tab-target="#pinned" class="tab"><img class= "profile_tab_icon" src = "images/svg/profile_saved.svg"/><span class = "profile_tab_text">Pinned</span></li>
+								</ul>
 
-												<input
-														class="compose_textarea"
-														type="text"
-														placeholder="Share Something Amazing"
-														aria-label="Share Something Amazing"
-												/>
-											</div>
-											<div class="line"></div>
+								<div class="tab-content">
+									<!--- Discussions tab --->
+									<div id="discussions" data-tab-content class="active">
+										<!--- User posts starts here----->
 
-											<div class="compose_action_div">
-												<div class="share_it_live">
-													<img class="compose_action_img" src="images/svg/compose_live.svg" />
-													Share it Live
-												</div>
-												<div class="share_image_video">
-													<img class="compose_action_img" src="images/svg/compose_media.svg"/>
-													Picture/Video
-												</div>
-												<div class="share_feeling_activity">
-													<img class="compose_action_img" src="images/svg/compose_activity.svg"/>
-													Activity
+										<div class="central-meta item">
+											<div class="user-post">
+												<div class="friend-info">
+													<figure>
+														<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_960_720.jpg"  style="height: 30px; width: 30px;" alt="">
+													</figure>
+													<div class="friend-name">
+														<div class="more">
+															<div class="more-post-optns"><i class="ti-more-alt"></i>
+																<ul>
+																	<li><i class="fa fa-pencil-square-o"></i>Edit Post</li>
+																	<li><i class="fa fa-trash-o"></i>Delete Post</li>
+																	<li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
+																	<li><i class="fa fa-address-card-o"></i>Boost This Post</li>
+																	<li><i class="fa fa-clock-o"></i>Schedule Post</li>
+																	<li><i class="fa fa-wpexplorer"></i>Select as featured</li>
+																	<li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
+																</ul>
+															</div>
+														</div>
+														<div class="post_header_meta">
+															<a id="posted_by_link" href="time-line.html" title="">Jack Dorsey</a>
+														</div>
+													</div>
+													<div class="post-meta">
+
+														<!--- post title starts here ---->
+														<p class="full_post_text">JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. </p>
+
+
+
+														<!----- Image Slider is  here ------>
+														<figure>
+															<div id="image-slider" class="splide" style="margin-left: -20px; margin-right: -20px;">
+																<div class="splide__track">
+																	<ul class="splide__list">
+																		<li class="splide__slide" role="button" tabindex="0">
+																			<img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_960_720.jpg" class="img-fluid" alt="">
+																		</li>
+																		<li class="splide__slide" role="button" tabindex="0">
+																			<img src="https://cdn.pixabay.com/photo/2020/09/25/06/07/portrait-5600556_960_720.jpg" class="img-fluid" alt="">
+																		</li>
+																		<li class="splide__slide" role="button" tabindex="0">
+																			<img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_960_720.jpg" class="img-fluid" alt="">
+																		</li>
+																		<li class="splide__slide" role="button" tabindex="0">
+																			<img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_960_720.jpg" class="img-fluid" alt="">
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</figure>
+
+														<!---- image slider ends here ----->
+
+
+														<!-- post reactions and user interaction starts here  ---->
+
+
+
+
+														<!----- post activity metas continues in these area --->
+
+														<div class="post_actions_root">
+															<div class="actions_float_left">
+																<div class="post_action_div">
+																	<img class="post_action_img" src="images/svg/post_like.svg" />
+																	25 likes
+																</div>
+																<div class="post_action_div">
+																	<img class="post_comment_img" src="images/svg/post_comment.svg" />
+																	78k comments
+																</div>
+																<div class="post_action_div">
+																	<img class="post_comment_img" src="images/svg/post_share.svg" />
+																	Share
+																</div>
+															</div>
+															<div class="action_float_right">
+																<div class="post_action_div">
+																	<img class="post_bookmark_img" src="images/svg/post_bookmark.svg" />
+																</div>
+															</div>
+														</div>
+														<!---- user post interaction ends here  --->
+
+														<!---- Add a comment --->
+														<div class="comment_on_post_root">
+															<img
+																	class="comment_on_post_profile_image"
+																	src="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg"
+															/>
+
+															<input
+																	class="comment_on_post_text_area"
+																	type="text"
+																	placeholder="Write a comment"
+																	aria-label="Write a comment"
+															/>
+
+															<div class="comment_on_post_send">Send</div>
+														</div>
+														<!-- Add a comment ends --->
+
+													</div>
 												</div>
 											</div>
 										</div>
+										<!------ user post ends here  ----->
 									</div>
-									<!-- compose ends here -->
 
-									<!-------- User post Starts here --->
+
+									<!-- central meta -->
+
+								</div>
+
+								<!--- Media tab --->
+
+								<div id="media" data-tab-content>
+									<!--- User media starts here----->
+
+									<div class="grid">
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+									</div>
+								</div>
+
+								<!--- pinned posts here----->
+								<div id="pinned" data-tab-content>
 
 									<div class="central-meta item">
 										<div class="user-post">
@@ -237,7 +364,7 @@
 												<div class="post-meta">
 
 													<!--- post title starts here ---->
-													<p class="post_text">JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. </p>
+													<p class="full_post_text">JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. JetBrains Space is an all-in-one collaboration solution that brings all your teams together to communicate effectively, share information, develop software, and work on projects in a more productive and fun way! Space is free in our cloud for an unlimited number of users. </p>
 
 
 
@@ -319,12 +446,10 @@
 										</div>
 									</div>
 
-
-									<!------ user post ends here  ----->
 								</div>
 
-
 							</div>
+
 							<!-- centerl meta -->
 							<div class="col-lg-4">
 
@@ -378,9 +503,9 @@
 
 							</div>
 							<!-- sidebar -->
-						</div>
+
+			</div>
 					</div>
-				</div>
 			</div>
 		</div>
 	</section><!-- content -->
@@ -631,6 +756,25 @@
 			});
 
 		});
+</script>
+
+<script>
+	const tabs = document.querySelectorAll('[data-tab-target]')
+	const tabContents = document.querySelectorAll('[data-tab-content]')
+
+	tabs.forEach(tab => {
+		tab.addEventListener('click', () => {
+			const target = document.querySelector(tab.dataset.tabTarget)
+			tabContents.forEach(tabContent => {
+				tabContent.classList.remove('active')
+			})
+			tabs.forEach(tab => {
+				tab.classList.remove('active')
+			})
+			tab.classList.add('active')
+			target.classList.add('active')
+		})
+	})
 </script>
 
 </body>

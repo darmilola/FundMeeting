@@ -152,3 +152,76 @@
     align-items: center;
 }
 
+.user_profile_root {
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 350px;
+    height: 90px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #ede9e9;
+}
+
+.profile_image_div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_meta_div {
+    width: 80%;
+    height: 100%;
+    display: block;
+    margin-top: 6px;
+}
+
+.user_profile_image {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+.profile_name {
+    margin-top: 10px;
+}
+.profile_actions_div {
+    display: flex;
+    height: 30px;
+    margin-top: 7px;
+}
+.users_followers {
+    border: 1px lightgrey solid;
+    border-radius: 4px;
+    width: 100px;
+    height: 23px;
+    padding: 3px;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.follow_user {
+    border-radius: 4px;
+    width: 100px;
+    height: 23px;
+    padding: 3px;
+    font-size: 14px;
+    background-color: blue;
+    margin-left: 10px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+
