@@ -8,7 +8,7 @@ Start Date:  8/August/19
 ====INDEX=====
 
 01- general styling
-02- sticky header 
+02- sticky header
 03- login/landing page
 04- home page topbar
 05- timeline area
@@ -16,23 +16,23 @@ Start Date:  8/August/19
 07- sidebar widgets
 08- post sharing area
 09- social icons
-10- comment area 
+10- comment area
 11- search area
 12- footer
 13- widgets
 14- side panel
 15- short profile widget
 16- svg button styling
-17- 404 error page 
+17- 404 error page
 18- contact page
-19- knowledge base page 
+19- knowledge base page
 20- faq's page
 21- photos page
-22- favourit page 
+22- favourit page
 23- edit basic info page
 24- notification page
 25- message page
-26- loadmore 
+26- loadmore
 27- responsive header
 28- main menu
 39- blog pages
@@ -49,7 +49,7 @@ Start Date:  8/August/19
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
 
 /*===============
-***General Styling 
+***General Styling
 ===============*/
 html,body{
 	font-family: "Roboto", "Segoe Ui";
@@ -258,9 +258,9 @@ section {
     padding: 0;
 }
 .pad-ext-40{padding-top: 40px;}
-.d-flex a, 
-.d-flex a:hover, 
-.d-flex a:focus, 
+.d-flex a,
+.d-flex a:hover,
+.d-flex a:focus,
 .d-flex a:active {
     border: medium none !important;
 }
@@ -368,6 +368,7 @@ section {
     float: left;
     width: 100%;
     background: #f5f5f5!important;
+    min-height: 100vh!important;
 }
 .bg-valvot{
 	background-color: #7750f8 !important;
@@ -613,7 +614,7 @@ iframe {
 
 
 /*======================/
-***** Home page 1 
+***** Home page 1
 ======================*/
 
 
@@ -1519,15 +1520,14 @@ header.sticky {
 /*--- central posts meta box ---*/
 .central-meta {
     background: #fff none repeat scroll 0 0;
-    border: 1px solid #ede9e9;
+    border: 1px solid #d4d1d1;
     border-radius: 5px;
     display: inline-block;
-    width: 100%;
+    width: 95%;
     margin-bottom: 20px;
     margin-left:40px;
     margin-right: 0px;
     padding: 20px;
-    width: 100%;
     height: auto;
     position: relative;
 }
@@ -1575,7 +1575,7 @@ header.sticky {
     width: 100%;
     border: none;
 }
-.newpst-input textarea:focus, 
+.newpst-input textarea:focus,
 .newpst-input textarea:active {
     outline: medium none;
     border: none;
@@ -1727,7 +1727,7 @@ form button {
     font-style: normal;
 }
 .friend-name > em.verify{
-	color: mediumseagreen; 
+	color: mediumseagreen;
 }
 .friend-name > ins {
 	display: inline-block;
@@ -2088,7 +2088,7 @@ a.learnmore:hover{
     transition: all 0.2s linear 0s;
 }
 
-.we-video-info > ul li span.like:hover 
+.we-video-info > ul li span.like:hover
 .we-video-info > ul li span.dislike:hover {
     transform: scale(1.1);
 }
@@ -2527,7 +2527,7 @@ for some reason nth-child(1) is always busy and elements starting from 2 */
     margin-top: 0;
 }
 
-.inline-itms > a, 
+.inline-itms > a,
 .inline-itms > span {
     display: inline-block;
     font-size: 12px;
@@ -5501,7 +5501,7 @@ canvas {
     padding: 20px 20px 20px;
     width: 100%;
 	border-top: 1px solid;
-	
+
 }
 .widget .help-list {
     border-top: 0 none;
@@ -6530,7 +6530,7 @@ a.addnewforum {
 	transition: all 0.2s linear 0s;
 	z-index: 1;
 	border-radius: 10px;
-} 
+}
 .story-box:hover:before{
 	z-index: 0;
 }
@@ -6868,6 +6868,7 @@ a.addnewforum {
     margin-bottom: 30px;
     position: relative;
     width: 100%;
+    margin-top:130px;
 }
 .user-profile > figure {
     display: inline-block;
@@ -6880,6 +6881,25 @@ a.addnewforum {
     width: 100%;
     border-radius: 5px 5px 0 0;
 }
+
+.group-thumb {
+    display: inline-block;
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    z-index: 3;
+}
+.group-thumb > img {
+    max-width: 155px;
+    min-width: 155px;
+    width: 155px!important;
+    height: 155px;
+    border-radius: 50%!important;
+    object-fit: cover;
+    border: 3px white solid;
+    object-position: center right;
+}
+
 .edit-pp {
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
     border-radius: 100%;
@@ -6949,7 +6969,7 @@ a.addnewforum {
 	background: #857ec3;
 }
 .profile-controls > li > a,
-.profile-controls > li > div { 
+.profile-controls > li > div {
     background: #888da8 none repeat scroll 0 0;
     border-radius: 100%;
     display: inline-block;
@@ -6999,7 +7019,6 @@ a.addnewforum {
 }
 
 .profile-section {
-    background: #fff none repeat scroll 0 0;
     display: inline-block;
     padding: 0 15px;
     position: relative;
@@ -7091,12 +7110,13 @@ a.addnewforum {
 	position: relative;
 }
 .profile-author-thumb > img {
-    border: 3px solid #fff;
-    border-radius: 100%;
     max-width: 155px;
     min-width: 155px;
     width: 155px;
-    display: inline-block;
+    height: 155px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
 }
 
 .edit-dp {
@@ -7258,7 +7278,7 @@ a.addnewforum {
 }
 .we-form > input {
     border: 1px solid #eaeaea;
-    
+
     float: left;
     margin-bottom: 8px;
     padding: 13px 20px;
@@ -7400,7 +7420,7 @@ a.with-smedia {
     font-size: 15px;
     width: 87%;
     color: #636175;
-}   
+}
 
 .form-title > i {
     margin-right: 10px;
@@ -10531,7 +10551,7 @@ span.ttl {
 /*--- search page friends search ---*/
 
 .pit-friends,
-.pit-groups, 
+.pit-groups,
 .pit-pages {
     border-bottom: 1px dashed #cfcfcf;
     display: inline-block;
@@ -10540,7 +10560,7 @@ span.ttl {
     width: 100%;
 }
 .pit-friends > figure,
-.pit-groups > figure, 
+.pit-groups > figure,
 .pit-pages > figure {
     display: inline-block;
     margin: 0;
@@ -10548,7 +10568,7 @@ span.ttl {
     width: 45px;
 }
 .pit-friends > figure img,
-.pit-groups > figure img, 
+.pit-groups > figure img,
 .pit-pages > figure img {
     border-radius: 100%;
     display: inline-block;
@@ -10556,7 +10576,7 @@ span.ttl {
     width: 45px;
 }
 .pit-frnz-meta,
-.pit-groups-meta, 
+.pit-groups-meta,
 .pit-pages-meta {
     display: inline-block;
     padding-left: 8px;
@@ -10564,7 +10584,7 @@ span.ttl {
     width: 91%;
 }
 .pit-friends .add-remove-frnd,
-.pit-groups .add-remove-frnd, 
+.pit-groups .add-remove-frnd,
 .pit-pages .add-remove-frnd {
     float: right;
     margin: 0;
@@ -10574,7 +10594,7 @@ span.ttl {
     padding: 0;
 }
 .pit-frnz-meta > a,
-.pit-groups-meta > a, 
+.pit-groups-meta > a,
 .pit-pages-meta > a {
     color: #535165;
     display: inline-block;
@@ -10583,14 +10603,14 @@ span.ttl {
     width: 100%;
 }
 .pit-frnz-meta > i,
-.pit-groups-meta > i, 
+.pit-groups-meta > i,
 .pit-pages-meta > i {
     display: inline-block;
     font-size: 12px;
     font-style: normal;
 }
 .central-meta.item .pit-friends:last-child,
-.central-meta.item .pit-groups:last-child, 
+.central-meta.item .pit-groups:last-child,
 .central-meta.item .pit-pages:last-child {
     border: 0 none;
     margin-bottom: 0;
@@ -10988,19 +11008,19 @@ aside .widget.pitnik-links > ul > li > a {
     width: 100%;
 }
 .color-red{
-	color: #e44a3c;	
+	color: #e44a3c;
 }
 .color-purple{
-	color: #7750f8;	
+	color: #7750f8;
 }
 .color-orange{
-	color: #fa6342;	
+	color: #fa6342;
 }
 .color-blue{
-	color: #23d2e2;	
+	color: #23d2e2;
 }
 .color-green{
-	color: #38bff1;	
+	color: #38bff1;
 }
 /*--- help page video section ---*/
 
@@ -11383,7 +11403,7 @@ aside .widget.pitnik-links > ul > li > a {
   position: relative;
   transition: all .3s ease;
 }
-.heart.broken:before, 
+.heart.broken:before,
 .heart.broken:after{
   content: "❤";
   opacity: 1;
@@ -11517,7 +11537,7 @@ aside .widget.pitnik-links > ul > li > a {
 	margin-bottom: 10px;
 	vertical-align: middle;
 }
-.share-to-other > span, 
+.share-to-other > span,
 .copy-email > span{
     color: #535165;
     display: inline-block;
@@ -12213,7 +12233,7 @@ aside.sidebar .friend-box .frnd-meta {
 }
 .pit-post > figure > img {
     border-radius: 5px;
-	
+
 }
 .pitred-trendings li > figure > img{
 	transition: all 0.2s linear 0s;
@@ -12451,7 +12471,7 @@ aside.sidebar .friend-box .frnd-meta {
 }
 .post-title.gry-bg > h6 > i {
     color: #535165;
-  }  
+  }
 .post-title .number {
     width: 100px;
 }
@@ -15653,7 +15673,7 @@ a.shopping-cart > i {
 	max-height: 488px;
 	height: 488px;
 	min-height: 488px;
-	
+
 }
 .conversations > li {
     display: inline-block;
@@ -16029,7 +16049,7 @@ a.shopping-cart > i {
     background-image: url(../images/resources/text-bg.jpg);
 	text-transform: capitalize;
     padding-right: 30px;
-	
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 	-moz-background-clip: text;
@@ -16202,7 +16222,7 @@ a.shopping-cart > i {
   width: auto;
   left: 50%;
   transform: translateX(-50%);
-  
+
   opacity: 0;
 }
 
@@ -16212,34 +16232,34 @@ a.shopping-cart > i {
 }
 
 /* fade-out & fade-in */
-@-webkit-keyframes fadeOut 
+@-webkit-keyframes fadeOut
 {
 	0% {opacity: 1;}
 	100% {opacity: 0;}
 }
-@-moz-keyframes fadeOut 
+@-moz-keyframes fadeOut
 {
 	0% {opacity: 1;}
 	100% {opacity: 0;}
 }
-@keyframes fadeOut 
+@keyframes fadeOut
 {
 	0% {opacity: 1;}
 	100% {opacity: 0;}
 }
 
 
-@-webkit-keyframes fadeIn 
+@-webkit-keyframes fadeIn
 {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
-@-moz-keyframes fadeIn 
+@-moz-keyframes fadeIn
 {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
-@keyframes fadeIn 
+@keyframes fadeIn
 {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
@@ -16457,7 +16477,7 @@ a.shopping-cart > i {
   color: #fff;
   text-align: center;
   border-radius: 5px;
-	
+
 }
 .message:after {
   content: '';
@@ -16935,7 +16955,7 @@ a.shopping-cart > i {
 .featured-caro-unit{
 	position:relative;
 	float:left;
-	width:100%;	
+	width:100%;
 }
 .text-caro {
     float: left;
@@ -16952,8 +16972,8 @@ a.shopping-cart > i {
 	left:0;
 	width:100%;
 	height:100%;
-	z-index:1;	
-} 
+	z-index:1;
+}
 .unit-text-caro {
     float: left;
     position: relative;
@@ -17007,7 +17027,7 @@ a.shopping-cart > i {
 .featurd-posts{
 	float:left;
 	width:100%;
-	position:relative;	
+	position:relative;
 }
 /*--- funfacts section ---*/
 .counter,
@@ -17428,7 +17448,7 @@ footer.style2 .share-article {
 	background: rgba(26,44,60,.6);
 	padding-bottom: 10px;
 	padding-top: 10px;
-}	
+}
 .topbar.transperent .nav-list {
     background: transparent none repeat scroll 0 0;
     border-radius: 0;
@@ -18281,7 +18301,7 @@ nav .main-btn{margin-left: 20px;}
 }
 .prod-detail .full-postmeta .shopnow:hover{
 	color: #fff;
-} 
+}
 .full-postmeta > p {
     margin-bottom: 50px;
     margin-top: 10px;
@@ -18911,7 +18931,7 @@ table.adition tbody tr td {
 }
 .course:hover .prise > span {
     color: #62626e;
-}  
+}
 .course-title {
     display: inline-block;
     font-size: 18px;

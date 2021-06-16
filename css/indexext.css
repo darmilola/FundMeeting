@@ -1,0 +1,144 @@
+.reply_card {
+    background-color: #fff;
+    max-width: 270px;
+    min-height: 85px;
+    display: block;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 15px;
+    position: relative;
+    z-index: 3;
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "bentoreg";
+}
+
+.home_marketing_reply_div_root {
+    height: 270px;
+    display: block;
+    left: 60%;
+    top: 10%;
+    position: relative;
+    padding: 10px;
+}
+
+.home_marketing_reply_profile_image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute!important;
+    margin-left: 20px;
+    top: 0%;
+    left: 28% !important;
+    z-index: 3;
+    object-position: center right;
+}
+
+
+.home_marketing_reply_name {
+    margin-right: 35px;
+    height: 20px;
+    margin-top: 5px;
+    width: 150px;
+    height: 7px;
+    margin-left: 20px;
+    margin-top: 15px;
+    background-color: #ffe0e7;
+    border-radius: 20px;
+}
+
+.home_marketing_reply_question {
+    width: 100%;
+    font-size: 14px;
+    margin-left: 15px;
+    margin-top: 7px;
+    margin-left: 15px;
+    margin-right: 10px;
+    position: relative;
+    color: #4b4a4a;
+    font-family: 'bentothin';
+    font-weight: bold;
+}
+
+.question_card {
+    background-color: #fff;
+    max-width: 250px;
+    min-height: 80px;
+    display: block;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 15px;
+    position: relative;
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "bentothin";
+}
+.home_marketing_div_root {
+    height: 200px;
+    display: block;
+    position: relative;
+    padding: 10px;
+    z-index: 3;
+}
+
+.home_marketing_profile_image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    margin-left: 20px;
+    top: 0%;
+    left: 25% !important;
+    object-position: center right;
+}
+
+.home_marketing_name {
+    margin-right: 35px;
+    height: 20px;
+    margin-top: 5px;
+    width: 120px;
+    height: 7px;
+    margin-left: 20px;
+    margin-top: 15px;
+    background-color: #ffe0e7;
+    border-radius: 20px;
+}
+.home_marketing_name2 {
+    margin-right: 35px;
+    height: 20px;
+    margin-top: 5px;
+    width: 80px;
+    height: 7px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: #eef4ff;
+    border-radius: 20px;
+}
+
+
+.home_marketing_question {
+    width: 100%;
+    font-size: 14px;
+    margin-left: 15px;
+    margin-top: 7px;
+    position: relative;
+    color: #4b4a4a;
+    font-family: 'bentothin';
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: "bento";
+    src: url("../fonts/bentomed.otf");
+}
+@font-face {
+    font-family: "bentoreg";
+    src: url("../fonts/bentonreg.otf");
+}
+@font-face {
+    font-family: "bentothin";
+    src: url("../fonts/bentolight.otf");
+}
