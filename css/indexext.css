@@ -16,10 +16,14 @@
 .home_marketing_reply_div_root {
     height: 270px;
     display: block;
-    left: 60%;
+    left: 55%;
     top: 10%;
     position: relative;
     padding: 10px;
+}
+body{
+    overflow-x: hidden!important;
+    width: 100vw!important;
 }
 
 .home_marketing_reply_profile_image {
@@ -30,7 +34,7 @@
     position: absolute!important;
     margin-left: 20px;
     top: 0%;
-    left: 28% !important;
+    left: 33% !important;
     z-index: 3;
     object-position: center right;
 }
@@ -56,7 +60,7 @@
     margin-left: 15px;
     margin-right: 10px;
     position: relative;
-    color: #4b4a4a;
+    color: #262525;
     font-family: 'bentothin';
     font-weight: bold;
 }
@@ -90,7 +94,7 @@
     position: absolute;
     margin-left: 20px;
     top: 0%;
-    left: 25% !important;
+    left: 30% !important;
     object-position: center right;
 }
 
@@ -98,7 +102,7 @@
     margin-right: 35px;
     height: 20px;
     margin-top: 5px;
-    width: 120px;
+    width: 130px;
     height: 7px;
     margin-left: 20px;
     margin-top: 15px;
@@ -124,7 +128,7 @@
     margin-left: 15px;
     margin-top: 7px;
     position: relative;
-    color: #4b4a4a;
+    color: #262525;
     font-family: 'bentothin';
     font-weight: bold;
 }
@@ -141,4 +145,23 @@
 @font-face {
     font-family: "bentothin";
     src: url("../fonts/bentolight.otf");
+}
+.no_account_root{
+    width: 100%;
+    height: 320px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: -webkit-center;
+    text-align: center;
+    position: relative;
+    background: #f4f4f4;
+
+
+}
+.emoji_img{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
 }
