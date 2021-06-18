@@ -64,6 +64,10 @@ body{
     font-family: 'bentothin';
     font-weight: bold;
 }
+body{
+    margin: 0px!important;
+    padding: 0px!important;
+}
 
 .question_card {
     background-color: #fff;
