@@ -124,6 +124,28 @@ label.light {
     border: 1px solid #d4d1d1;
 }
 
+.create_post_card{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 700px;
+    height: 550px;
+    margin-top: 10px;
+    margin-left: -20px;
+    margin-right: -40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    border: 1px solid #d4d1d1;
+}
+.choose_activity{
+    width: 600px;
+    height:90px!important;
+    background-color: transparent;
+    margin-top: 30px;
+    margin-left: -20px;
+    display: flex;
+}
+
 
 .community_create_background{
     -webkit-filter: blur(3px);
@@ -176,7 +198,9 @@ label.light {
     background-color: lightgrey;
 }
 
-.input_select{
+
+
+.community_select{
     background: transparent;
     border: 1px solid lightgrey;
     border-radius: 7px;
@@ -188,11 +212,11 @@ label.light {
     font-family: 'bentothin';
     font-weight: bold;
 }
+
 .chosen-container .chosen-drop {
     border-bottom: 0;
     border-top: 1px solid #aaa;
     top: auto!important;
-    bottom: 40px!important;
 }
 .chosen-drop{
     margin-bottom: 20px!important;
