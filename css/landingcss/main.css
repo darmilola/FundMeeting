@@ -19661,11 +19661,14 @@ Content Area-1 L-11-2
   top: 80px;
   left: 0;
   z-index: 1;
+  margin-left:-150px;
+  margin-top:-120px;
 }
 
 @media (min-width: 1200px) {
   .testimonial-area-l-20 .image-group .image-1 img {
     width: 85%;
+    display:block;
   }
 }
 
@@ -19687,17 +19690,20 @@ Content Area-1 L-11-2
   top: -40px;
   right: 0;
   z-index: 1;
+  margin-right: -70px;
 }
 
 @media (min-width: 1200px) {
   .testimonial-area-l-20 .image-group .image-3 img {
     width: 85%;
+    display:block;
   }
 }
 
 @media (min-width: 1600px) {
   .testimonial-area-l-20 .image-group .image-3 img {
     width: initial;
+    display:block;
   }
 }
 
