@@ -36,6 +36,8 @@
           href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
           crossorigin="anonymous">
+    <!-- Include stylesheet -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
 
 </head>
@@ -153,7 +155,6 @@
                                     <ul class="tabs">
                                         <li data-tab-target="#post" class="active tab"><img class= "profile_tab_icon" src = "images/svg/profile_posts.svg"/><span class = "profile_tab_text">Posts</span></li>
                                         <li data-tab-target="#media" class="tab"><img class = "profile_media_icon" src = "images/svg/profile_media.svg"/><span class = "profile_tab_text">Picture/Video</span></li>
-                                        <li data-tab-target="#links" class="tab"><img class= "profile_tab_icon" src = "images/svg/profile_saved.svg"/><span class = "profile_tab_text">Links</span></li>
                                     </ul>
 
 
@@ -161,18 +162,11 @@
                                         <!--- Discussions tab --->
                                         <div id="post" data-tab-content class="active">
 
-                                                <div data-tiny-editor
-                                                 data-formatblock="no"
-                                                 data-underline="no"
-                                                 data-fontname="no"
-                                                 data-forecolor="no"
-                                                 data-justifyleft="no"
-                                                 data-justifycenter="no"
-                                                 data-justifyright="no">
-                                                <p>
-                                                    Write here...
-                                                </p>
+                                            <!-- Create the editor container -->
+                                            <div id="editor" style="height: 300px;">
+                                                <p>Write something here...</p>
                                             </div>
+
 
                                         </div>
                                 </div>
@@ -195,17 +189,24 @@
 
                                         </div>
                                     </div>
-                                    <div class="tab-content">
-                                        <!--- Discussions tab --->
-                                        <div id="links" data-tab-content>
-
-                                            <div style="background-color: red; width: 100px; height: 100px;"></div>
-
-                                        </div>
-                                    </div>
                             </div>
                             </div>
-                            <div class="col-lg-5" style="background-color: palegreen; margin-left: 60px; margin-top: 55px;">
+                            <div class="col-lg-5" style="margin-left: 60px; margin-top: 55px;">
+
+                                <div class="rules_root sticky-top">
+                                    <div class="rules">Rules</div>
+                                    <ul style="margin-left: 15px;">
+                                        <li class="community_rule">
+                                            Do not post questions that could be answered by googling or reading the Y Combinator website
+                                        </li>
+                                        <li class="community_rule">
+                                            This is not a place to post spam or self-promotional material
+                                        </li>
+                                        <li class="community_rule">
+                                            This is the rule number one for the community
+                                        </li>
+                                    </ul>
+                                </div>
 
 
                     </div>
@@ -277,5 +278,20 @@
         }
     }
 </script>
+
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+<script>
+    var toolbarOptions = ['bold', 'italic', 'underline', 'strike','link','size','list',{ 'size': [ 'small', false, 'large', 'huge' ]}];
+    var quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+            toolbar: toolbarOptions
+        }
+    });
+</script>
+
 </body>
 </html>
