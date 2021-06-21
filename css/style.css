@@ -8312,6 +8312,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .message-pop > h4 {
   font-size: 30px;
 }
+.popup::after {
+    border-bottom: 5px solid;
+    bottom: 0;
+    border-bottom-color: transparent!important;
+    content: "";
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+}
 
 .popup-closed {
   cursor: pointer;
@@ -8320,7 +8330,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   right: 18px;
   top: 15px;
 	z-index: 9;
+    color: black;
 }
+
 
 .popup-closed > i {
   line-height: initial;
@@ -10069,6 +10081,8 @@ svg #shadow_1_ {
 .popup-meta {
     display: inline-block;
     width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
 }
 .login-frm {
     display: inline-block;

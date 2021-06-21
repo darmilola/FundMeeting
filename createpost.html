@@ -116,13 +116,9 @@
                 <div class="row">
                     <div class="col-lg-12" style="display: flex">
 
+                        <div class="col-lg-7" style="margin-left: 20px; display: block;">
 
-
-
-                            <div class="col-lg-7" style="margin-left: 20px; display: block;">
-
-
-                                <div class="choose_activity">
+                            <div class="choose_activity">
                                     <div style="margin-top:10px; margin-bottom:15px;color: #262626; font-size: 20px; font-weight: bold; font-family: 'bentothin;">Start a new Thread</div>
 
                                  <div style="display: flex;">
@@ -155,6 +151,7 @@
                                     <ul class="tabs">
                                         <li data-tab-target="#post" class="active tab"><img class= "profile_tab_icon" src = "images/svg/profile_posts.svg"/><span class = "profile_tab_text">Posts</span></li>
                                         <li data-tab-target="#media" class="tab"><img class = "profile_media_icon" src = "images/svg/profile_media.svg"/><span class = "profile_tab_text">Picture/Video</span></li>
+                                        <li data-tab-target="#topics" class="tab"><img class = "profile_media_icon" src = "images/svg/profile_media.svg"/><span class = "profile_tab_text">Topics</span></li>
                                     </ul>
 
 
@@ -166,8 +163,6 @@
                                             <div id="editor" style="height: 300px;">
                                                 <p>Write something here...</p>
                                             </div>
-
-
                                         </div>
                                 </div>
                                     <div class="tab-content">
@@ -188,6 +183,19 @@
                                             </div>
 
                                         </div>
+                                    </div>
+                                    <div class="tab-content">
+                                        <!--- Discussions tab --->
+                                        <div id="topics" data-tab-content>
+
+                                            <div class="wrapper">
+                                                <h3>Add Topic</h3>
+                                                <p class="info" style="color: white">Type your topic & press enter.</p>
+                                                <input type="text" id="hashtags" autocomplete="off">
+                                                <div class="tag-container">
+                                                </div>
+                                            </div>
+                                          </div>
                                     </div>
                             </div>
                             </div>
@@ -289,6 +297,33 @@
         theme: 'snow',
         modules: {
             toolbar: toolbarOptions
+        }
+    });
+</script>
+
+<script>
+    let input, hashtagArray, container, t;
+
+    input = document.querySelector('#hashtags');
+    container = document.querySelector('.tag-container');
+    hashtagArray = [];
+
+    input.addEventListener('keyup', () => {
+        if (event.which == 13 && input.value.length > 0) {
+            var text = document.createTextNode(input.value);
+            var p = document.createElement('p');
+            container.appendChild(p);
+            p.appendChild(text);
+            p.classList.add('tag');
+            input.value = '';
+
+            let deleteTags = document.querySelectorAll('.tag');
+
+            for(let i = 0; i < deleteTags.length; i++) {
+                deleteTags[i].addEventListener('click', () => {
+                    container.removeChild(deleteTags[i]);
+                });
+            }
         }
     });
 </script>
