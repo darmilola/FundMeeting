@@ -213,7 +213,7 @@
 
 
 
-
+<!----
                         <div class="bg_carousel" style="width: 100vw; height: 400px; margin-left: -140px; margin-top: 80px; margin-bottom: 70px;">
                             <div class="bg_navigation_root">
                                 <div class="bg_right_arrow_root">
@@ -282,7 +282,7 @@
                                 </div>
                             </div>
                         </div>
-
+---->
 
 
                         <span class="category_text">Categories</span>
@@ -651,7 +651,41 @@
             slidesToShow: 6,
             slidesToScroll: 1,
             prevArrow: $(".category_left_arrow_root"),
-            nextArrow: $(".category_right_arrow_root")
+            nextArrow: $(".category_right_arrow_root"),
+
+            responsive: [
+
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 2
+                    }
+                }
+
+            ]
+
         });
 
         $(".image-items").slick({
