@@ -876,6 +876,235 @@ a:active {
     border-bottom-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
 }
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-top: 1px solid lightgrey;
+}
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    color:lightgrey;
+    display:flex;
+    justify-content:center;
+    width:auto;
+
+}
+
+.tab.active {
+    border-top: 1px solid black;
+    color:black;
+
+}
+
+
+.tab-content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.profile_tab_icon{
+    height:16px;
+    width:16px;
+    margin-right:5px;
+}
+
+.profile_media_icon{
+    height:20px;
+    width:20px;
+    margin-right:5px;
+}
+
+.profile_saved_icon{
+    height:24px;
+    width:24px;
+    margin-right:5px;
+}
+
+
+.profile_tab_text{
+    font-size:16px;
+}
+.profile_about_text{
+    color: #262626;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: 'bentothin';
+    margin-bottom: 10px;
+
+}
+
+.user_profile_root {
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 400px;
+    height: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #ede9e9;
+}
+
+.profile_image_div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_meta_div {
+    width: 80%;
+    height: 100%;
+    display: block;
+    margin-top: 6px;
+}
+
+.user_profile_image {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+.profile_name {
+    margin-top: 10px;
+    color: black;
+    font-family: 'bentoreg';
+    font-weight: bold;
+}
+.profile_actions_div {
+    display: flex;
+    height: 30px;
+    margin-top: 7px;
+}
+.users_followers {
+    border: 1px lightgrey solid;
+    border-radius: 4px;
+    width: 100px;
+    height: 23px;
+    padding: 3px;
+    font-size: 12px;
+    justify-content: center;
+    display: flex;
+    color: #262626;
+    align-items: center;
+}
+.follow_user {
+    border-radius: 4px;
+    width: 100px;
+    height: 23px;
+    padding: 3px;
+    font-size: 14px;
+    background-color: blue;
+    margin-left: 10px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.user_community_root {
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 400px;
+    margin-top: 10px;
+    height: 90px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #ede9e9;
+}
+
+.community_image_div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    margin-top: -10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.community_meta_div {
+    width: 80%;
+    height: 100%;
+    display: block;
+}
+
+.user_community_image {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+.community_name {
+    margin-top: 10px;
+    height: auto;
+    color: #262626;
+}
+.community_actions_div {
+    display: flex;
+    height: 30px;
+    margin-top: 7px;
+}
+.community_followers {
+    border-radius: 4px;
+    width: auto;
+    height: 23px;
+    padding: 3px;
+    font-size: 14px;
+    margin-top: -5px;
+    color: #262626;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.follow_community {
+    border-radius: 4px;
+    width: 100px;
+    height: 23px;
+    padding: 3px;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: blue;
+    margin-left: 10px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
 
 
 

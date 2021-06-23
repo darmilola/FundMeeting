@@ -103,6 +103,7 @@ Helper CSS
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
+	background: #f4f4f4!important;
 }
 
 .spad {
@@ -483,7 +484,10 @@ How section
  -------------------*/
 
 .how-section {
-	background-color: #0a183d;
+	background-color: #0a183d!important;
+	background: #f4f4f4!important;
+	height: 500px;
+	margin-bottom: 40px;
 }
 
 .how-item .hi-icon {
@@ -578,7 +582,7 @@ Subscription section
 }
 
 /* ----------------
-Premium section 
+Premium section
  -------------------*/
 
 .premium-section p {
