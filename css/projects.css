@@ -168,6 +168,13 @@
     margin-top: 20px;
     text-align: left;
 }
+.campaign_funds{
+    font-size: 20px;
+    color: #262626;
+    font-family: 'bento';
+    margin-top: 20px;
+    text-align: left;
+}
 .campaign_desc{
     font-size: 20px;
     color: #262626;
@@ -250,5 +257,14 @@
 .update_text {
     padding: 5px;
     color: #262626;
+}
+.dropdown-item {
+    font-size: 15px;
+    padding: 4px 10px;
+    color: #262626;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'bentothin';
+    font-weight: bold;
 }
 

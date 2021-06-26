@@ -15479,9 +15479,9 @@ a.shopping-cart > i {
     padding: 3px 10px;
 }
 .dropdown-item {
-    font-size: 12px;
+    font-size: 18px;
     padding: 4px 10px;
-	color: #9391a5;
+	color: #262626;
 }
 .dropdown-item > i{margin-right: 5px;}
 .dropdown-menu {
