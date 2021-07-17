@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>TimesBuddy | World Times Social Media</title>
+    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <link rel="stylesheet" href="css/toast-notification.css">
+    <link rel="stylesheet" href="css/page-tour.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/make_discoveries.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/post_action_area.css">
+    <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/videoplayer.css"/>
+    <link rel="stylesheet" href="css/homeheader.css"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/css/mdDateTimePicker.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"/>
+
+    <script src="https://static.opentok.com/v2/js/opentok.js"></script>
+
+    <link rel = "stylesheet" href="css/live.css"/>
+
+    <style type="text/css" media="screen">
+        #layout{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #layout > div {
+            background-color: #000;
+            display: inline-block;
+            border: 1px solid #fff;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+
+        #layout > div {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        #layout > div.ot-layout {
+            opacity: 1;
+        }
+
+
+    </style>
+    <script src="js/opentok-layout.js"></script>
+</head>
+<body>
+
+<div class="theme-layout">
+
+    <!--- Home Header Starts here   ---->
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark navbar_ext">
+        <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" style="height: 40px; width: 140px;"/>
+        <button style="margin-left: 50px!important;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" style="height: 40px; width: 140px;"/>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    Start a campaign
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    Explore
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    About us
+                </a>
+            </li>
+            <form class="form-inline my-2 my-lg-0">
+                <input  class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="height: 30px; font-size: 12px; background-color: #e3e2e2">
+            </form>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="header_profile_image"
+                         src="https://static.skillshare.com/uploads/users/486263820/user-image-small.jpg?1327299936"/>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">My Campaigns</a>
+                    <a class="dropdown-item" href="#">My Contributions</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Log Out</a>
+                </div>
+            </li>
+        </div>
+    </nav>
+    <!-- Home header ends here --->
+
+
+
+
+
+    <section>
+        <div class="gap2 gray-bg" style="min-height: 90vh; padding-top: 0px; padding-bottom: 0px; display: flex">
+
+
+                      <!--- Chat Arena is here  ---->
+                        <div style="width: 30%; background-color: #0a76ca; height: 90vh;" class="chat_arena">
+
+                            <!---- Live Chat Ui Starts ---->
+
+                            <div style="width: 100%; height: 100%; display: block">
+
+                                <div>
+                                    <div class="mesge-area" style="margin-top: 10px;">
+                                        <ul class="conversations">
+                                            <li class="you">
+                                                <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                <div class="text-box">
+                                                    <p>HI, i have faced a problem with your software. are you available now</p>
+                                                    <span><i class="ti-check"></i><i class="ti-check"></i> 2:32PM</span>
+                                                </div>
+                                            </li>
+                                            <li class="me">
+                                                <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                <div class="text-box">
+                                                    <p>HI, i have checked about your query, there is no any problem like that...</p>
+                                                    <span><i class="ti-check"></i><i class="ti-check"></i> 2:35PM</span>
+                                                </div>
+                                            </li>
+                                            <li class="you">
+                                                <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                <div class="text-box">
+                                                    <p>HI, i have faced a problem with your software. are you available now</p>
+                                                    <span><i class="ti-check"></i><i class="ti-check"></i> 2:32PM</span>
+                                                </div>
+                                            </li>
+                                            <li class="you">
+                                                <figure><img src="https://cdn.pixabay.com/photo/2020/11/19/20/04/puffin-5759684_960_720.jpg" alt=""></figure>
+                                                <div class="text-box">
+                                                    <p>HI, i have faced a problem with your software. are you available now</p>
+                                                    <span><i class="ti-check"></i><i class="ti-check"></i> 2:32PM</span>
+                                                </div>
+                                            </li>
+
+
+                                            <li class="you">
+                                                <figure><img src="images/resources/user1.jpg" alt=""></figure>
+                                                <div class="text-box">
+                                                    <div class="wave">
+                                                        <span class="dot"></span>
+                                                        <span class="dot"></span>
+                                                        <span class="dot"></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="message-writing-box">
+                                        <form method="post">
+                                            <div class="text-area">
+                                                <input type="text" placeholder="write your message here..">
+                                                <button type="submit"><i  style="margin-left: 10px;" class="fa fa-paper-plane-o"></i></button>
+                                            </div>
+                                            <div class="emojies">
+                                                <i><img src="images/smiles/happy-3.png" alt=""></i>
+                                                <ul class="emojies-list">
+                                                    <li><a href="#" title=""><img src="images/smiles/unhappy.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/tongue-out-1.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/suspicious.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/smiling.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/wink.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/bored.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/angry-1.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/angry.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/bored-1.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/bored-2.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/confused-1.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/confused.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/crying-1.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/crying.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/embarrassed.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/emoticons.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/happy-1.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/happy-2.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/happy-3.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/happy-4.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/ill.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/in-love.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/kissing.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/mad.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/nerd.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/ninja.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/quiet.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/sad.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/secret.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/smile.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/surprised-1.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/tongue-out.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/unhappy.png" alt=""></a></li>
+                                                    <li><a href="#" title=""><img src="images/smiles/suspicious.png" alt=""></a></li>
+                                                </ul>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!---- Live Chat Ui Ends ---->
+
+
+                        </div>
+                        <!--- Chat Arena ends here  ---->
+
+
+                       <!--- live Arena is here  ---->
+                        <div style="width: 70%; background-color: #fa3569; height: 90vh;" class = "mlive_arena">
+
+
+                            <div id="live_arena" style="margin-top: 20px;">
+                                <div id="layout"></div>
+
+                                <div class="live_fullscreen"><img class="live_fullscreen_arrow" src="images/arrow.svg"/><img class="live_fullscreen_arrow_reverse" src="images/arrow.svg"/></div>
+
+                                <div class="live_icon">Live</div>
+                                <div class="live_toolbar">
+
+                                    <div class="live_tools_background muteaudio">
+
+                                        <img src="images/svg/mutelive.svg" style="height: 24px; width: 24px;"/>
+
+                                    </div>
+
+                                    <div class="live_tools_background mutevideo">
+
+                                        <img src="images/svg/livevideomute.svg" style="height: 24px; width: 24px;"/>
+
+                                    </div>
+
+                                    <div class="live_tools_background sharescreen">
+
+                                        <img src="images/svg/sharescreen.svg" style="height: 27px; width: 27px;"/>
+
+                                    </div>
+
+                                    <div class="live_tools_background">
+
+                                        <img src="images/svg/filter.svg" style="height: 30px; width: 30px;"/>
+
+                                    </div>
+                                    <div class="live_tools_background">
+
+                                        <img src="images/svg/donatelive.svg" style="height: 32px; width: 32px;"/>
+
+                                    </div>
+
+                                    <div class="live_tools_background" style="background-color: #fa2d65;">
+
+                                        <img src="images/svg/exitlive.svg" style="height: 20px; width: 20px;"/>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                       <!--- live Arena ends here  ---->
+
+                    </div>
+    </section>
+
+</div>
+
+
+
+
+
+
+
+<script src="js/main.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/homeheader.js"/>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="./dist/js/moment.min.js"></script>
+<script src="./dist/js/mdDateTimePicker.js"></script>
+<script src="./dist/js/scroll-into-view-if-needed.min.js"></script>
+<script src="./dist/js/draggabilly.pkgd.min.js"></script>
+<script src = "js/live.js"></script>
+
+
+
+<script type="text/javascript">
+
+    var startDateDialog = new mdDateTimePicker.default({
+        init: moment("2021-09-2", "YYYY-MM-DD"),
+        type: 'date'
+    });
+
+    var toggleStartDate = document.getElementById('start_date');
+    toggleStartDate.addEventListener('focus', function() {
+        startDateDialog.toggle();
+    });
+
+    startDateDialog.trigger = toggleStartDate;
+    toggleStartDate.addEventListener("onOk", function () {
+
+        this.value = startDateDialog.time.toString();
+
+    });
+
+
+    var startTimeDialog = new mdDateTimePicker.default({
+        type: 'time'
+    });
+
+    var endTimeDialog = new mdDateTimePicker.default({
+        type: 'time'
+    });
+
+    var toggleEndTime = document.getElementById('end_time');
+    toggleEndTime.addEventListener('focus', function() {
+        endTimeDialog.toggle();
+    });
+
+    var toggleStartTime = document.getElementById('start_time');
+    toggleStartTime.addEventListener('focus', function() {
+        startTimeDialog.toggle();
+    });
+
+
+    startTimeDialog.trigger = toggleStartTime;
+    toggleStartTime.addEventListener("onOk", function () {
+
+        this.value = startTimeDialog.time.toString();
+
+    });
+    endTimeDialog.trigger = toggleEndTime;
+    toggleEndTime.addEventListener("onOk", function () {
+
+        this.value = endTimeDialog.time.toString();
+
+    });
+
+</script>
+
+
+
+
+
+<script>
+    $("#add_tags_btn").click(function () {
+        let $txt = $("#add_tags");
+        let filter = $txt.val();
+        $txt.val("");
+        $(`
+          <div class = "chip" tabindex = "-1">
+            <span>
+              ${filter}
+            </span>
+            <button title="Remove chip" aria-label="Remove tag" type = "button" onclick = "$(this).parent().remove()">
+              <i class = "material-icons">cancel</i>
+            </button>
+          </div>`).appendTo("#add_tags_container");
+    });
+
+    function autocomplete(inp, arr) {
+        /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function (e) {
+            var a,
+                b,
+                i,
+                val = this.value;
+            /*close any already open lists of autocompleted values*/
+            closeAllLists();
+            if (!val) {
+                return false;
+            }
+            currentFocus = -1;
+            /*create a DIV element that will contain the items (values):*/
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            /*append the DIV element as a child of the autocomplete container:*/
+            this.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (i = 0; i < arr.length; i++) {
+                var pos = arr[i].toUpperCase().indexOf(val.toUpperCase());
+                /*check if the item starts with the same letters as the text field value:*/
+                if (pos > -1) {
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = arr[i].substr(0, pos);
+                    b.innerHTML +=
+                        "<strong>" + arr[i].substr(pos, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(pos + val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function (e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                      (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+            }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function (e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                /*If the arrow DOWN key is pressed,
+            increase the currentFocus variable:*/
+                currentFocus++;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 38) {
+                //up
+                /*If the arrow UP key is pressed,
+            decrease the currentFocus variable:*/
+                currentFocus--;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    /*and simulate a click on the "active" item:*/
+                    if (x) x[currentFocus].click();
+                }
+            }
+        });
+        function addActive(x) {
+            /*a function to classify an item as "active":*/
+            if (!x) return false;
+            /*start by removing the "active" class on all items:*/
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = x.length - 1;
+            /*add class "autocomplete-active":*/
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+            /*a function to remove the "active" class from all autocomplete items:*/
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+        function closeAllLists(elmnt) {
+            /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+    }
+
+    /*An array containing all the country names in the world:*/
+    var countries = [
+        "Afghanistan",
+        "South Korea",
+        "South Sudan",
+        "Spain",
+        "Sri Lanka",
+        "St Kitts & Nevis",
+        "St Lucia",
+        "St Vincent",
+        "Sudan",
+        "Suriname",
+        "Swaziland",
+        "Sweden",
+        "Switzerland",
+        "Syria",
+        "Taiwan",
+        "Tajikistan",
+        "Tanzania",
+        "Thailand",
+        "Timor L'Este",
+        "Togo",
+        "Tonga",
+        "Trinidad & Tobago",
+        "Tunisia",
+        "Turkey",
+        "Turkmenistan",
+        "Turks & Caicos",
+        "Tuvalu",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States of America",
+        "Uruguay",
+        "Uzbekistan",
+        "Vanuatu",
+        "Vatican City",
+        "Venezuela",
+        "Vietnam",
+        "Virgin Islands (US)",
+        "Yemen",
+        "Zambia",
+        "Zimbabwe"
+    ];
+
+    /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+    autocomplete(document.getElementById("add_tags"), countries);
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Handler for .ready() called.
+        $('#dashboard_root').animate({
+            scrollTop: $('#live_dashboard').offset().top
+        }, 'slow');
+    });
+</script>
+
+
+
+
+
+
+<!--- Vonage Streaming Live Starts --->
+
+<!--- Vonage Streaming Live Ends  --->
+
+<script type="text/javascript" charset="utf-8">
+
+    //These credentials are usually generated by your server
+
+
+    const apiKey = '47248174';
+    const sessionId = '1_MX40NzI0ODE3NH5-MTYyNDcyMDY3OTEyNH5jeXljVGJGWHVQa254MGJtN3F5RVBlTHZ-fg';
+    let session = OT.initSession(apiKey, sessionId);
+    var token1 = "T1==cGFydG5lcl9pZD00NzI0ODE3NCZzaWc9ZWVmMTEyZGYxYTE2NmM1MzY0OWVmOTQ2MzA1NjMxYzEyYTU2YmVhZDpzZXNzaW9uX2lkPTFfTVg0ME56STBPREUzTkg1LU1UWXlORGN5TURZM09URXlOSDVqZVhsalZHSkdXSFZRYTI1NE1HSnROM0Y1UlZCbFRIWi1mZyZjcmVhdGVfdGltZT0xNjI0NzIwNzA4Jm5vbmNlPTAuMjgxNzQzMjIxMzAyNDc2MiZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNjI3MzEyMzM3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
+    var token2 = "T1==cGFydG5lcl9pZD00NzI0ODE3NCZzaWc9MjE0MzQwOGNhZTYyNjI4MGU5MzUxZGFhYjkwMTYxMDU1OTBhOTI4MzpzZXNzaW9uX2lkPTFfTVg0ME56STBPREUzTkg1LU1UWXlORGN5TURZM09URXlOSDVqZVhsalZHSkdXSFZRYTI1NE1HSnROM0Y1UlZCbFRIWi1mZyZjcmVhdGVfdGltZT0xNjI0NzIwODExJm5vbmNlPTAuMjU4NzAzMTkyODk1NzE5NzUmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTYyNzMxMjQ0MCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ==";
+    var token3 = "T1==cGFydG5lcl9pZD00NzI0ODE3NCZzaWc9NjU2N2QxZDFjMzBhN2VkNGMyZGExZjZiYTA2OTNkMWI1MTIyZGE3MzpzZXNzaW9uX2lkPTFfTVg0ME56STBPREUzTkg1LU1UWXlORGN5TURZM09URXlOSDVqZVhsalZHSkdXSFZRYTI1NE1HSnROM0Y1UlZCbFRIWi1mZyZjcmVhdGVfdGltZT0xNjI0NzIwODQ4Jm5vbmNlPTAuMDE4NzE4NTgwNjQyOTc1OTM1JnJvbGU9cHVibGlzaGVyJmV4cGlyZV90aW1lPTE2MjczMTI0NzcmaW5pdGlhbF9sYXlvdXRfY2xhc3NfbGlzdD0=";
+    var token4 = "T1==cGFydG5lcl9pZD00NzI0ODE3NCZzaWc9NDNlMzA5NWMzMDA3NmU3NWQ3YzYxNTc1M2ZkMTRkOWE5YWVmNjlkZDpzZXNzaW9uX2lkPTFfTVg0ME56STBPREUzTkg1LU1UWXlORGN5TURZM09URXlOSDVqZVhsalZHSkdXSFZRYTI1NE1HSnROM0Y1UlZCbFRIWi1mZyZjcmVhdGVfdGltZT0xNjI0NzIwODczJm5vbmNlPTAuODIxMzQzNTY4Nzc3NjY3NiZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNjI3MzEyNTAzJmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
+    var layoutEl = document.getElementById("layout");
+    var layout;
+
+
+    //Handling all of our errors here by alerting them
+    function handleError(error) {
+        if (error) {
+            //alert(error.message);
+        }
+    }
+
+
+    function updateLayoutValues() {
+
+        layout = initLayoutContainer(layoutEl, {
+            maxRatio: 9/16,
+            minRatio: 9/16,
+            fixedRatio:false,
+            alignItems: "center",
+            bigPercentage:0.8,
+            bigFixedRatio: false,
+            bigMaxRatio: 3/2,
+            bigMinRatio: 9/16,
+            bigFirst: true,
+            smallMaxWidth: Infinity,
+            smallMaxHeight: Infinity,
+            bigMaxWidth: Infinity,
+            bigMaxHeight: Infinity,
+            bigAlignItems: "center",
+            smallAlignItems: "center",
+            scaleLastRow: true,
+            bigScaleLastRow: true,
+        }).layout;
+    }
+
+    updateLayoutValues();
+    addPublisher();
+
+
+    $('.sharescreen').click(function(event) {
+        startShareScreen();
+    });
+
+    function startShareScreen(){
+
+        OT.checkScreenSharingCapability(function(response) {
+            if(!response.supported || response.extensionRegistered === false) {
+
+                // This browser does not support screen sharing.
+
+
+            } else if (response.extensionInstalled === false) {
+
+
+                // Prompt to install the extension.
+
+
+            } else {
+
+                // Screen sharing is available. Publish the screen.
+
+
+                var screen = document.createElement("div");
+
+                var publisher = OT.initPublisher(screen,
+                    {videoSource: 'screen',publishAudio:true},
+                    function(error) {
+                        if (error) {
+
+                            // Look at error.message to see what went wrong.
+
+                        } else {
+                            session.publish(publisher, function(error) {
+
+                                if (error) {
+
+                                    // Look error.message to see what went wrong.
+
+                                }
+                            });
+
+                        }
+
+                    }
+
+                );
+
+                publisher.on('streamDestroyed', function(event) {
+                    if (event.reason === 'mediaStopped') {
+                        // User clicked stop sharing
+                    } else if (event.reason === 'forceUnpublished') {
+                        // A moderator forced the user to stop sharing.
+                    }
+                });
+
+            }
+
+        });
+
+    }
+
+
+    function addPublisher() {
+
+        var ratios = [4/3, 3/4, 16/9];
+        var el = document.createElement("div");
+        el.videoHeight = 480;
+        // Pick a random ratio
+        var ratio = ratios[Math.round(Math.random() * (ratios.length - 1))];
+        el.videoWidth = 480 * ratio;
+
+        var publisherOptions = {
+            showControls: false
+        };
+        var publisher = OT.initPublisher(el, {
+            insertMode: 'append',
+            width:"100%",
+            height:"100%",
+            audioBitrate:30000,
+            autoGainControl:true,
+            publisherOptions
+        }, handleError);
+
+
+        $('.muteaudio').click(function(event) {
+            publisher.publishAudio(false);
+        });
+
+        $('.mutevideo').click(function(event) {
+            publisher.publishVideo(false);
+        });
+
+
+        session.on("streamPropertyChanged", function (event) {
+            var subscribers = session.getSubscribersForStream(event.stream);
+            for (var i = 0; i < subscribers.length; i++) {
+                // You may want to display some UI text for each
+                // subscriber, or make some other UI change,
+                // based on event.changedProperty and
+                // event.newValue
+            }
+        });
+
+
+        var subscriberOptions = {
+            showControls: false
+        };
+        //Once a new user joins the stream this automatically Subscribe to the newly created stream
+        session.on('streamCreated',function (event) {
+            var sub = document.createElement("div");
+            subscriber =  session.subscribe(event.stream, sub, {
+                insertMode: 'append',
+                width:"100%",
+                height:"100%",
+                audioBitrate:30000,
+                autoGainControl:true,
+
+
+                subscriberOptions
+            }, handleError);
+            addSubscriber(sub,subscriber);
+        });
+
+
+        // Connect to the session
+        session.connect(token4, function (error) {
+            // If the connection is successful, initialize a publisher and publish to the session
+            if (error) {
+                handleError(error);
+            } else {
+                session.publish(publisher, handleError);
+                layout();
+            }
+        });
+
+
+        el.addEventListener('click', function () {
+            if (el.classList.contains('OT_big')) {
+                el.classList.remove('OT_big');
+            } else {
+                el.classList.add('OT_big');
+            }
+            layout();
+        });
+
+        layoutEl.appendChild(el);
+        layout();
+
+    }
+
+    function addSubscriber(sub,subscriber) {
+        sub.videoHeight = 480;
+        // Pick a random ratio
+        var ratios = [4/3, 3/4, 16/9];
+        var ratio = ratios[Math.round(Math.random() * (ratios.length - 1))];
+        sub.videoWidth = 480 * ratio;
+        sub.addEventListener('click', function () {
+            if (sub.classList.contains('OT_big')) {
+                sub.classList.remove('OT_big');
+            } else {
+                sub.classList.add('OT_big');
+            }
+            layout();
+        });
+
+        $('.muteaudio').click(function(event) {
+            subscriber.subscribeToAudio(false);
+        });
+
+        $('.mutevideo').click(function(event) {
+            subscriber.subscribeToVideo(false);
+        });
+
+
+
+        layoutEl.appendChild(sub);
+        layout();
+    }
+
+
+    function removeElement() {
+        layoutEl.firstChild.classList.remove('ot-layout');
+        setTimeout(function() {
+            layoutEl.removeChild(layoutEl.firstChild);
+            layout();
+        }, 200);
+    }
+
+    var resizeTimeout;
+    window.onresize = function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function () {
+            layout();
+        }, 20);
+    };
+
+</script>
+
+
+
+</body>
+</html>
+
+

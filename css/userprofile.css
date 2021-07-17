@@ -86,7 +86,10 @@
 
 
 .profile_tab_text{
-    font-size:16px;
+    font-size:20px;
+    color: #262626;
+    font-weight: bold;
+    font-family: 'bentoreg';
 }
 .profile_about_text{
     color: #262626;

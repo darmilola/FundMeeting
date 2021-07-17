@@ -56,8 +56,8 @@ $('.live_fullscreen_arrow').click(function(event) {
     event.preventDefault();
     $('.live_fullscreen_arrow').toggle();
     $('.live_fullscreen_arrow_reverse').toggle();
-    $('.nav-tabs').toggle();
-    $('.live_arena_root').width("100vw");
+    $('.chat_arena').toggle();
+    $('.mlive_arena').width("100vw");
     var resizeTimeout;
     clearTimeout(resizeTimeout);
      resizeTimeout = setTimeout(function () {
@@ -71,8 +71,8 @@ $('.live_fullscreen_arrow_reverse').click(function(event) {
     event.preventDefault();
     $('.live_fullscreen_arrow').toggle();
     $('.live_fullscreen_arrow_reverse').toggle();
-    $('.nav-tabs').toggle();
-    $('.live_arena_root').width("75vw");
+    $('.chat_arena').toggle();
+    $('.mlive_arena').width("75vw");
     var resizeTimeout;
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(function () {

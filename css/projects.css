@@ -1,0 +1,270 @@
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top:30px;
+    margin-bottom: 10px;
+    border-top: 1px solid lightgrey;
+    width: 700px;
+    margin-left: 90px;
+}
+
+.user_followers_count{
+    color: #383737;
+    font-family: 'bento';
+    font-size: 14px;
+}
+
+.followers_text{
+    color: #4e4e4e;
+    font-family: 'bentothin';
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.user_metas{
+    display: flex;
+    width: 10%;
+    margin-left: 40px;
+}
+.user_metas_root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    text-align: -webkit-center;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    color:lightgrey;
+    display:flex;
+    justify-content:center;
+    width:auto;
+
+}
+
+.tab.active {
+    border-top: 1px solid black;
+    color:black;
+
+}
+
+
+.tab-content {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%!important;
+}
+
+.profile_tab_icon{
+    height:16px;
+    width:16px;
+    margin-right:5px;
+}
+
+.profile_media_icon{
+    height:20px;
+    width:20px;
+    margin-right:5px;
+}
+
+.profile_saved_icon{
+    height:24px;
+    width:24px;
+    margin-right:5px;
+}
+
+
+.profile_tab_text{
+    font-size:20px;
+    font-weight: bold;
+    font-family: 'bentoreg';
+    color: #262626;
+}
+
+.sld-wrp {
+    width: 800px;
+    margin: 0 auto;
+    margin-top:20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.slider-nav{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 800px;
+}
+.slider-for {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.slide-container {
+    height: 60vh;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40vh;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.slide-btn {
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+.slide-btn:hover {
+    background-color: rgb(255, 179, 0);
+}
+
+.slider_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+.profile_image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+
+.mslick-active {
+    border: 2px solid #fa2d65!important;
+}
+.campaign_title{
+    font-size: 30px;
+    color: #262626;
+    font-family: 'bento';
+    margin-top: 20px;
+    text-align: left;
+}
+.campaign_funds{
+    font-size: 20px;
+    color: #262626;
+    font-family: 'bento';
+    margin-top: 20px;
+    text-align: left;
+}
+.campaign_desc{
+    font-size: 20px;
+    color: #262626;
+    font-family: 'bentoreg';
+    margin-top: 20px;
+    text-align: left;
+}
+.campaign_owner{
+    display: flex;
+    margin-top: 10px;
+}
+.follow_campaign{
+    border: 1px solid #262626;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    margin-left: 20px;
+    color: #262626;
+}
+
+.update_card {
+    background-color: transparent;
+    display: block;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 750px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    border: 1px solid #b6b4b4;
+}
+
+.update_profile_image {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+.img_textarea_div {
+    display: flex;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background: rgb(224, 224, 224);
+    margin-top: 10px;
+}
+
+.update_time {
+    margin-left: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+    color: #262626;
+    align-items: center;
+}
+
+.update_name {
+    margin-left: 10px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: #262626;
+}
+
+.update_text {
+    padding: 5px;
+    color: #262626;
+}
+.dropdown-item {
+    font-size: 15px;
+    padding: 4px 10px;
+    color: #262626;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'bentothin';
+    font-weight: bold;
+}
+
